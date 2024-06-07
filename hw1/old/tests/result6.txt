@@ -1,0 +1,112 @@
+ubuntu@41983:~/hw1$ cat test6.bin | ./1-2
+
+0 0 2
+
+0 4
+
+1 6 2
+
+0 17
+
+2 10 10
+
+0 71
+
+1 131
+
+0 62
+
+1 143
+
+0 3
+
+100 0 2
+
+255 0
+
+Start Processing. loaded_procs = 3
+
+0000 CPU: Loaded PID: 000Arrival: 000Codesize: 002PC: 000
+
+0000 CPU: Loaded PID: 100Arrival: 000Codesize: 002PC: 000
+
+0000 CPU: OP_CPU START len: 004 ends at: 0004
+
+0004 CPU: Increase PCPID:000PC:000
+
+0004 CPU: Process is terminatedPID:000PC:001
+
+0004 CPU: ReschedulePID: 000Status: 04
+
+0014 CPU: Switchedfrom: 000to: 100
+
+0014 CPU: Loaded PID: 001Arrival: 006Codesize: 002PC: 000
+
+0014 CPU: Loaded PID: 002Arrival: 010Codesize: 010PC: 000
+
+0014 CPU: OP_IDLE START
+
+0015 CPU: ReschedulePID: 100Status: 01
+
+0025 CPU: OP_IDLE ENDS
+
+0025 CPU: Switchedfrom: 100to: 001
+
+0025 CPU: OP_CPU START len: 017 ends at: 0042
+
+0042 CPU: Increase PCPID:001PC:000
+
+0042 CPU: Process is terminatedPID:001PC:001
+
+0042 CPU: ReschedulePID: 001Status: 04
+
+0052 CPU: Switchedfrom: 001to: 002
+
+0052 CPU: OP_CPU START len: 071 ends at: 0123
+
+0123 CPU: Increase PCPID:002PC:000
+
+0123 CPU: OP_IO START len: 131 ends at: 0254
+
+0254 CPU: Increase PCPID:002PC:001
+
+0254 CPU: OP_CPU START len: 062 ends at: 0316
+
+0316 CPU: Increase PCPID:002PC:002
+
+0316 CPU: OP_IO START len: 143 ends at: 0459
+
+0459 CPU: Increase PCPID:002PC:003
+
+0459 CPU: OP_CPU START len: 003 ends at: 0462
+
+0462 CPU: Increase PCPID:002PC:004
+
+0462 CPU: Process is terminatedPID:002PC:005
+
+*** TOTAL CLOCKS: 0462 IDLE: 0305 UTIL: 33.98%
+
+PID: 100ARRIVAL: 000CODESIZE: 002
+
+255 000
+
+PID: 002ARRIVAL: 010CODESIZE: 010
+
+000 000
+
+001 000
+
+000 000
+
+001 000
+
+000 000
+
+PID: 001ARRIVAL: 006CODESIZE: 002
+
+000 000
+
+PID: 000ARRIVAL: 000CODESIZE: 002
+
+000 000
+

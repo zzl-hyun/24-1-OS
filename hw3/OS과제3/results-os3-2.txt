@@ -1,0 +1,3038 @@
+ubuntu@41983:~/hw3$ cat test3.bin | ./os3-2-dump
+load_process() start
+0 8
+52 52 51 53 50 17 53 51 
+1 7
+07 04 06 04 05 07 21 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 052: (L1PT) PF,Allocated Frame 006 -> 002,(L2PT) PF,Allocated Frame 003
+[PID 01 REF:000] Page access 007: (L1PT) PF,Allocated Frame 000 -> 004,(L2PT) PF,Allocated Frame 005
+[PID 00 REF:001] Page access 052: (L1PT) Frame 002,(L2PT) Frame 003
+[PID 01 REF:001] Page access 004: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 006
+[PID 00 REF:002] Page access 051: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 007
+[PID 01 REF:002] Page access 006: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 008
+[PID 00 REF:003] Page access 053: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 009
+[PID 01 REF:003] Page access 004: (L1PT) Frame 004,(L2PT) Frame 006
+[PID 00 REF:004] Page access 050: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 010
+[PID 01 REF:004] Page access 005: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 011
+[PID 00 REF:005] Page access 017: (L1PT) PF,Allocated Frame 002 -> 012,(L2PT) PF,Allocated Frame 013
+[PID 01 REF:005] Page access 007: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 00 REF:006] Page access 053: (L1PT) Frame 002,(L2PT) Frame 009
+[PID 01 REF:006] Page access 021: (L1PT) PF,Allocated Frame 002 -> 014,(L2PT) PF,Allocated Frame 015
+[PID 00 REF:007] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+Start() end
+** Process 000: Allocated Frames=008 PageFaults/References=007/008
+(L1PT) 002 -> 012
+(L2PT) 017 -> 013 REF=001
+(L1PT) 006 -> 002
+(L2PT) 050 -> 010 REF=001
+(L2PT) 051 -> 007 REF=002
+(L2PT) 052 -> 003 REF=002
+(L2PT) 053 -> 009 REF=002
+** Process 001: Allocated Frames=008 PageFaults/References=007/007
+(L1PT) 000 -> 004
+(L2PT) 004 -> 006 REF=002
+(L2PT) 005 -> 011 REF=001
+(L2PT) 006 -> 008 REF=001
+(L2PT) 007 -> 005 REF=002
+(L1PT) 002 -> 014
+(L2PT) 021 -> 015 REF=001
+Total: Allocated Frames=016 Page Faults/References=014/015
+ubuntu@41983:~/hw3$ cat test3-1.bin | ./os3-2-dump
+load_process() start
+0 139
+23 25 43 24 24 29 23 23 22 21 25 10 10 10 48 49 32 48 49 48 51 50 48 48 14 14 13 11 15 16 18 14 16 15 16 16 14 18 18 18 15 14 53 51 50 54 09 50 53 52 54 54 31 29 28 42 55 10 11 12 61 60 12 57 61 36 59 57 61 61 59 57 57 58 60 47 45 49 48 47 33 06 07 03 05 06 05 07 50 05 03 02 15 03 02 04 03 03 02 23 23 24 21 06 25 17 15 32 16 15 29 31 29 28 28 23 52 28 31 31 02 05 03 43 01 02 42 32 01 05 54 52 57 55 58 18 18 17 17 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 023: (L1PT) PF,Allocated Frame 002 -> 001,(L2PT) PF,Allocated Frame 002
+[PID 00 REF:001] Page access 025: (L1PT) PF,Allocated Frame 003 -> 003,(L2PT) PF,Allocated Frame 004
+[PID 00 REF:002] Page access 043: (L1PT) PF,Allocated Frame 005 -> 005,(L2PT) PF,Allocated Frame 006
+[PID 00 REF:003] Page access 024: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 007
+[PID 00 REF:004] Page access 024: (L1PT) Frame 003,(L2PT) Frame 007
+[PID 00 REF:005] Page access 029: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 008
+[PID 00 REF:006] Page access 023: (L1PT) Frame 001,(L2PT) Frame 002
+[PID 00 REF:007] Page access 023: (L1PT) Frame 001,(L2PT) Frame 002
+[PID 00 REF:008] Page access 022: (L1PT) Frame 001,(L2PT) PF,Allocated Frame 009
+[PID 00 REF:009] Page access 021: (L1PT) Frame 001,(L2PT) PF,Allocated Frame 010
+[PID 00 REF:010] Page access 025: (L1PT) Frame 003,(L2PT) Frame 004
+[PID 00 REF:011] Page access 010: (L1PT) PF,Allocated Frame 001 -> 011,(L2PT) PF,Allocated Frame 012
+[PID 00 REF:012] Page access 010: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 00 REF:013] Page access 010: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 00 REF:014] Page access 048: (L1PT) PF,Allocated Frame 006 -> 013,(L2PT) PF,Allocated Frame 014
+[PID 00 REF:015] Page access 049: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 015
+[PID 00 REF:016] Page access 032: (L1PT) PF,Allocated Frame 004 -> 016,(L2PT) PF,Allocated Frame 017
+[PID 00 REF:017] Page access 048: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:018] Page access 049: (L1PT) Frame 013,(L2PT) Frame 015
+[PID 00 REF:019] Page access 048: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:020] Page access 051: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 018
+[PID 00 REF:021] Page access 050: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 019
+[PID 00 REF:022] Page access 048: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:023] Page access 048: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:024] Page access 014: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 020
+[PID 00 REF:025] Page access 014: (L1PT) Frame 011,(L2PT) Frame 020
+[PID 00 REF:026] Page access 013: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 021
+[PID 00 REF:027] Page access 011: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 022
+[PID 00 REF:028] Page access 015: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 023
+[PID 00 REF:029] Page access 016: (L1PT) Frame 001,(L2PT) PF,Allocated Frame 024
+[PID 00 REF:030] Page access 018: (L1PT) Frame 001,(L2PT) PF,Allocated Frame 025
+[PID 00 REF:031] Page access 014: (L1PT) Frame 011,(L2PT) Frame 020
+[PID 00 REF:032] Page access 016: (L1PT) Frame 001,(L2PT) Frame 024
+[PID 00 REF:033] Page access 015: (L1PT) Frame 011,(L2PT) Frame 023
+[PID 00 REF:034] Page access 016: (L1PT) Frame 001,(L2PT) Frame 024
+[PID 00 REF:035] Page access 016: (L1PT) Frame 001,(L2PT) Frame 024
+[PID 00 REF:036] Page access 014: (L1PT) Frame 011,(L2PT) Frame 020
+[PID 00 REF:037] Page access 018: (L1PT) Frame 001,(L2PT) Frame 025
+[PID 00 REF:038] Page access 018: (L1PT) Frame 001,(L2PT) Frame 025
+[PID 00 REF:039] Page access 018: (L1PT) Frame 001,(L2PT) Frame 025
+[PID 00 REF:040] Page access 015: (L1PT) Frame 011,(L2PT) Frame 023
+[PID 00 REF:041] Page access 014: (L1PT) Frame 011,(L2PT) Frame 020
+[PID 00 REF:042] Page access 053: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 026
+[PID 00 REF:043] Page access 051: (L1PT) Frame 013,(L2PT) Frame 018
+[PID 00 REF:044] Page access 050: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:045] Page access 054: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 027
+[PID 00 REF:046] Page access 009: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 028
+[PID 00 REF:047] Page access 050: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:048] Page access 053: (L1PT) Frame 013,(L2PT) Frame 026
+[PID 00 REF:049] Page access 052: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 029
+[PID 00 REF:050] Page access 054: (L1PT) Frame 013,(L2PT) Frame 027
+[PID 00 REF:051] Page access 054: (L1PT) Frame 013,(L2PT) Frame 027
+[PID 00 REF:052] Page access 031: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 030
+[PID 00 REF:053] Page access 029: (L1PT) Frame 003,(L2PT) Frame 008
+[PID 00 REF:054] Page access 028: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 031
+[PID 00 REF:055] Page access 042: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 032
+[PID 00 REF:056] Page access 055: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 033
+[PID 00 REF:057] Page access 010: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 00 REF:058] Page access 011: (L1PT) Frame 011,(L2PT) Frame 022
+[PID 00 REF:059] Page access 012: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 034
+[PID 00 REF:060] Page access 061: (L1PT) PF,Allocated Frame 007 -> 035,(L2PT) PF,Allocated Frame 036
+[PID 00 REF:061] Page access 060: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 037
+[PID 00 REF:062] Page access 012: (L1PT) Frame 011,(L2PT) Frame 034
+[PID 00 REF:063] Page access 057: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 038
+[PID 00 REF:064] Page access 061: (L1PT) Frame 035,(L2PT) Frame 036
+[PID 00 REF:065] Page access 036: (L1PT) Frame 016,(L2PT) PF,Allocated Frame 039
+[PID 00 REF:066] Page access 059: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 040
+[PID 00 REF:067] Page access 057: (L1PT) Frame 035,(L2PT) Frame 038
+[PID 00 REF:068] Page access 061: (L1PT) Frame 035,(L2PT) Frame 036
+[PID 00 REF:069] Page access 061: (L1PT) Frame 035,(L2PT) Frame 036
+[PID 00 REF:070] Page access 059: (L1PT) Frame 035,(L2PT) Frame 040
+[PID 00 REF:071] Page access 057: (L1PT) Frame 035,(L2PT) Frame 038
+[PID 00 REF:072] Page access 057: (L1PT) Frame 035,(L2PT) Frame 038
+[PID 00 REF:073] Page access 058: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 041
+[PID 00 REF:074] Page access 060: (L1PT) Frame 035,(L2PT) Frame 037
+[PID 00 REF:075] Page access 047: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 042
+[PID 00 REF:076] Page access 045: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 043
+[PID 00 REF:077] Page access 049: (L1PT) Frame 013,(L2PT) Frame 015
+[PID 00 REF:078] Page access 048: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:079] Page access 047: (L1PT) Frame 005,(L2PT) Frame 042
+[PID 00 REF:080] Page access 033: (L1PT) Frame 016,(L2PT) PF,Allocated Frame 044
+[PID 00 REF:081] Page access 006: (L1PT) PF,Allocated Frame 000 -> 045,(L2PT) PF,Allocated Frame 046
+[PID 00 REF:082] Page access 007: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 047
+[PID 00 REF:083] Page access 003: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 048
+[PID 00 REF:084] Page access 005: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 049
+[PID 00 REF:085] Page access 006: (L1PT) Frame 045,(L2PT) Frame 046
+[PID 00 REF:086] Page access 005: (L1PT) Frame 045,(L2PT) Frame 049
+[PID 00 REF:087] Page access 007: (L1PT) Frame 045,(L2PT) Frame 047
+[PID 00 REF:088] Page access 050: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:089] Page access 005: (L1PT) Frame 045,(L2PT) Frame 049
+[PID 00 REF:090] Page access 003: (L1PT) Frame 045,(L2PT) Frame 048
+[PID 00 REF:091] Page access 002: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 050
+[PID 00 REF:092] Page access 015: (L1PT) Frame 011,(L2PT) Frame 023
+[PID 00 REF:093] Page access 003: (L1PT) Frame 045,(L2PT) Frame 048
+[PID 00 REF:094] Page access 002: (L1PT) Frame 045,(L2PT) Frame 050
+[PID 00 REF:095] Page access 004: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 051
+[PID 00 REF:096] Page access 003: (L1PT) Frame 045,(L2PT) Frame 048
+[PID 00 REF:097] Page access 003: (L1PT) Frame 045,(L2PT) Frame 048
+[PID 00 REF:098] Page access 002: (L1PT) Frame 045,(L2PT) Frame 050
+[PID 00 REF:099] Page access 023: (L1PT) Frame 001,(L2PT) Frame 002
+[PID 00 REF:100] Page access 023: (L1PT) Frame 001,(L2PT) Frame 002
+[PID 00 REF:101] Page access 024: (L1PT) Frame 003,(L2PT) Frame 007
+[PID 00 REF:102] Page access 021: (L1PT) Frame 001,(L2PT) Frame 010
+[PID 00 REF:103] Page access 006: (L1PT) Frame 045,(L2PT) Frame 046
+[PID 00 REF:104] Page access 025: (L1PT) Frame 003,(L2PT) Frame 004
+[PID 00 REF:105] Page access 017: (L1PT) Frame 001,(L2PT) PF,Allocated Frame 052
+[PID 00 REF:106] Page access 015: (L1PT) Frame 011,(L2PT) Frame 023
+[PID 00 REF:107] Page access 032: (L1PT) Frame 016,(L2PT) Frame 017
+[PID 00 REF:108] Page access 016: (L1PT) Frame 001,(L2PT) Frame 024
+[PID 00 REF:109] Page access 015: (L1PT) Frame 011,(L2PT) Frame 023
+[PID 00 REF:110] Page access 029: (L1PT) Frame 003,(L2PT) Frame 008
+[PID 00 REF:111] Page access 031: (L1PT) Frame 003,(L2PT) Frame 030
+[PID 00 REF:112] Page access 029: (L1PT) Frame 003,(L2PT) Frame 008
+[PID 00 REF:113] Page access 028: (L1PT) Frame 003,(L2PT) Frame 031
+[PID 00 REF:114] Page access 028: (L1PT) Frame 003,(L2PT) Frame 031
+[PID 00 REF:115] Page access 023: (L1PT) Frame 001,(L2PT) Frame 002
+[PID 00 REF:116] Page access 052: (L1PT) Frame 013,(L2PT) Frame 029
+[PID 00 REF:117] Page access 028: (L1PT) Frame 003,(L2PT) Frame 031
+[PID 00 REF:118] Page access 031: (L1PT) Frame 003,(L2PT) Frame 030
+[PID 00 REF:119] Page access 031: (L1PT) Frame 003,(L2PT) Frame 030
+[PID 00 REF:120] Page access 002: (L1PT) Frame 045,(L2PT) Frame 050
+[PID 00 REF:121] Page access 005: (L1PT) Frame 045,(L2PT) Frame 049
+[PID 00 REF:122] Page access 003: (L1PT) Frame 045,(L2PT) Frame 048
+[PID 00 REF:123] Page access 043: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 00 REF:124] Page access 001: (L1PT) Frame 045,(L2PT) PF,Allocated Frame 053
+[PID 00 REF:125] Page access 002: (L1PT) Frame 045,(L2PT) Frame 050
+[PID 00 REF:126] Page access 042: (L1PT) Frame 005,(L2PT) Frame 032
+[PID 00 REF:127] Page access 032: (L1PT) Frame 016,(L2PT) Frame 017
+[PID 00 REF:128] Page access 001: (L1PT) Frame 045,(L2PT) Frame 053
+[PID 00 REF:129] Page access 005: (L1PT) Frame 045,(L2PT) Frame 049
+[PID 00 REF:130] Page access 054: (L1PT) Frame 013,(L2PT) Frame 027
+[PID 00 REF:131] Page access 052: (L1PT) Frame 013,(L2PT) Frame 029
+[PID 00 REF:132] Page access 057: (L1PT) Frame 035,(L2PT) Frame 038
+[PID 00 REF:133] Page access 055: (L1PT) Frame 013,(L2PT) Frame 033
+[PID 00 REF:134] Page access 058: (L1PT) Frame 035,(L2PT) Frame 041
+[PID 00 REF:135] Page access 018: (L1PT) Frame 001,(L2PT) Frame 025
+[PID 00 REF:136] Page access 018: (L1PT) Frame 001,(L2PT) Frame 025
+[PID 00 REF:137] Page access 017: (L1PT) Frame 001,(L2PT) Frame 052
+[PID 00 REF:138] Page access 017: (L1PT) Frame 001,(L2PT) Frame 052
+Start() end
+** Process 000: Allocated Frames=054 PageFaults/References=053/139
+(L1PT) 000 -> 045
+(L2PT) 001 -> 053 REF=002
+(L2PT) 002 -> 050 REF=005
+(L2PT) 003 -> 048 REF=006
+(L2PT) 004 -> 051 REF=001
+(L2PT) 005 -> 049 REF=005
+(L2PT) 006 -> 046 REF=003
+(L2PT) 007 -> 047 REF=002
+(L1PT) 001 -> 011
+(L2PT) 009 -> 028 REF=001
+(L2PT) 010 -> 012 REF=004
+(L2PT) 011 -> 022 REF=002
+(L2PT) 012 -> 034 REF=002
+(L2PT) 013 -> 021 REF=001
+(L2PT) 014 -> 020 REF=005
+(L2PT) 015 -> 023 REF=006
+(L1PT) 002 -> 001
+(L2PT) 016 -> 024 REF=005
+(L2PT) 017 -> 052 REF=003
+(L2PT) 018 -> 025 REF=006
+(L2PT) 021 -> 010 REF=002
+(L2PT) 022 -> 009 REF=001
+(L2PT) 023 -> 002 REF=006
+(L1PT) 003 -> 003
+(L2PT) 024 -> 007 REF=003
+(L2PT) 025 -> 004 REF=003
+(L2PT) 028 -> 031 REF=004
+(L2PT) 029 -> 008 REF=004
+(L2PT) 031 -> 030 REF=004
+(L1PT) 004 -> 016
+(L2PT) 032 -> 017 REF=003
+(L2PT) 033 -> 044 REF=001
+(L2PT) 036 -> 039 REF=001
+(L1PT) 005 -> 005
+(L2PT) 042 -> 032 REF=002
+(L2PT) 043 -> 006 REF=002
+(L2PT) 045 -> 043 REF=001
+(L2PT) 047 -> 042 REF=002
+(L1PT) 006 -> 013
+(L2PT) 048 -> 014 REF=006
+(L2PT) 049 -> 015 REF=003
+(L2PT) 050 -> 019 REF=004
+(L2PT) 051 -> 018 REF=002
+(L2PT) 052 -> 029 REF=003
+(L2PT) 053 -> 026 REF=002
+(L2PT) 054 -> 027 REF=004
+(L2PT) 055 -> 033 REF=002
+(L1PT) 007 -> 035
+(L2PT) 057 -> 038 REF=005
+(L2PT) 058 -> 041 REF=002
+(L2PT) 059 -> 040 REF=002
+(L2PT) 060 -> 037 REF=002
+(L2PT) 061 -> 036 REF=004
+Total: Allocated Frames=054 Page Faults/References=053/139
+ubuntu@41983:~/hw3$ cat test3-2.bin | ./os3-2-dump
+load_process() start
+0 156
+52 52 51 53 50 17 53 51 05 49 51 46 48 47 45 46 46 44 32 31 32 34 31 32 07 09 08 14 08 10 24 25 28 25 21 26 27 20 28 22 23 25 24 25 61 28 08 08 52 55 54 08 53 52 03 06 03 06 03 39 00 08 07 07 10 08 10 06 07 09 51 48 48 40 47 49 51 49 48 51 47 00 48 50 39 06 36 38 08 59 58 60 57 57 59 59 01 02 02 03 04 01 03 03 02 01 03 04 62 58 61 61 59 60 59 62 61 58 62 60 58 57 58 59 58 57 19 16 15 19 19 18 16 16 17 17 15 17 17 17 08 20 04 06 04 07 04 22 08 05 26 05 27 25 32 32 
+1 110
+07 04 06 04 05 07 05 04 07 04 05 49 46 04 07 22 21 59 24 25 24 25 23 24 61 57 61 57 57 57 35 12 12 23 26 39 22 24 24 22 23 25 44 44 47 45 44 44 47 45 45 05 45 43 44 43 45 46 48 48 50 37 50 50 48 49 48 51 48 47 43 45 42 46 44 45 46 43 46 42 46 44 44 43 52 16 31 16 16 15 37 28 40 40 37 36 19 20 18 19 20 17 17 17 20 20 17 19 54 12 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 052: (L1PT) PF,Allocated Frame 006 -> 002,(L2PT) PF,Allocated Frame 003
+[PID 01 REF:000] Page access 007: (L1PT) PF,Allocated Frame 000 -> 004,(L2PT) PF,Allocated Frame 005
+[PID 00 REF:001] Page access 052: (L1PT) Frame 002,(L2PT) Frame 003
+[PID 01 REF:001] Page access 004: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 006
+[PID 00 REF:002] Page access 051: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 007
+[PID 01 REF:002] Page access 006: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 008
+[PID 00 REF:003] Page access 053: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 009
+[PID 01 REF:003] Page access 004: (L1PT) Frame 004,(L2PT) Frame 006
+[PID 00 REF:004] Page access 050: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 010
+[PID 01 REF:004] Page access 005: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 011
+[PID 00 REF:005] Page access 017: (L1PT) PF,Allocated Frame 002 -> 012,(L2PT) PF,Allocated Frame 013
+[PID 01 REF:005] Page access 007: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 00 REF:006] Page access 053: (L1PT) Frame 002,(L2PT) Frame 009
+[PID 01 REF:006] Page access 005: (L1PT) Frame 004,(L2PT) Frame 011
+[PID 00 REF:007] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+[PID 01 REF:007] Page access 004: (L1PT) Frame 004,(L2PT) Frame 006
+[PID 00 REF:008] Page access 005: (L1PT) PF,Allocated Frame 000 -> 014,(L2PT) PF,Allocated Frame 015
+[PID 01 REF:008] Page access 007: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 00 REF:009] Page access 049: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 016
+[PID 01 REF:009] Page access 004: (L1PT) Frame 004,(L2PT) Frame 006
+[PID 00 REF:010] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+[PID 01 REF:010] Page access 005: (L1PT) Frame 004,(L2PT) Frame 011
+[PID 00 REF:011] Page access 046: (L1PT) PF,Allocated Frame 005 -> 017,(L2PT) PF,Allocated Frame 018
+[PID 01 REF:011] Page access 049: (L1PT) PF,Allocated Frame 006 -> 019,(L2PT) PF,Allocated Frame 020
+[PID 00 REF:012] Page access 048: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 021
+[PID 01 REF:012] Page access 046: (L1PT) PF,Allocated Frame 005 -> 022,(L2PT) PF,Allocated Frame 023
+[PID 00 REF:013] Page access 047: (L1PT) Frame 017,(L2PT) PF,Allocated Frame 024
+[PID 01 REF:013] Page access 004: (L1PT) Frame 004,(L2PT) Frame 006
+[PID 00 REF:014] Page access 045: (L1PT) Frame 017,(L2PT) PF,Allocated Frame 025
+[PID 01 REF:014] Page access 007: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 00 REF:015] Page access 046: (L1PT) Frame 017,(L2PT) Frame 018
+[PID 01 REF:015] Page access 022: (L1PT) PF,Allocated Frame 002 -> 026,(L2PT) PF,Allocated Frame 027
+[PID 00 REF:016] Page access 046: (L1PT) Frame 017,(L2PT) Frame 018
+[PID 01 REF:016] Page access 021: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 028
+[PID 00 REF:017] Page access 044: (L1PT) Frame 017,(L2PT) PF,Allocated Frame 029
+[PID 01 REF:017] Page access 059: (L1PT) PF,Allocated Frame 007 -> 030,(L2PT) PF,Allocated Frame 031
+[PID 00 REF:018] Page access 032: (L1PT) PF,Allocated Frame 004 -> 032,(L2PT) PF,Allocated Frame 033
+[PID 01 REF:018] Page access 024: (L1PT) PF,Allocated Frame 003 -> 034,(L2PT) PF,Allocated Frame 035
+[PID 00 REF:019] Page access 031: (L1PT) PF,Allocated Frame 003 -> 036,(L2PT) PF,Allocated Frame 037
+[PID 01 REF:019] Page access 025: (L1PT) Frame 034,(L2PT) PF,Allocated Frame 038
+[PID 00 REF:020] Page access 032: (L1PT) Frame 032,(L2PT) Frame 033
+[PID 01 REF:020] Page access 024: (L1PT) Frame 034,(L2PT) Frame 035
+[PID 00 REF:021] Page access 034: (L1PT) Frame 032,(L2PT) PF,Allocated Frame 039
+[PID 01 REF:021] Page access 025: (L1PT) Frame 034,(L2PT) Frame 038
+[PID 00 REF:022] Page access 031: (L1PT) Frame 036,(L2PT) Frame 037
+[PID 01 REF:022] Page access 023: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 040
+[PID 00 REF:023] Page access 032: (L1PT) Frame 032,(L2PT) Frame 033
+[PID 01 REF:023] Page access 024: (L1PT) Frame 034,(L2PT) Frame 035
+[PID 00 REF:024] Page access 007: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 041
+[PID 01 REF:024] Page access 061: (L1PT) Frame 030,(L2PT) PF,Allocated Frame 042
+[PID 00 REF:025] Page access 009: (L1PT) PF,Allocated Frame 001 -> 043,(L2PT) PF,Allocated Frame 044
+[PID 01 REF:025] Page access 057: (L1PT) Frame 030,(L2PT) PF,Allocated Frame 045
+[PID 00 REF:026] Page access 008: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 046
+[PID 01 REF:026] Page access 061: (L1PT) Frame 030,(L2PT) Frame 042
+[PID 00 REF:027] Page access 014: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 047
+[PID 01 REF:027] Page access 057: (L1PT) Frame 030,(L2PT) Frame 045
+[PID 00 REF:028] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:028] Page access 057: (L1PT) Frame 030,(L2PT) Frame 045
+[PID 00 REF:029] Page access 010: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 048
+[PID 01 REF:029] Page access 057: (L1PT) Frame 030,(L2PT) Frame 045
+[PID 00 REF:030] Page access 024: (L1PT) Frame 036,(L2PT) PF,Allocated Frame 049
+[PID 01 REF:030] Page access 035: (L1PT) PF,Allocated Frame 004 -> 050,(L2PT) PF,Allocated Frame 051
+[PID 00 REF:031] Page access 025: (L1PT) Frame 036,(L2PT) PF,Allocated Frame 052
+[PID 01 REF:031] Page access 012: (L1PT) PF,Allocated Frame 001 -> 053,(L2PT) PF,Allocated Frame 054
+[PID 00 REF:032] Page access 028: (L1PT) Frame 036,(L2PT) PF,Allocated Frame 055
+[PID 01 REF:032] Page access 012: (L1PT) Frame 053,(L2PT) Frame 054
+[PID 00 REF:033] Page access 025: (L1PT) Frame 036,(L2PT) Frame 052
+[PID 01 REF:033] Page access 023: (L1PT) Frame 026,(L2PT) Frame 040
+[PID 00 REF:034] Page access 021: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 056
+[PID 01 REF:034] Page access 026: (L1PT) Frame 034,(L2PT) PF,Allocated Frame 057
+[PID 00 REF:035] Page access 026: (L1PT) Frame 036,(L2PT) PF,Allocated Frame 058
+[PID 01 REF:035] Page access 039: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 059
+[PID 00 REF:036] Page access 027: (L1PT) Frame 036,(L2PT) PF,Allocated Frame 060
+[PID 01 REF:036] Page access 022: (L1PT) Frame 026,(L2PT) Frame 027
+[PID 00 REF:037] Page access 020: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 061
+[PID 01 REF:037] Page access 024: (L1PT) Frame 034,(L2PT) Frame 035
+[PID 00 REF:038] Page access 028: (L1PT) Frame 036,(L2PT) Frame 055
+[PID 01 REF:038] Page access 024: (L1PT) Frame 034,(L2PT) Frame 035
+[PID 00 REF:039] Page access 022: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 062
+[PID 01 REF:039] Page access 022: (L1PT) Frame 026,(L2PT) Frame 027
+[PID 00 REF:040] Page access 023: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 063
+[PID 01 REF:040] Page access 023: (L1PT) Frame 026,(L2PT) Frame 040
+[PID 00 REF:041] Page access 025: (L1PT) Frame 036,(L2PT) Frame 052
+[PID 01 REF:041] Page access 025: (L1PT) Frame 034,(L2PT) Frame 038
+[PID 00 REF:042] Page access 024: (L1PT) Frame 036,(L2PT) Frame 049
+[PID 01 REF:042] Page access 044: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 064
+[PID 00 REF:043] Page access 025: (L1PT) Frame 036,(L2PT) Frame 052
+[PID 01 REF:043] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:044] Page access 061: (L1PT) PF,Allocated Frame 007 -> 065,(L2PT) PF,Allocated Frame 066
+[PID 01 REF:044] Page access 047: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 067
+[PID 00 REF:045] Page access 028: (L1PT) Frame 036,(L2PT) Frame 055
+[PID 01 REF:045] Page access 045: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 068
+[PID 00 REF:046] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:046] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:047] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:047] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:048] Page access 052: (L1PT) Frame 002,(L2PT) Frame 003
+[PID 01 REF:048] Page access 047: (L1PT) Frame 022,(L2PT) Frame 067
+[PID 00 REF:049] Page access 055: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 069
+[PID 01 REF:049] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:050] Page access 054: (L1PT) Frame 002,(L2PT) PF,Allocated Frame 070
+[PID 01 REF:050] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:051] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:051] Page access 005: (L1PT) Frame 004,(L2PT) Frame 011
+[PID 00 REF:052] Page access 053: (L1PT) Frame 002,(L2PT) Frame 009
+[PID 01 REF:052] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:053] Page access 052: (L1PT) Frame 002,(L2PT) Frame 003
+[PID 01 REF:053] Page access 043: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 071
+[PID 00 REF:054] Page access 003: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 072
+[PID 01 REF:054] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:055] Page access 006: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 073
+[PID 01 REF:055] Page access 043: (L1PT) Frame 022,(L2PT) Frame 071
+[PID 00 REF:056] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:056] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:057] Page access 006: (L1PT) Frame 014,(L2PT) Frame 073
+[PID 01 REF:057] Page access 046: (L1PT) Frame 022,(L2PT) Frame 023
+[PID 00 REF:058] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:058] Page access 048: (L1PT) Frame 019,(L2PT) PF,Allocated Frame 074
+[PID 00 REF:059] Page access 039: (L1PT) Frame 032,(L2PT) PF,Allocated Frame 075
+[PID 01 REF:059] Page access 048: (L1PT) Frame 019,(L2PT) Frame 074
+[PID 00 REF:060] Page access 000: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 076
+[PID 01 REF:060] Page access 050: (L1PT) Frame 019,(L2PT) PF,Allocated Frame 077
+[PID 00 REF:061] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:061] Page access 037: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 078
+[PID 00 REF:062] Page access 007: (L1PT) Frame 014,(L2PT) Frame 041
+[PID 01 REF:062] Page access 050: (L1PT) Frame 019,(L2PT) Frame 077
+[PID 00 REF:063] Page access 007: (L1PT) Frame 014,(L2PT) Frame 041
+[PID 01 REF:063] Page access 050: (L1PT) Frame 019,(L2PT) Frame 077
+[PID 00 REF:064] Page access 010: (L1PT) Frame 043,(L2PT) Frame 048
+[PID 01 REF:064] Page access 048: (L1PT) Frame 019,(L2PT) Frame 074
+[PID 00 REF:065] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:065] Page access 049: (L1PT) Frame 019,(L2PT) Frame 020
+[PID 00 REF:066] Page access 010: (L1PT) Frame 043,(L2PT) Frame 048
+[PID 01 REF:066] Page access 048: (L1PT) Frame 019,(L2PT) Frame 074
+[PID 00 REF:067] Page access 006: (L1PT) Frame 014,(L2PT) Frame 073
+[PID 01 REF:067] Page access 051: (L1PT) Frame 019,(L2PT) PF,Allocated Frame 079
+[PID 00 REF:068] Page access 007: (L1PT) Frame 014,(L2PT) Frame 041
+[PID 01 REF:068] Page access 048: (L1PT) Frame 019,(L2PT) Frame 074
+[PID 00 REF:069] Page access 009: (L1PT) Frame 043,(L2PT) Frame 044
+[PID 01 REF:069] Page access 047: (L1PT) Frame 022,(L2PT) Frame 067
+[PID 00 REF:070] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+[PID 01 REF:070] Page access 043: (L1PT) Frame 022,(L2PT) Frame 071
+[PID 00 REF:071] Page access 048: (L1PT) Frame 002,(L2PT) Frame 021
+[PID 01 REF:071] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:072] Page access 048: (L1PT) Frame 002,(L2PT) Frame 021
+[PID 01 REF:072] Page access 042: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 080
+[PID 00 REF:073] Page access 040: (L1PT) Frame 017,(L2PT) PF,Allocated Frame 081
+[PID 01 REF:073] Page access 046: (L1PT) Frame 022,(L2PT) Frame 023
+[PID 00 REF:074] Page access 047: (L1PT) Frame 017,(L2PT) Frame 024
+[PID 01 REF:074] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:075] Page access 049: (L1PT) Frame 002,(L2PT) Frame 016
+[PID 01 REF:075] Page access 045: (L1PT) Frame 022,(L2PT) Frame 068
+[PID 00 REF:076] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+[PID 01 REF:076] Page access 046: (L1PT) Frame 022,(L2PT) Frame 023
+[PID 00 REF:077] Page access 049: (L1PT) Frame 002,(L2PT) Frame 016
+[PID 01 REF:077] Page access 043: (L1PT) Frame 022,(L2PT) Frame 071
+[PID 00 REF:078] Page access 048: (L1PT) Frame 002,(L2PT) Frame 021
+[PID 01 REF:078] Page access 046: (L1PT) Frame 022,(L2PT) Frame 023
+[PID 00 REF:079] Page access 051: (L1PT) Frame 002,(L2PT) Frame 007
+[PID 01 REF:079] Page access 042: (L1PT) Frame 022,(L2PT) Frame 080
+[PID 00 REF:080] Page access 047: (L1PT) Frame 017,(L2PT) Frame 024
+[PID 01 REF:080] Page access 046: (L1PT) Frame 022,(L2PT) Frame 023
+[PID 00 REF:081] Page access 000: (L1PT) Frame 014,(L2PT) Frame 076
+[PID 01 REF:081] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:082] Page access 048: (L1PT) Frame 002,(L2PT) Frame 021
+[PID 01 REF:082] Page access 044: (L1PT) Frame 022,(L2PT) Frame 064
+[PID 00 REF:083] Page access 050: (L1PT) Frame 002,(L2PT) Frame 010
+[PID 01 REF:083] Page access 043: (L1PT) Frame 022,(L2PT) Frame 071
+[PID 00 REF:084] Page access 039: (L1PT) Frame 032,(L2PT) Frame 075
+[PID 01 REF:084] Page access 052: (L1PT) Frame 019,(L2PT) PF,Allocated Frame 082
+[PID 00 REF:085] Page access 006: (L1PT) Frame 014,(L2PT) Frame 073
+[PID 01 REF:085] Page access 016: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 083
+[PID 00 REF:086] Page access 036: (L1PT) Frame 032,(L2PT) PF,Allocated Frame 084
+[PID 01 REF:086] Page access 031: (L1PT) Frame 034,(L2PT) PF,Allocated Frame 085
+[PID 00 REF:087] Page access 038: (L1PT) Frame 032,(L2PT) PF,Allocated Frame 086
+[PID 01 REF:087] Page access 016: (L1PT) Frame 026,(L2PT) Frame 083
+[PID 00 REF:088] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 01 REF:088] Page access 016: (L1PT) Frame 026,(L2PT) Frame 083
+[PID 00 REF:089] Page access 059: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 087
+[PID 01 REF:089] Page access 015: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 088
+[PID 00 REF:090] Page access 058: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 089
+[PID 01 REF:090] Page access 037: (L1PT) Frame 050,(L2PT) Frame 078
+[PID 00 REF:091] Page access 060: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 090
+[PID 01 REF:091] Page access 028: (L1PT) Frame 034,(L2PT) PF,Allocated Frame 091
+[PID 00 REF:092] Page access 057: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 092
+[PID 01 REF:092] Page access 040: (L1PT) Frame 022,(L2PT) PF,Allocated Frame 093
+[PID 00 REF:093] Page access 057: (L1PT) Frame 065,(L2PT) Frame 092
+[PID 01 REF:093] Page access 040: (L1PT) Frame 022,(L2PT) Frame 093
+[PID 00 REF:094] Page access 059: (L1PT) Frame 065,(L2PT) Frame 087
+[PID 01 REF:094] Page access 037: (L1PT) Frame 050,(L2PT) Frame 078
+[PID 00 REF:095] Page access 059: (L1PT) Frame 065,(L2PT) Frame 087
+[PID 01 REF:095] Page access 036: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 094
+[PID 00 REF:096] Page access 001: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 095
+[PID 01 REF:096] Page access 019: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 096
+[PID 00 REF:097] Page access 002: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 097
+[PID 01 REF:097] Page access 020: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 098
+[PID 00 REF:098] Page access 002: (L1PT) Frame 014,(L2PT) Frame 097
+[PID 01 REF:098] Page access 018: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 099
+[PID 00 REF:099] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:099] Page access 019: (L1PT) Frame 026,(L2PT) Frame 096
+[PID 00 REF:100] Page access 004: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 100
+[PID 01 REF:100] Page access 020: (L1PT) Frame 026,(L2PT) Frame 098
+[PID 00 REF:101] Page access 001: (L1PT) Frame 014,(L2PT) Frame 095
+[PID 01 REF:101] Page access 017: (L1PT) Frame 026,(L2PT) PF,Allocated Frame 101
+[PID 00 REF:102] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:102] Page access 017: (L1PT) Frame 026,(L2PT) Frame 101
+[PID 00 REF:103] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:103] Page access 017: (L1PT) Frame 026,(L2PT) Frame 101
+[PID 00 REF:104] Page access 002: (L1PT) Frame 014,(L2PT) Frame 097
+[PID 01 REF:104] Page access 020: (L1PT) Frame 026,(L2PT) Frame 098
+[PID 00 REF:105] Page access 001: (L1PT) Frame 014,(L2PT) Frame 095
+[PID 01 REF:105] Page access 020: (L1PT) Frame 026,(L2PT) Frame 098
+[PID 00 REF:106] Page access 003: (L1PT) Frame 014,(L2PT) Frame 072
+[PID 01 REF:106] Page access 017: (L1PT) Frame 026,(L2PT) Frame 101
+[PID 00 REF:107] Page access 004: (L1PT) Frame 014,(L2PT) Frame 100
+[PID 01 REF:107] Page access 019: (L1PT) Frame 026,(L2PT) Frame 096
+[PID 00 REF:108] Page access 062: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 102
+[PID 01 REF:108] Page access 054: (L1PT) Frame 019,(L2PT) PF,Allocated Frame 103
+[PID 00 REF:109] Page access 058: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 01 REF:109] Page access 012: (L1PT) Frame 053,(L2PT) Frame 054
+[PID 00 REF:110] Page access 061: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:111] Page access 061: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:112] Page access 059: (L1PT) Frame 065,(L2PT) Frame 087
+[PID 00 REF:113] Page access 060: (L1PT) Frame 065,(L2PT) Frame 090
+[PID 00 REF:114] Page access 059: (L1PT) Frame 065,(L2PT) Frame 087
+[PID 00 REF:115] Page access 062: (L1PT) Frame 065,(L2PT) Frame 102
+[PID 00 REF:116] Page access 061: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:117] Page access 058: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:118] Page access 062: (L1PT) Frame 065,(L2PT) Frame 102
+[PID 00 REF:119] Page access 060: (L1PT) Frame 065,(L2PT) Frame 090
+[PID 00 REF:120] Page access 058: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:121] Page access 057: (L1PT) Frame 065,(L2PT) Frame 092
+[PID 00 REF:122] Page access 058: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:123] Page access 059: (L1PT) Frame 065,(L2PT) Frame 087
+[PID 00 REF:124] Page access 058: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:125] Page access 057: (L1PT) Frame 065,(L2PT) Frame 092
+[PID 00 REF:126] Page access 019: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 104
+[PID 00 REF:127] Page access 016: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 105
+[PID 00 REF:128] Page access 015: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 106
+[PID 00 REF:129] Page access 019: (L1PT) Frame 012,(L2PT) Frame 104
+[PID 00 REF:130] Page access 019: (L1PT) Frame 012,(L2PT) Frame 104
+[PID 00 REF:131] Page access 018: (L1PT) Frame 012,(L2PT) PF,Allocated Frame 107
+[PID 00 REF:132] Page access 016: (L1PT) Frame 012,(L2PT) Frame 105
+[PID 00 REF:133] Page access 016: (L1PT) Frame 012,(L2PT) Frame 105
+[PID 00 REF:134] Page access 017: (L1PT) Frame 012,(L2PT) Frame 013
+[PID 00 REF:135] Page access 017: (L1PT) Frame 012,(L2PT) Frame 013
+[PID 00 REF:136] Page access 015: (L1PT) Frame 043,(L2PT) Frame 106
+[PID 00 REF:137] Page access 017: (L1PT) Frame 012,(L2PT) Frame 013
+[PID 00 REF:138] Page access 017: (L1PT) Frame 012,(L2PT) Frame 013
+[PID 00 REF:139] Page access 017: (L1PT) Frame 012,(L2PT) Frame 013
+[PID 00 REF:140] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 00 REF:141] Page access 020: (L1PT) Frame 012,(L2PT) Frame 061
+[PID 00 REF:142] Page access 004: (L1PT) Frame 014,(L2PT) Frame 100
+[PID 00 REF:143] Page access 006: (L1PT) Frame 014,(L2PT) Frame 073
+[PID 00 REF:144] Page access 004: (L1PT) Frame 014,(L2PT) Frame 100
+[PID 00 REF:145] Page access 007: (L1PT) Frame 014,(L2PT) Frame 041
+[PID 00 REF:146] Page access 004: (L1PT) Frame 014,(L2PT) Frame 100
+[PID 00 REF:147] Page access 022: (L1PT) Frame 012,(L2PT) Frame 062
+[PID 00 REF:148] Page access 008: (L1PT) Frame 043,(L2PT) Frame 046
+[PID 00 REF:149] Page access 005: (L1PT) Frame 014,(L2PT) Frame 015
+[PID 00 REF:150] Page access 026: (L1PT) Frame 036,(L2PT) Frame 058
+[PID 00 REF:151] Page access 005: (L1PT) Frame 014,(L2PT) Frame 015
+[PID 00 REF:152] Page access 027: (L1PT) Frame 036,(L2PT) Frame 060
+[PID 00 REF:153] Page access 025: (L1PT) Frame 036,(L2PT) Frame 052
+[PID 00 REF:154] Page access 032: (L1PT) Frame 032,(L2PT) Frame 033
+[PID 00 REF:155] Page access 032: (L1PT) Frame 032,(L2PT) Frame 033
+Start() end
+** Process 000: Allocated Frames=060 PageFaults/References=059/156
+(L1PT) 000 -> 014
+(L2PT) 000 -> 076 REF=002
+(L2PT) 001 -> 095 REF=003
+(L2PT) 002 -> 097 REF=003
+(L2PT) 003 -> 072 REF=007
+(L2PT) 004 -> 100 REF=005
+(L2PT) 005 -> 015 REF=003
+(L2PT) 006 -> 073 REF=005
+(L2PT) 007 -> 041 REF=005
+(L1PT) 001 -> 043
+(L2PT) 008 -> 046 REF=010
+(L2PT) 009 -> 044 REF=002
+(L2PT) 010 -> 048 REF=003
+(L2PT) 014 -> 047 REF=001
+(L2PT) 015 -> 106 REF=002
+(L1PT) 002 -> 012
+(L2PT) 016 -> 105 REF=003
+(L2PT) 017 -> 013 REF=006
+(L2PT) 018 -> 107 REF=001
+(L2PT) 019 -> 104 REF=003
+(L2PT) 020 -> 061 REF=002
+(L2PT) 021 -> 056 REF=001
+(L2PT) 022 -> 062 REF=002
+(L2PT) 023 -> 063 REF=001
+(L1PT) 003 -> 036
+(L2PT) 024 -> 049 REF=002
+(L2PT) 025 -> 052 REF=005
+(L2PT) 026 -> 058 REF=002
+(L2PT) 027 -> 060 REF=002
+(L2PT) 028 -> 055 REF=003
+(L2PT) 031 -> 037 REF=002
+(L1PT) 004 -> 032
+(L2PT) 032 -> 033 REF=005
+(L2PT) 034 -> 039 REF=001
+(L2PT) 036 -> 084 REF=001
+(L2PT) 038 -> 086 REF=001
+(L2PT) 039 -> 075 REF=002
+(L1PT) 005 -> 017
+(L2PT) 040 -> 081 REF=001
+(L2PT) 044 -> 029 REF=001
+(L2PT) 045 -> 025 REF=001
+(L2PT) 046 -> 018 REF=003
+(L2PT) 047 -> 024 REF=003
+(L1PT) 006 -> 002
+(L2PT) 048 -> 021 REF=005
+(L2PT) 049 -> 016 REF=003
+(L2PT) 050 -> 010 REF=002
+(L2PT) 051 -> 007 REF=006
+(L2PT) 052 -> 003 REF=004
+(L2PT) 053 -> 009 REF=003
+(L2PT) 054 -> 070 REF=001
+(L2PT) 055 -> 069 REF=001
+(L1PT) 007 -> 065
+(L2PT) 057 -> 092 REF=004
+(L2PT) 058 -> 089 REF=006
+(L2PT) 059 -> 087 REF=006
+(L2PT) 060 -> 090 REF=003
+(L2PT) 061 -> 066 REF=004
+(L2PT) 062 -> 102 REF=003
+** Process 001: Allocated Frames=048 PageFaults/References=047/110
+(L1PT) 000 -> 004
+(L2PT) 004 -> 006 REF=005
+(L2PT) 005 -> 011 REF=004
+(L2PT) 006 -> 008 REF=001
+(L2PT) 007 -> 005 REF=004
+(L1PT) 001 -> 053
+(L2PT) 012 -> 054 REF=003
+(L2PT) 015 -> 088 REF=001
+(L1PT) 002 -> 026
+(L2PT) 016 -> 083 REF=003
+(L2PT) 017 -> 101 REF=004
+(L2PT) 018 -> 099 REF=001
+(L2PT) 019 -> 096 REF=003
+(L2PT) 020 -> 098 REF=004
+(L2PT) 021 -> 028 REF=001
+(L2PT) 022 -> 027 REF=003
+(L2PT) 023 -> 040 REF=003
+(L1PT) 003 -> 034
+(L2PT) 024 -> 035 REF=005
+(L2PT) 025 -> 038 REF=003
+(L2PT) 026 -> 057 REF=001
+(L2PT) 028 -> 091 REF=001
+(L2PT) 031 -> 085 REF=001
+(L1PT) 004 -> 050
+(L2PT) 035 -> 051 REF=001
+(L2PT) 036 -> 094 REF=001
+(L2PT) 037 -> 078 REF=003
+(L2PT) 039 -> 059 REF=001
+(L1PT) 005 -> 022
+(L2PT) 040 -> 093 REF=002
+(L2PT) 042 -> 080 REF=002
+(L2PT) 043 -> 071 REF=005
+(L2PT) 044 -> 064 REF=008
+(L2PT) 045 -> 068 REF=007
+(L2PT) 046 -> 023 REF=006
+(L2PT) 047 -> 067 REF=003
+(L1PT) 006 -> 019
+(L2PT) 048 -> 074 REF=005
+(L2PT) 049 -> 020 REF=002
+(L2PT) 050 -> 077 REF=003
+(L2PT) 051 -> 079 REF=001
+(L2PT) 052 -> 082 REF=001
+(L2PT) 054 -> 103 REF=001
+(L1PT) 007 -> 030
+(L2PT) 057 -> 045 REF=004
+(L2PT) 059 -> 031 REF=001
+(L2PT) 061 -> 042 REF=002
+Total: Allocated Frames=108 Page Faults/References=106/266
+ubuntu@41983:~/hw3$ cat test3-3.bin | ./os3-2-dump
+load_process() start
+0 210
+03 05 04 04 03 21 04 02 33 36 52 34 53 57 57 54 54 53 53 54 53 23 51 55 34 34 34 37 57 33 47 48 50 46 49 12 41 41 41 45 45 45 41 41 44 44 44 45 11 11 13 09 11 11 56 42 55 57 56 56 54 56 57 54 35 58 08 58 54 55 20 18 38 38 37 38 38 36 36 37 35 34 35 37 26 24 25 23 25 24 37 35 37 35 38 35 38 60 39 31 39 38 38 38 38 12 11 13 12 11 12 14 13 13 17 14 13 15 14 16 50 33 17 15 17 15 18 16 18 16 15 18 08 16 16 21 21 20 19 20 23 23 22 03 02 05 03 02 05 05 04 05 05 02 06 08 09 08 10 39 08 07 10 07 06 12 13 13 63 62 32 31 33 30 31 33 33 33 29 32 33 30 40 38 39 36 37 37 39 38 40 36 40 31 36 51 43 43 43 25 43 42 41 43 42 41 45 45 42 42 
+1 210
+06 03 05 02 03 03 05 06 02 11 42 11 10 13 11 38 15 12 11 15 58 44 15 14 14 14 12 63 13 16 14 13 17 14 15 13 15 15 13 15 16 14 38 42 39 33 36 33 35 37 37 34 33 34 36 37 21 18 20 55 22 20 22 22 21 21 18 22 20 20 51 50 51 48 52 06 05 06 06 06 03 07 04 03 04 05 31 04 07 03 63 62 60 60 61 60 61 60 62 27 24 25 25 14 27 25 23 24 48 51 49 50 18 17 15 14 16 18 16 15 34 33 08 25 32 35 31 34 34 32 33 32 42 27 45 45 29 30 31 27 31 29 30 30 45 28 29 25 29 26 51 29 43 25 26 29 38 41 39 41 38 41 15 40 38 44 42 42 54 45 45 42 45 45 42 44 43 44 41 41 55 55 35 36 34 37 35 40 43 41 40 41 60 09 61 58 60 06 59 60 13 13 14 10 50 47 50 47 48 46 
+2 140
+63 61 44 63 62 62 03 62 60 60 59 62 60 63 10 62 60 62 06 09 05 08 07 09 08 11 11 12 08 08 08 16 12 20 50 50 53 47 52 54 25 28 25 28 27 27 38 35 50 51 52 48 52 48 52 49 11 11 09 10 02 02 29 45 47 44 61 06 46 04 08 20 30 31 31 31 29 31 27 29 29 27 28 27 30 34 33 31 34 32 63 17 18 19 19 19 18 20 21 20 21 21 20 16 24 41 43 43 30 19 14 12 11 13 12 12 13 16 17 16 33 33 35 31 31 34 18 32 31 35 25 24 25 25 22 23 23 25 25 26 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 003: (L1PT) PF,Allocated Frame 000 -> 003,(L2PT) PF,Allocated Frame 004
+[PID 01 REF:000] Page access 006: (L1PT) PF,Allocated Frame 000 -> 005,(L2PT) PF,Allocated Frame 006
+[PID 02 REF:000] Page access 063: (L1PT) PF,Allocated Frame 007 -> 007,(L2PT) PF,Allocated Frame 008
+[PID 00 REF:001] Page access 005: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 009
+[PID 01 REF:001] Page access 003: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 010
+[PID 02 REF:001] Page access 061: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 011
+[PID 00 REF:002] Page access 004: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 012
+[PID 01 REF:002] Page access 005: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 013
+[PID 02 REF:002] Page access 044: (L1PT) PF,Allocated Frame 005 -> 014,(L2PT) PF,Allocated Frame 015
+[PID 00 REF:003] Page access 004: (L1PT) Frame 003,(L2PT) Frame 012
+[PID 01 REF:003] Page access 002: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 016
+[PID 02 REF:003] Page access 063: (L1PT) Frame 007,(L2PT) Frame 008
+[PID 00 REF:004] Page access 003: (L1PT) Frame 003,(L2PT) Frame 004
+[PID 01 REF:004] Page access 003: (L1PT) Frame 005,(L2PT) Frame 010
+[PID 02 REF:004] Page access 062: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 017
+[PID 00 REF:005] Page access 021: (L1PT) PF,Allocated Frame 002 -> 018,(L2PT) PF,Allocated Frame 019
+[PID 01 REF:005] Page access 003: (L1PT) Frame 005,(L2PT) Frame 010
+[PID 02 REF:005] Page access 062: (L1PT) Frame 007,(L2PT) Frame 017
+[PID 00 REF:006] Page access 004: (L1PT) Frame 003,(L2PT) Frame 012
+[PID 01 REF:006] Page access 005: (L1PT) Frame 005,(L2PT) Frame 013
+[PID 02 REF:006] Page access 003: (L1PT) PF,Allocated Frame 000 -> 020,(L2PT) PF,Allocated Frame 021
+[PID 00 REF:007] Page access 002: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 022
+[PID 01 REF:007] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 02 REF:007] Page access 062: (L1PT) Frame 007,(L2PT) Frame 017
+[PID 00 REF:008] Page access 033: (L1PT) PF,Allocated Frame 004 -> 023,(L2PT) PF,Allocated Frame 024
+[PID 01 REF:008] Page access 002: (L1PT) Frame 005,(L2PT) Frame 016
+[PID 02 REF:008] Page access 060: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 025
+[PID 00 REF:009] Page access 036: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 026
+[PID 01 REF:009] Page access 011: (L1PT) PF,Allocated Frame 001 -> 027,(L2PT) PF,Allocated Frame 028
+[PID 02 REF:009] Page access 060: (L1PT) Frame 007,(L2PT) Frame 025
+[PID 00 REF:010] Page access 052: (L1PT) PF,Allocated Frame 006 -> 029,(L2PT) PF,Allocated Frame 030
+[PID 01 REF:010] Page access 042: (L1PT) PF,Allocated Frame 005 -> 031,(L2PT) PF,Allocated Frame 032
+[PID 02 REF:010] Page access 059: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 033
+[PID 00 REF:011] Page access 034: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 034
+[PID 01 REF:011] Page access 011: (L1PT) Frame 027,(L2PT) Frame 028
+[PID 02 REF:011] Page access 062: (L1PT) Frame 007,(L2PT) Frame 017
+[PID 00 REF:012] Page access 053: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 035
+[PID 01 REF:012] Page access 010: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 036
+[PID 02 REF:012] Page access 060: (L1PT) Frame 007,(L2PT) Frame 025
+[PID 00 REF:013] Page access 057: (L1PT) PF,Allocated Frame 007 -> 037,(L2PT) PF,Allocated Frame 038
+[PID 01 REF:013] Page access 013: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 039
+[PID 02 REF:013] Page access 063: (L1PT) Frame 007,(L2PT) Frame 008
+[PID 00 REF:014] Page access 057: (L1PT) Frame 037,(L2PT) Frame 038
+[PID 01 REF:014] Page access 011: (L1PT) Frame 027,(L2PT) Frame 028
+[PID 02 REF:014] Page access 010: (L1PT) PF,Allocated Frame 001 -> 040,(L2PT) PF,Allocated Frame 041
+[PID 00 REF:015] Page access 054: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 042
+[PID 01 REF:015] Page access 038: (L1PT) PF,Allocated Frame 004 -> 043,(L2PT) PF,Allocated Frame 044
+[PID 02 REF:015] Page access 062: (L1PT) Frame 007,(L2PT) Frame 017
+[PID 00 REF:016] Page access 054: (L1PT) Frame 029,(L2PT) Frame 042
+[PID 01 REF:016] Page access 015: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 045
+[PID 02 REF:016] Page access 060: (L1PT) Frame 007,(L2PT) Frame 025
+[PID 00 REF:017] Page access 053: (L1PT) Frame 029,(L2PT) Frame 035
+[PID 01 REF:017] Page access 012: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 046
+[PID 02 REF:017] Page access 062: (L1PT) Frame 007,(L2PT) Frame 017
+[PID 00 REF:018] Page access 053: (L1PT) Frame 029,(L2PT) Frame 035
+[PID 01 REF:018] Page access 011: (L1PT) Frame 027,(L2PT) Frame 028
+[PID 02 REF:018] Page access 006: (L1PT) Frame 020,(L2PT) PF,Allocated Frame 047
+[PID 00 REF:019] Page access 054: (L1PT) Frame 029,(L2PT) Frame 042
+[PID 01 REF:019] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:019] Page access 009: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 048
+[PID 00 REF:020] Page access 053: (L1PT) Frame 029,(L2PT) Frame 035
+[PID 01 REF:020] Page access 058: (L1PT) PF,Allocated Frame 007 -> 049,(L2PT) PF,Allocated Frame 050
+[PID 02 REF:020] Page access 005: (L1PT) Frame 020,(L2PT) PF,Allocated Frame 051
+[PID 00 REF:021] Page access 023: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 052
+[PID 01 REF:021] Page access 044: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 053
+[PID 02 REF:021] Page access 008: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 054
+[PID 00 REF:022] Page access 051: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 055
+[PID 01 REF:022] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:022] Page access 007: (L1PT) Frame 020,(L2PT) PF,Allocated Frame 056
+[PID 00 REF:023] Page access 055: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 057
+[PID 01 REF:023] Page access 014: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 058
+[PID 02 REF:023] Page access 009: (L1PT) Frame 040,(L2PT) Frame 048
+[PID 00 REF:024] Page access 034: (L1PT) Frame 023,(L2PT) Frame 034
+[PID 01 REF:024] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:024] Page access 008: (L1PT) Frame 040,(L2PT) Frame 054
+[PID 00 REF:025] Page access 034: (L1PT) Frame 023,(L2PT) Frame 034
+[PID 01 REF:025] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:025] Page access 011: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 059
+[PID 00 REF:026] Page access 034: (L1PT) Frame 023,(L2PT) Frame 034
+[PID 01 REF:026] Page access 012: (L1PT) Frame 027,(L2PT) Frame 046
+[PID 02 REF:026] Page access 011: (L1PT) Frame 040,(L2PT) Frame 059
+[PID 00 REF:027] Page access 037: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 060
+[PID 01 REF:027] Page access 063: (L1PT) Frame 049,(L2PT) PF,Allocated Frame 061
+[PID 02 REF:027] Page access 012: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 062
+[PID 00 REF:028] Page access 057: (L1PT) Frame 037,(L2PT) Frame 038
+[PID 01 REF:028] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 02 REF:028] Page access 008: (L1PT) Frame 040,(L2PT) Frame 054
+[PID 00 REF:029] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:029] Page access 016: (L1PT) PF,Allocated Frame 002 -> 063,(L2PT) PF,Allocated Frame 064
+[PID 02 REF:029] Page access 008: (L1PT) Frame 040,(L2PT) Frame 054
+[PID 00 REF:030] Page access 047: (L1PT) PF,Allocated Frame 005 -> 065,(L2PT) PF,Allocated Frame 066
+[PID 01 REF:030] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:030] Page access 008: (L1PT) Frame 040,(L2PT) Frame 054
+[PID 00 REF:031] Page access 048: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 067
+[PID 01 REF:031] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 02 REF:031] Page access 016: (L1PT) PF,Allocated Frame 002 -> 068,(L2PT) PF,Allocated Frame 069
+[PID 00 REF:032] Page access 050: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 070
+[PID 01 REF:032] Page access 017: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 071
+[PID 02 REF:032] Page access 012: (L1PT) Frame 040,(L2PT) Frame 062
+[PID 00 REF:033] Page access 046: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 072
+[PID 01 REF:033] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:033] Page access 020: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 073
+[PID 00 REF:034] Page access 049: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 074
+[PID 01 REF:034] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:034] Page access 050: (L1PT) PF,Allocated Frame 006 -> 075,(L2PT) PF,Allocated Frame 076
+[PID 00 REF:035] Page access 012: (L1PT) PF,Allocated Frame 001 -> 077,(L2PT) PF,Allocated Frame 078
+[PID 01 REF:035] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 02 REF:035] Page access 050: (L1PT) Frame 075,(L2PT) Frame 076
+[PID 00 REF:036] Page access 041: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 079
+[PID 01 REF:036] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:036] Page access 053: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 080
+[PID 00 REF:037] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:037] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:037] Page access 047: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 081
+[PID 00 REF:038] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:038] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 02 REF:038] Page access 052: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 082
+[PID 00 REF:039] Page access 045: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 083
+[PID 01 REF:039] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:039] Page access 054: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 084
+[PID 00 REF:040] Page access 045: (L1PT) Frame 065,(L2PT) Frame 083
+[PID 01 REF:040] Page access 016: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 02 REF:040] Page access 025: (L1PT) PF,Allocated Frame 003 -> 085,(L2PT) PF,Allocated Frame 086
+[PID 00 REF:041] Page access 045: (L1PT) Frame 065,(L2PT) Frame 083
+[PID 01 REF:041] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:041] Page access 028: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 087
+[PID 00 REF:042] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:042] Page access 038: (L1PT) Frame 043,(L2PT) Frame 044
+[PID 02 REF:042] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:043] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:043] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 02 REF:043] Page access 028: (L1PT) Frame 085,(L2PT) Frame 087
+[PID 00 REF:044] Page access 044: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 088
+[PID 01 REF:044] Page access 039: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 089
+[PID 02 REF:044] Page access 027: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 090
+[PID 00 REF:045] Page access 044: (L1PT) Frame 065,(L2PT) Frame 088
+[PID 01 REF:045] Page access 033: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 091
+[PID 02 REF:045] Page access 027: (L1PT) Frame 085,(L2PT) Frame 090
+[PID 00 REF:046] Page access 044: (L1PT) Frame 065,(L2PT) Frame 088
+[PID 01 REF:046] Page access 036: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 092
+[PID 02 REF:046] Page access 038: (L1PT) PF,Allocated Frame 004 -> 093,(L2PT) PF,Allocated Frame 094
+[PID 00 REF:047] Page access 045: (L1PT) Frame 065,(L2PT) Frame 083
+[PID 01 REF:047] Page access 033: (L1PT) Frame 043,(L2PT) Frame 091
+[PID 02 REF:047] Page access 035: (L1PT) Frame 093,(L2PT) PF,Allocated Frame 095
+[PID 00 REF:048] Page access 011: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 096
+[PID 01 REF:048] Page access 035: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 097
+[PID 02 REF:048] Page access 050: (L1PT) Frame 075,(L2PT) Frame 076
+[PID 00 REF:049] Page access 011: (L1PT) Frame 077,(L2PT) Frame 096
+[PID 01 REF:049] Page access 037: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 098
+[PID 02 REF:049] Page access 051: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 099
+[PID 00 REF:050] Page access 013: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 100
+[PID 01 REF:050] Page access 037: (L1PT) Frame 043,(L2PT) Frame 098
+[PID 02 REF:050] Page access 052: (L1PT) Frame 075,(L2PT) Frame 082
+[PID 00 REF:051] Page access 009: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 101
+[PID 01 REF:051] Page access 034: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 102
+[PID 02 REF:051] Page access 048: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 103
+[PID 00 REF:052] Page access 011: (L1PT) Frame 077,(L2PT) Frame 096
+[PID 01 REF:052] Page access 033: (L1PT) Frame 043,(L2PT) Frame 091
+[PID 02 REF:052] Page access 052: (L1PT) Frame 075,(L2PT) Frame 082
+[PID 00 REF:053] Page access 011: (L1PT) Frame 077,(L2PT) Frame 096
+[PID 01 REF:053] Page access 034: (L1PT) Frame 043,(L2PT) Frame 102
+[PID 02 REF:053] Page access 048: (L1PT) Frame 075,(L2PT) Frame 103
+[PID 00 REF:054] Page access 056: (L1PT) Frame 037,(L2PT) PF,Allocated Frame 104
+[PID 01 REF:054] Page access 036: (L1PT) Frame 043,(L2PT) Frame 092
+[PID 02 REF:054] Page access 052: (L1PT) Frame 075,(L2PT) Frame 082
+[PID 00 REF:055] Page access 042: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 105
+[PID 01 REF:055] Page access 037: (L1PT) Frame 043,(L2PT) Frame 098
+[PID 02 REF:055] Page access 049: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 106
+[PID 00 REF:056] Page access 055: (L1PT) Frame 029,(L2PT) Frame 057
+[PID 01 REF:056] Page access 021: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 107
+[PID 02 REF:056] Page access 011: (L1PT) Frame 040,(L2PT) Frame 059
+[PID 00 REF:057] Page access 057: (L1PT) Frame 037,(L2PT) Frame 038
+[PID 01 REF:057] Page access 018: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 108
+[PID 02 REF:057] Page access 011: (L1PT) Frame 040,(L2PT) Frame 059
+[PID 00 REF:058] Page access 056: (L1PT) Frame 037,(L2PT) Frame 104
+[PID 01 REF:058] Page access 020: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 109
+[PID 02 REF:058] Page access 009: (L1PT) Frame 040,(L2PT) Frame 048
+[PID 00 REF:059] Page access 056: (L1PT) Frame 037,(L2PT) Frame 104
+[PID 01 REF:059] Page access 055: (L1PT) PF,Allocated Frame 006 -> 110,(L2PT) PF,Allocated Frame 111
+[PID 02 REF:059] Page access 010: (L1PT) Frame 040,(L2PT) Frame 041
+[PID 00 REF:060] Page access 054: (L1PT) Frame 029,(L2PT) Frame 042
+[PID 01 REF:060] Page access 022: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 112
+[PID 02 REF:060] Page access 002: (L1PT) Frame 020,(L2PT) PF,Allocated Frame 113
+[PID 00 REF:061] Page access 056: (L1PT) Frame 037,(L2PT) Frame 104
+[PID 01 REF:061] Page access 020: (L1PT) Frame 063,(L2PT) Frame 109
+[PID 02 REF:061] Page access 002: (L1PT) Frame 020,(L2PT) Frame 113
+[PID 00 REF:062] Page access 057: (L1PT) Frame 037,(L2PT) Frame 038
+[PID 01 REF:062] Page access 022: (L1PT) Frame 063,(L2PT) Frame 112
+[PID 02 REF:062] Page access 029: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 114
+[PID 00 REF:063] Page access 054: (L1PT) Frame 029,(L2PT) Frame 042
+[PID 01 REF:063] Page access 022: (L1PT) Frame 063,(L2PT) Frame 112
+[PID 02 REF:063] Page access 045: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 115
+[PID 00 REF:064] Page access 035: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 116
+[PID 01 REF:064] Page access 021: (L1PT) Frame 063,(L2PT) Frame 107
+[PID 02 REF:064] Page access 047: (L1PT) Frame 014,(L2PT) Frame 081
+[PID 00 REF:065] Page access 058: (L1PT) Frame 037,(L2PT) PF,Allocated Frame 117
+[PID 01 REF:065] Page access 021: (L1PT) Frame 063,(L2PT) Frame 107
+[PID 02 REF:065] Page access 044: (L1PT) Frame 014,(L2PT) Frame 015
+[PID 00 REF:066] Page access 008: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 118
+[PID 01 REF:066] Page access 018: (L1PT) Frame 063,(L2PT) Frame 108
+[PID 02 REF:066] Page access 061: (L1PT) Frame 007,(L2PT) Frame 011
+[PID 00 REF:067] Page access 058: (L1PT) Frame 037,(L2PT) Frame 117
+[PID 01 REF:067] Page access 022: (L1PT) Frame 063,(L2PT) Frame 112
+[PID 02 REF:067] Page access 006: (L1PT) Frame 020,(L2PT) Frame 047
+[PID 00 REF:068] Page access 054: (L1PT) Frame 029,(L2PT) Frame 042
+[PID 01 REF:068] Page access 020: (L1PT) Frame 063,(L2PT) Frame 109
+[PID 02 REF:068] Page access 046: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 119
+[PID 00 REF:069] Page access 055: (L1PT) Frame 029,(L2PT) Frame 057
+[PID 01 REF:069] Page access 020: (L1PT) Frame 063,(L2PT) Frame 109
+[PID 02 REF:069] Page access 004: (L1PT) Frame 020,(L2PT) PF,Allocated Frame 120
+[PID 00 REF:070] Page access 020: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 121
+[PID 01 REF:070] Page access 051: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 122
+[PID 02 REF:070] Page access 008: (L1PT) Frame 040,(L2PT) Frame 054
+[PID 00 REF:071] Page access 018: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 123
+[PID 01 REF:071] Page access 050: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 124
+[PID 02 REF:071] Page access 020: (L1PT) Frame 068,(L2PT) Frame 073
+[PID 00 REF:072] Page access 038: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 125
+[PID 01 REF:072] Page access 051: (L1PT) Frame 110,(L2PT) Frame 122
+[PID 02 REF:072] Page access 030: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 126
+[PID 00 REF:073] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:073] Page access 048: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 127
+[PID 02 REF:073] Page access 031: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 128
+[PID 00 REF:074] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:074] Page access 052: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 129
+[PID 02 REF:074] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:075] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:075] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 02 REF:075] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:076] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:076] Page access 005: (L1PT) Frame 005,(L2PT) Frame 013
+[PID 02 REF:076] Page access 029: (L1PT) Frame 085,(L2PT) Frame 114
+[PID 00 REF:077] Page access 036: (L1PT) Frame 023,(L2PT) Frame 026
+[PID 01 REF:077] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 02 REF:077] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:078] Page access 036: (L1PT) Frame 023,(L2PT) Frame 026
+[PID 01 REF:078] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 02 REF:078] Page access 027: (L1PT) Frame 085,(L2PT) Frame 090
+[PID 00 REF:079] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:079] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 02 REF:079] Page access 029: (L1PT) Frame 085,(L2PT) Frame 114
+[PID 00 REF:080] Page access 035: (L1PT) Frame 023,(L2PT) Frame 116
+[PID 01 REF:080] Page access 003: (L1PT) Frame 005,(L2PT) Frame 010
+[PID 02 REF:080] Page access 029: (L1PT) Frame 085,(L2PT) Frame 114
+[PID 00 REF:081] Page access 034: (L1PT) Frame 023,(L2PT) Frame 034
+[PID 01 REF:081] Page access 007: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 130
+[PID 02 REF:081] Page access 027: (L1PT) Frame 085,(L2PT) Frame 090
+[PID 00 REF:082] Page access 035: (L1PT) Frame 023,(L2PT) Frame 116
+[PID 01 REF:082] Page access 004: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 131
+[PID 02 REF:082] Page access 028: (L1PT) Frame 085,(L2PT) Frame 087
+[PID 00 REF:083] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:083] Page access 003: (L1PT) Frame 005,(L2PT) Frame 010
+[PID 02 REF:083] Page access 027: (L1PT) Frame 085,(L2PT) Frame 090
+[PID 00 REF:084] Page access 026: (L1PT) PF,Allocated Frame 003 -> 132,(L2PT) PF,Allocated Frame 133
+[PID 01 REF:084] Page access 004: (L1PT) Frame 005,(L2PT) Frame 131
+[PID 02 REF:084] Page access 030: (L1PT) Frame 085,(L2PT) Frame 126
+[PID 00 REF:085] Page access 024: (L1PT) Frame 132,(L2PT) PF,Allocated Frame 134
+[PID 01 REF:085] Page access 005: (L1PT) Frame 005,(L2PT) Frame 013
+[PID 02 REF:085] Page access 034: (L1PT) Frame 093,(L2PT) PF,Allocated Frame 135
+[PID 00 REF:086] Page access 025: (L1PT) Frame 132,(L2PT) PF,Allocated Frame 136
+[PID 01 REF:086] Page access 031: (L1PT) PF,Allocated Frame 003 -> 137,(L2PT) PF,Allocated Frame 138
+[PID 02 REF:086] Page access 033: (L1PT) Frame 093,(L2PT) PF,Allocated Frame 139
+[PID 00 REF:087] Page access 023: (L1PT) Frame 018,(L2PT) Frame 052
+[PID 01 REF:087] Page access 004: (L1PT) Frame 005,(L2PT) Frame 131
+[PID 02 REF:087] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:088] Page access 025: (L1PT) Frame 132,(L2PT) Frame 136
+[PID 01 REF:088] Page access 007: (L1PT) Frame 005,(L2PT) Frame 130
+[PID 02 REF:088] Page access 034: (L1PT) Frame 093,(L2PT) Frame 135
+[PID 00 REF:089] Page access 024: (L1PT) Frame 132,(L2PT) Frame 134
+[PID 01 REF:089] Page access 003: (L1PT) Frame 005,(L2PT) Frame 010
+[PID 02 REF:089] Page access 032: (L1PT) Frame 093,(L2PT) PF,Allocated Frame 140
+[PID 00 REF:090] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:090] Page access 063: (L1PT) Frame 049,(L2PT) Frame 061
+[PID 02 REF:090] Page access 063: (L1PT) Frame 007,(L2PT) Frame 008
+[PID 00 REF:091] Page access 035: (L1PT) Frame 023,(L2PT) Frame 116
+[PID 01 REF:091] Page access 062: (L1PT) Frame 049,(L2PT) PF,Allocated Frame 141
+[PID 02 REF:091] Page access 017: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 142
+[PID 00 REF:092] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:092] Page access 060: (L1PT) Frame 049,(L2PT) PF,Allocated Frame 143
+[PID 02 REF:092] Page access 018: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 144
+[PID 00 REF:093] Page access 035: (L1PT) Frame 023,(L2PT) Frame 116
+[PID 01 REF:093] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 02 REF:093] Page access 019: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 145
+[PID 00 REF:094] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:094] Page access 061: (L1PT) Frame 049,(L2PT) PF,Allocated Frame 146
+[PID 02 REF:094] Page access 019: (L1PT) Frame 068,(L2PT) Frame 145
+[PID 00 REF:095] Page access 035: (L1PT) Frame 023,(L2PT) Frame 116
+[PID 01 REF:095] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 02 REF:095] Page access 019: (L1PT) Frame 068,(L2PT) Frame 145
+[PID 00 REF:096] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:096] Page access 061: (L1PT) Frame 049,(L2PT) Frame 146
+[PID 02 REF:096] Page access 018: (L1PT) Frame 068,(L2PT) Frame 144
+[PID 00 REF:097] Page access 060: (L1PT) Frame 037,(L2PT) PF,Allocated Frame 147
+[PID 01 REF:097] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 02 REF:097] Page access 020: (L1PT) Frame 068,(L2PT) Frame 073
+[PID 00 REF:098] Page access 039: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 148
+[PID 01 REF:098] Page access 062: (L1PT) Frame 049,(L2PT) Frame 141
+[PID 02 REF:098] Page access 021: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 149
+[PID 00 REF:099] Page access 031: (L1PT) Frame 132,(L2PT) PF,Allocated Frame 150
+[PID 01 REF:099] Page access 027: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 151
+[PID 02 REF:099] Page access 020: (L1PT) Frame 068,(L2PT) Frame 073
+[PID 00 REF:100] Page access 039: (L1PT) Frame 023,(L2PT) Frame 148
+[PID 01 REF:100] Page access 024: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 152
+[PID 02 REF:100] Page access 021: (L1PT) Frame 068,(L2PT) Frame 149
+[PID 00 REF:101] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:101] Page access 025: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 153
+[PID 02 REF:101] Page access 021: (L1PT) Frame 068,(L2PT) Frame 149
+[PID 00 REF:102] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:102] Page access 025: (L1PT) Frame 137,(L2PT) Frame 153
+[PID 02 REF:102] Page access 020: (L1PT) Frame 068,(L2PT) Frame 073
+[PID 00 REF:103] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:103] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:103] Page access 016: (L1PT) Frame 068,(L2PT) Frame 069
+[PID 00 REF:104] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:104] Page access 027: (L1PT) Frame 137,(L2PT) Frame 151
+[PID 02 REF:104] Page access 024: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 154
+[PID 00 REF:105] Page access 012: (L1PT) Frame 077,(L2PT) Frame 078
+[PID 01 REF:105] Page access 025: (L1PT) Frame 137,(L2PT) Frame 153
+[PID 02 REF:105] Page access 041: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 155
+[PID 00 REF:106] Page access 011: (L1PT) Frame 077,(L2PT) Frame 096
+[PID 01 REF:106] Page access 023: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 156
+[PID 02 REF:106] Page access 043: (L1PT) Frame 014,(L2PT) PF,Allocated Frame 157
+[PID 00 REF:107] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:107] Page access 024: (L1PT) Frame 137,(L2PT) Frame 152
+[PID 02 REF:107] Page access 043: (L1PT) Frame 014,(L2PT) Frame 157
+[PID 00 REF:108] Page access 012: (L1PT) Frame 077,(L2PT) Frame 078
+[PID 01 REF:108] Page access 048: (L1PT) Frame 110,(L2PT) Frame 127
+[PID 02 REF:108] Page access 030: (L1PT) Frame 085,(L2PT) Frame 126
+[PID 00 REF:109] Page access 011: (L1PT) Frame 077,(L2PT) Frame 096
+[PID 01 REF:109] Page access 051: (L1PT) Frame 110,(L2PT) Frame 122
+[PID 02 REF:109] Page access 019: (L1PT) Frame 068,(L2PT) Frame 145
+[PID 00 REF:110] Page access 012: (L1PT) Frame 077,(L2PT) Frame 078
+[PID 01 REF:110] Page access 049: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 158
+[PID 02 REF:110] Page access 014: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 159
+[PID 00 REF:111] Page access 014: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 160
+[PID 01 REF:111] Page access 050: (L1PT) Frame 110,(L2PT) Frame 124
+[PID 02 REF:111] Page access 012: (L1PT) Frame 040,(L2PT) Frame 062
+[PID 00 REF:112] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:112] Page access 018: (L1PT) Frame 063,(L2PT) Frame 108
+[PID 02 REF:112] Page access 011: (L1PT) Frame 040,(L2PT) Frame 059
+[PID 00 REF:113] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:113] Page access 017: (L1PT) Frame 063,(L2PT) Frame 071
+[PID 02 REF:113] Page access 013: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 161
+[PID 00 REF:114] Page access 017: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 162
+[PID 01 REF:114] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:114] Page access 012: (L1PT) Frame 040,(L2PT) Frame 062
+[PID 00 REF:115] Page access 014: (L1PT) Frame 077,(L2PT) Frame 160
+[PID 01 REF:115] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 02 REF:115] Page access 012: (L1PT) Frame 040,(L2PT) Frame 062
+[PID 00 REF:116] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:116] Page access 016: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 02 REF:116] Page access 013: (L1PT) Frame 040,(L2PT) Frame 161
+[PID 00 REF:117] Page access 015: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 163
+[PID 01 REF:117] Page access 018: (L1PT) Frame 063,(L2PT) Frame 108
+[PID 02 REF:117] Page access 016: (L1PT) Frame 068,(L2PT) Frame 069
+[PID 00 REF:118] Page access 014: (L1PT) Frame 077,(L2PT) Frame 160
+[PID 01 REF:118] Page access 016: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 02 REF:118] Page access 017: (L1PT) Frame 068,(L2PT) Frame 142
+[PID 00 REF:119] Page access 016: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 164
+[PID 01 REF:119] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 02 REF:119] Page access 016: (L1PT) Frame 068,(L2PT) Frame 069
+[PID 00 REF:120] Page access 050: (L1PT) Frame 029,(L2PT) Frame 070
+[PID 01 REF:120] Page access 034: (L1PT) Frame 043,(L2PT) Frame 102
+[PID 02 REF:120] Page access 033: (L1PT) Frame 093,(L2PT) Frame 139
+[PID 00 REF:121] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:121] Page access 033: (L1PT) Frame 043,(L2PT) Frame 091
+[PID 02 REF:121] Page access 033: (L1PT) Frame 093,(L2PT) Frame 139
+[PID 00 REF:122] Page access 017: (L1PT) Frame 018,(L2PT) Frame 162
+[PID 01 REF:122] Page access 008: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 165
+[PID 02 REF:122] Page access 035: (L1PT) Frame 093,(L2PT) Frame 095
+[PID 00 REF:123] Page access 015: (L1PT) Frame 077,(L2PT) Frame 163
+[PID 01 REF:123] Page access 025: (L1PT) Frame 137,(L2PT) Frame 153
+[PID 02 REF:123] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:124] Page access 017: (L1PT) Frame 018,(L2PT) Frame 162
+[PID 01 REF:124] Page access 032: (L1PT) Frame 043,(L2PT) PF,Allocated Frame 166
+[PID 02 REF:124] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:125] Page access 015: (L1PT) Frame 077,(L2PT) Frame 163
+[PID 01 REF:125] Page access 035: (L1PT) Frame 043,(L2PT) Frame 097
+[PID 02 REF:125] Page access 034: (L1PT) Frame 093,(L2PT) Frame 135
+[PID 00 REF:126] Page access 018: (L1PT) Frame 018,(L2PT) Frame 123
+[PID 01 REF:126] Page access 031: (L1PT) Frame 137,(L2PT) Frame 138
+[PID 02 REF:126] Page access 018: (L1PT) Frame 068,(L2PT) Frame 144
+[PID 00 REF:127] Page access 016: (L1PT) Frame 018,(L2PT) Frame 164
+[PID 01 REF:127] Page access 034: (L1PT) Frame 043,(L2PT) Frame 102
+[PID 02 REF:127] Page access 032: (L1PT) Frame 093,(L2PT) Frame 140
+[PID 00 REF:128] Page access 018: (L1PT) Frame 018,(L2PT) Frame 123
+[PID 01 REF:128] Page access 034: (L1PT) Frame 043,(L2PT) Frame 102
+[PID 02 REF:128] Page access 031: (L1PT) Frame 085,(L2PT) Frame 128
+[PID 00 REF:129] Page access 016: (L1PT) Frame 018,(L2PT) Frame 164
+[PID 01 REF:129] Page access 032: (L1PT) Frame 043,(L2PT) Frame 166
+[PID 02 REF:129] Page access 035: (L1PT) Frame 093,(L2PT) Frame 095
+[PID 00 REF:130] Page access 015: (L1PT) Frame 077,(L2PT) Frame 163
+[PID 01 REF:130] Page access 033: (L1PT) Frame 043,(L2PT) Frame 091
+[PID 02 REF:130] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:131] Page access 018: (L1PT) Frame 018,(L2PT) Frame 123
+[PID 01 REF:131] Page access 032: (L1PT) Frame 043,(L2PT) Frame 166
+[PID 02 REF:131] Page access 024: (L1PT) Frame 085,(L2PT) Frame 154
+[PID 00 REF:132] Page access 008: (L1PT) Frame 077,(L2PT) Frame 118
+[PID 01 REF:132] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 02 REF:132] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:133] Page access 016: (L1PT) Frame 018,(L2PT) Frame 164
+[PID 01 REF:133] Page access 027: (L1PT) Frame 137,(L2PT) Frame 151
+[PID 02 REF:133] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:134] Page access 016: (L1PT) Frame 018,(L2PT) Frame 164
+[PID 01 REF:134] Page access 045: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 167
+[PID 02 REF:134] Page access 022: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 168
+[PID 00 REF:135] Page access 021: (L1PT) Frame 018,(L2PT) Frame 019
+[PID 01 REF:135] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 02 REF:135] Page access 023: (L1PT) Frame 068,(L2PT) PF,Allocated Frame 169
+[PID 00 REF:136] Page access 021: (L1PT) Frame 018,(L2PT) Frame 019
+[PID 01 REF:136] Page access 029: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 170
+[PID 02 REF:136] Page access 023: (L1PT) Frame 068,(L2PT) Frame 169
+[PID 00 REF:137] Page access 020: (L1PT) Frame 018,(L2PT) Frame 121
+[PID 01 REF:137] Page access 030: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 171
+[PID 02 REF:137] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:138] Page access 019: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 172
+[PID 01 REF:138] Page access 031: (L1PT) Frame 137,(L2PT) Frame 138
+[PID 02 REF:138] Page access 025: (L1PT) Frame 085,(L2PT) Frame 086
+[PID 00 REF:139] Page access 020: (L1PT) Frame 018,(L2PT) Frame 121
+[PID 01 REF:139] Page access 027: (L1PT) Frame 137,(L2PT) Frame 151
+[PID 02 REF:139] Page access 026: (L1PT) Frame 085,(L2PT) PF,Allocated Frame 173
+[PID 00 REF:140] Page access 023: (L1PT) Frame 018,(L2PT) Frame 052
+[PID 01 REF:140] Page access 031: (L1PT) Frame 137,(L2PT) Frame 138
+[PID 00 REF:141] Page access 023: (L1PT) Frame 018,(L2PT) Frame 052
+[PID 01 REF:141] Page access 029: (L1PT) Frame 137,(L2PT) Frame 170
+[PID 00 REF:142] Page access 022: (L1PT) Frame 018,(L2PT) PF,Allocated Frame 174
+[PID 01 REF:142] Page access 030: (L1PT) Frame 137,(L2PT) Frame 171
+[PID 00 REF:143] Page access 003: (L1PT) Frame 003,(L2PT) Frame 004
+[PID 01 REF:143] Page access 030: (L1PT) Frame 137,(L2PT) Frame 171
+[PID 00 REF:144] Page access 002: (L1PT) Frame 003,(L2PT) Frame 022
+[PID 01 REF:144] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 00 REF:145] Page access 005: (L1PT) Frame 003,(L2PT) Frame 009
+[PID 01 REF:145] Page access 028: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 175
+[PID 00 REF:146] Page access 003: (L1PT) Frame 003,(L2PT) Frame 004
+[PID 01 REF:146] Page access 029: (L1PT) Frame 137,(L2PT) Frame 170
+[PID 00 REF:147] Page access 002: (L1PT) Frame 003,(L2PT) Frame 022
+[PID 01 REF:147] Page access 025: (L1PT) Frame 137,(L2PT) Frame 153
+[PID 00 REF:148] Page access 005: (L1PT) Frame 003,(L2PT) Frame 009
+[PID 01 REF:148] Page access 029: (L1PT) Frame 137,(L2PT) Frame 170
+[PID 00 REF:149] Page access 005: (L1PT) Frame 003,(L2PT) Frame 009
+[PID 01 REF:149] Page access 026: (L1PT) Frame 137,(L2PT) PF,Allocated Frame 176
+[PID 00 REF:150] Page access 004: (L1PT) Frame 003,(L2PT) Frame 012
+[PID 01 REF:150] Page access 051: (L1PT) Frame 110,(L2PT) Frame 122
+[PID 00 REF:151] Page access 005: (L1PT) Frame 003,(L2PT) Frame 009
+[PID 01 REF:151] Page access 029: (L1PT) Frame 137,(L2PT) Frame 170
+[PID 00 REF:152] Page access 005: (L1PT) Frame 003,(L2PT) Frame 009
+[PID 01 REF:152] Page access 043: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 177
+[PID 00 REF:153] Page access 002: (L1PT) Frame 003,(L2PT) Frame 022
+[PID 01 REF:153] Page access 025: (L1PT) Frame 137,(L2PT) Frame 153
+[PID 00 REF:154] Page access 006: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 178
+[PID 01 REF:154] Page access 026: (L1PT) Frame 137,(L2PT) Frame 176
+[PID 00 REF:155] Page access 008: (L1PT) Frame 077,(L2PT) Frame 118
+[PID 01 REF:155] Page access 029: (L1PT) Frame 137,(L2PT) Frame 170
+[PID 00 REF:156] Page access 009: (L1PT) Frame 077,(L2PT) Frame 101
+[PID 01 REF:156] Page access 038: (L1PT) Frame 043,(L2PT) Frame 044
+[PID 00 REF:157] Page access 008: (L1PT) Frame 077,(L2PT) Frame 118
+[PID 01 REF:157] Page access 041: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 179
+[PID 00 REF:158] Page access 010: (L1PT) Frame 077,(L2PT) PF,Allocated Frame 180
+[PID 01 REF:158] Page access 039: (L1PT) Frame 043,(L2PT) Frame 089
+[PID 00 REF:159] Page access 039: (L1PT) Frame 023,(L2PT) Frame 148
+[PID 01 REF:159] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:160] Page access 008: (L1PT) Frame 077,(L2PT) Frame 118
+[PID 01 REF:160] Page access 038: (L1PT) Frame 043,(L2PT) Frame 044
+[PID 00 REF:161] Page access 007: (L1PT) Frame 003,(L2PT) PF,Allocated Frame 181
+[PID 01 REF:161] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:162] Page access 010: (L1PT) Frame 077,(L2PT) Frame 180
+[PID 01 REF:162] Page access 015: (L1PT) Frame 027,(L2PT) Frame 045
+[PID 00 REF:163] Page access 007: (L1PT) Frame 003,(L2PT) Frame 181
+[PID 01 REF:163] Page access 040: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 182
+[PID 00 REF:164] Page access 006: (L1PT) Frame 003,(L2PT) Frame 178
+[PID 01 REF:164] Page access 038: (L1PT) Frame 043,(L2PT) Frame 044
+[PID 00 REF:165] Page access 012: (L1PT) Frame 077,(L2PT) Frame 078
+[PID 01 REF:165] Page access 044: (L1PT) Frame 031,(L2PT) Frame 053
+[PID 00 REF:166] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:166] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 00 REF:167] Page access 013: (L1PT) Frame 077,(L2PT) Frame 100
+[PID 01 REF:167] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 00 REF:168] Page access 063: (L1PT) Frame 037,(L2PT) PF,Allocated Frame 183
+[PID 01 REF:168] Page access 054: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 184
+[PID 00 REF:169] Page access 062: (L1PT) Frame 037,(L2PT) PF,Allocated Frame 185
+[PID 01 REF:169] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 00 REF:170] Page access 032: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 186
+[PID 01 REF:170] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 00 REF:171] Page access 031: (L1PT) Frame 132,(L2PT) Frame 150
+[PID 01 REF:171] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 00 REF:172] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:172] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 00 REF:173] Page access 030: (L1PT) Frame 132,(L2PT) PF,Allocated Frame 187
+[PID 01 REF:173] Page access 045: (L1PT) Frame 031,(L2PT) Frame 167
+[PID 00 REF:174] Page access 031: (L1PT) Frame 132,(L2PT) Frame 150
+[PID 01 REF:174] Page access 042: (L1PT) Frame 031,(L2PT) Frame 032
+[PID 00 REF:175] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:175] Page access 044: (L1PT) Frame 031,(L2PT) Frame 053
+[PID 00 REF:176] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:176] Page access 043: (L1PT) Frame 031,(L2PT) Frame 177
+[PID 00 REF:177] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:177] Page access 044: (L1PT) Frame 031,(L2PT) Frame 053
+[PID 00 REF:178] Page access 029: (L1PT) Frame 132,(L2PT) PF,Allocated Frame 188
+[PID 01 REF:178] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:179] Page access 032: (L1PT) Frame 023,(L2PT) Frame 186
+[PID 01 REF:179] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:180] Page access 033: (L1PT) Frame 023,(L2PT) Frame 024
+[PID 01 REF:180] Page access 055: (L1PT) Frame 110,(L2PT) Frame 111
+[PID 00 REF:181] Page access 030: (L1PT) Frame 132,(L2PT) Frame 187
+[PID 01 REF:181] Page access 055: (L1PT) Frame 110,(L2PT) Frame 111
+[PID 00 REF:182] Page access 040: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 189
+[PID 01 REF:182] Page access 035: (L1PT) Frame 043,(L2PT) Frame 097
+[PID 00 REF:183] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:183] Page access 036: (L1PT) Frame 043,(L2PT) Frame 092
+[PID 00 REF:184] Page access 039: (L1PT) Frame 023,(L2PT) Frame 148
+[PID 01 REF:184] Page access 034: (L1PT) Frame 043,(L2PT) Frame 102
+[PID 00 REF:185] Page access 036: (L1PT) Frame 023,(L2PT) Frame 026
+[PID 01 REF:185] Page access 037: (L1PT) Frame 043,(L2PT) Frame 098
+[PID 00 REF:186] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:186] Page access 035: (L1PT) Frame 043,(L2PT) Frame 097
+[PID 00 REF:187] Page access 037: (L1PT) Frame 023,(L2PT) Frame 060
+[PID 01 REF:187] Page access 040: (L1PT) Frame 031,(L2PT) Frame 182
+[PID 00 REF:188] Page access 039: (L1PT) Frame 023,(L2PT) Frame 148
+[PID 01 REF:188] Page access 043: (L1PT) Frame 031,(L2PT) Frame 177
+[PID 00 REF:189] Page access 038: (L1PT) Frame 023,(L2PT) Frame 125
+[PID 01 REF:189] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:190] Page access 040: (L1PT) Frame 065,(L2PT) Frame 189
+[PID 01 REF:190] Page access 040: (L1PT) Frame 031,(L2PT) Frame 182
+[PID 00 REF:191] Page access 036: (L1PT) Frame 023,(L2PT) Frame 026
+[PID 01 REF:191] Page access 041: (L1PT) Frame 031,(L2PT) Frame 179
+[PID 00 REF:192] Page access 040: (L1PT) Frame 065,(L2PT) Frame 189
+[PID 01 REF:192] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 00 REF:193] Page access 031: (L1PT) Frame 132,(L2PT) Frame 150
+[PID 01 REF:193] Page access 009: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 190
+[PID 00 REF:194] Page access 036: (L1PT) Frame 023,(L2PT) Frame 026
+[PID 01 REF:194] Page access 061: (L1PT) Frame 049,(L2PT) Frame 146
+[PID 00 REF:195] Page access 051: (L1PT) Frame 029,(L2PT) Frame 055
+[PID 01 REF:195] Page access 058: (L1PT) Frame 049,(L2PT) Frame 050
+[PID 00 REF:196] Page access 043: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 191
+[PID 01 REF:196] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 00 REF:197] Page access 043: (L1PT) Frame 065,(L2PT) Frame 191
+[PID 01 REF:197] Page access 006: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 00 REF:198] Page access 043: (L1PT) Frame 065,(L2PT) Frame 191
+[PID 01 REF:198] Page access 059: (L1PT) Frame 049,(L2PT) PF,Allocated Frame 192
+[PID 00 REF:199] Page access 025: (L1PT) Frame 132,(L2PT) Frame 136
+[PID 01 REF:199] Page access 060: (L1PT) Frame 049,(L2PT) Frame 143
+[PID 00 REF:200] Page access 043: (L1PT) Frame 065,(L2PT) Frame 191
+[PID 01 REF:200] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 00 REF:201] Page access 042: (L1PT) Frame 065,(L2PT) Frame 105
+[PID 01 REF:201] Page access 013: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 00 REF:202] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:202] Page access 014: (L1PT) Frame 027,(L2PT) Frame 058
+[PID 00 REF:203] Page access 043: (L1PT) Frame 065,(L2PT) Frame 191
+[PID 01 REF:203] Page access 010: (L1PT) Frame 027,(L2PT) Frame 036
+[PID 00 REF:204] Page access 042: (L1PT) Frame 065,(L2PT) Frame 105
+[PID 01 REF:204] Page access 050: (L1PT) Frame 110,(L2PT) Frame 124
+[PID 00 REF:205] Page access 041: (L1PT) Frame 065,(L2PT) Frame 079
+[PID 01 REF:205] Page access 047: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 193
+[PID 00 REF:206] Page access 045: (L1PT) Frame 065,(L2PT) Frame 083
+[PID 01 REF:206] Page access 050: (L1PT) Frame 110,(L2PT) Frame 124
+[PID 00 REF:207] Page access 045: (L1PT) Frame 065,(L2PT) Frame 083
+[PID 01 REF:207] Page access 047: (L1PT) Frame 031,(L2PT) Frame 193
+[PID 00 REF:208] Page access 042: (L1PT) Frame 065,(L2PT) Frame 105
+[PID 01 REF:208] Page access 048: (L1PT) Frame 110,(L2PT) Frame 127
+[PID 00 REF:209] Page access 042: (L1PT) Frame 065,(L2PT) Frame 105
+[PID 01 REF:209] Page access 046: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 194
+Start() end
+** Process 000: Allocated Frames=067 PageFaults/References=066/210
+(L1PT) 000 -> 003
+(L2PT) 002 -> 022 REF=004
+(L2PT) 003 -> 004 REF=004
+(L2PT) 004 -> 012 REF=004
+(L2PT) 005 -> 009 REF=006
+(L2PT) 006 -> 178 REF=002
+(L2PT) 007 -> 181 REF=002
+(L1PT) 001 -> 077
+(L2PT) 008 -> 118 REF=005
+(L2PT) 009 -> 101 REF=002
+(L2PT) 010 -> 180 REF=002
+(L2PT) 011 -> 096 REF=006
+(L2PT) 012 -> 078 REF=005
+(L2PT) 013 -> 100 REF=007
+(L2PT) 014 -> 160 REF=003
+(L2PT) 015 -> 163 REF=004
+(L1PT) 002 -> 018
+(L2PT) 016 -> 164 REF=005
+(L2PT) 017 -> 162 REF=003
+(L2PT) 018 -> 123 REF=004
+(L2PT) 019 -> 172 REF=001
+(L2PT) 020 -> 121 REF=003
+(L2PT) 021 -> 019 REF=003
+(L2PT) 022 -> 174 REF=001
+(L2PT) 023 -> 052 REF=004
+(L1PT) 003 -> 132
+(L2PT) 024 -> 134 REF=002
+(L2PT) 025 -> 136 REF=003
+(L2PT) 026 -> 133 REF=001
+(L2PT) 029 -> 188 REF=001
+(L2PT) 030 -> 187 REF=002
+(L2PT) 031 -> 150 REF=004
+(L1PT) 004 -> 023
+(L2PT) 032 -> 186 REF=002
+(L2PT) 033 -> 024 REF=008
+(L2PT) 034 -> 034 REF=005
+(L2PT) 035 -> 116 REF=006
+(L2PT) 036 -> 026 REF=006
+(L2PT) 037 -> 060 REF=008
+(L2PT) 038 -> 125 REF=012
+(L2PT) 039 -> 148 REF=005
+(L1PT) 005 -> 065
+(L2PT) 040 -> 189 REF=003
+(L2PT) 041 -> 079 REF=007
+(L2PT) 042 -> 105 REF=005
+(L2PT) 043 -> 191 REF=005
+(L2PT) 044 -> 088 REF=003
+(L2PT) 045 -> 083 REF=006
+(L2PT) 046 -> 072 REF=001
+(L2PT) 047 -> 066 REF=001
+(L1PT) 006 -> 029
+(L2PT) 048 -> 067 REF=001
+(L2PT) 049 -> 074 REF=001
+(L2PT) 050 -> 070 REF=002
+(L2PT) 051 -> 055 REF=002
+(L2PT) 052 -> 030 REF=001
+(L2PT) 053 -> 035 REF=004
+(L2PT) 054 -> 042 REF=006
+(L2PT) 055 -> 057 REF=003
+(L1PT) 007 -> 037
+(L2PT) 056 -> 104 REF=004
+(L2PT) 057 -> 038 REF=005
+(L2PT) 058 -> 117 REF=002
+(L2PT) 060 -> 147 REF=001
+(L2PT) 062 -> 185 REF=001
+(L2PT) 063 -> 183 REF=001
+** Process 001: Allocated Frames=067 PageFaults/References=066/210
+(L1PT) 000 -> 005
+(L2PT) 002 -> 016 REF=002
+(L2PT) 003 -> 010 REF=006
+(L2PT) 004 -> 131 REF=003
+(L2PT) 005 -> 013 REF=004
+(L2PT) 006 -> 006 REF=007
+(L2PT) 007 -> 130 REF=002
+(L1PT) 001 -> 027
+(L2PT) 008 -> 165 REF=001
+(L2PT) 009 -> 190 REF=001
+(L2PT) 010 -> 036 REF=002
+(L2PT) 011 -> 028 REF=004
+(L2PT) 012 -> 046 REF=002
+(L2PT) 013 -> 039 REF=007
+(L2PT) 014 -> 058 REF=009
+(L2PT) 015 -> 045 REF=010
+(L1PT) 002 -> 063
+(L2PT) 016 -> 064 REF=004
+(L2PT) 017 -> 071 REF=002
+(L2PT) 018 -> 108 REF=004
+(L2PT) 020 -> 109 REF=004
+(L2PT) 021 -> 107 REF=003
+(L2PT) 022 -> 112 REF=004
+(L2PT) 023 -> 156 REF=001
+(L1PT) 003 -> 137
+(L2PT) 024 -> 152 REF=002
+(L2PT) 025 -> 153 REF=006
+(L2PT) 026 -> 176 REF=002
+(L2PT) 027 -> 151 REF=004
+(L2PT) 028 -> 175 REF=001
+(L2PT) 029 -> 170 REF=006
+(L2PT) 030 -> 171 REF=003
+(L2PT) 031 -> 138 REF=004
+(L1PT) 004 -> 043
+(L2PT) 032 -> 166 REF=003
+(L2PT) 033 -> 091 REF=005
+(L2PT) 034 -> 102 REF=006
+(L2PT) 035 -> 097 REF=004
+(L2PT) 036 -> 092 REF=003
+(L2PT) 037 -> 098 REF=004
+(L2PT) 038 -> 044 REF=005
+(L2PT) 039 -> 089 REF=002
+(L1PT) 005 -> 031
+(L2PT) 040 -> 182 REF=003
+(L2PT) 041 -> 179 REF=007
+(L2PT) 042 -> 032 REF=007
+(L2PT) 043 -> 177 REF=003
+(L2PT) 044 -> 053 REF=004
+(L2PT) 045 -> 167 REF=007
+(L2PT) 046 -> 194 REF=001
+(L2PT) 047 -> 193 REF=002
+(L1PT) 006 -> 110
+(L2PT) 048 -> 127 REF=003
+(L2PT) 049 -> 158 REF=001
+(L2PT) 050 -> 124 REF=004
+(L2PT) 051 -> 122 REF=004
+(L2PT) 052 -> 129 REF=001
+(L2PT) 054 -> 184 REF=001
+(L2PT) 055 -> 111 REF=003
+(L1PT) 007 -> 049
+(L2PT) 058 -> 050 REF=002
+(L2PT) 059 -> 192 REF=001
+(L2PT) 060 -> 143 REF=007
+(L2PT) 061 -> 146 REF=003
+(L2PT) 062 -> 141 REF=002
+(L2PT) 063 -> 061 REF=002
+** Process 002: Allocated Frames=061 PageFaults/References=060/140
+(L1PT) 000 -> 020
+(L2PT) 002 -> 113 REF=002
+(L2PT) 003 -> 021 REF=001
+(L2PT) 004 -> 120 REF=001
+(L2PT) 005 -> 051 REF=001
+(L2PT) 006 -> 047 REF=002
+(L2PT) 007 -> 056 REF=001
+(L1PT) 001 -> 040
+(L2PT) 008 -> 054 REF=006
+(L2PT) 009 -> 048 REF=003
+(L2PT) 010 -> 041 REF=002
+(L2PT) 011 -> 059 REF=005
+(L2PT) 012 -> 062 REF=005
+(L2PT) 013 -> 161 REF=002
+(L2PT) 014 -> 159 REF=001
+(L1PT) 002 -> 068
+(L2PT) 016 -> 069 REF=004
+(L2PT) 017 -> 142 REF=002
+(L2PT) 018 -> 144 REF=003
+(L2PT) 019 -> 145 REF=004
+(L2PT) 020 -> 073 REF=005
+(L2PT) 021 -> 149 REF=003
+(L2PT) 022 -> 168 REF=001
+(L2PT) 023 -> 169 REF=002
+(L1PT) 003 -> 085
+(L2PT) 024 -> 154 REF=002
+(L2PT) 025 -> 086 REF=007
+(L2PT) 026 -> 173 REF=001
+(L2PT) 027 -> 090 REF=005
+(L2PT) 028 -> 087 REF=003
+(L2PT) 029 -> 114 REF=004
+(L2PT) 030 -> 126 REF=003
+(L2PT) 031 -> 128 REF=008
+(L1PT) 004 -> 093
+(L2PT) 032 -> 140 REF=002
+(L2PT) 033 -> 139 REF=003
+(L2PT) 034 -> 135 REF=003
+(L2PT) 035 -> 095 REF=003
+(L2PT) 038 -> 094 REF=001
+(L1PT) 005 -> 014
+(L2PT) 041 -> 155 REF=001
+(L2PT) 043 -> 157 REF=002
+(L2PT) 044 -> 015 REF=002
+(L2PT) 045 -> 115 REF=001
+(L2PT) 046 -> 119 REF=001
+(L2PT) 047 -> 081 REF=002
+(L1PT) 006 -> 075
+(L2PT) 048 -> 103 REF=002
+(L2PT) 049 -> 106 REF=001
+(L2PT) 050 -> 076 REF=003
+(L2PT) 051 -> 099 REF=001
+(L2PT) 052 -> 082 REF=004
+(L2PT) 053 -> 080 REF=001
+(L2PT) 054 -> 084 REF=001
+(L1PT) 007 -> 007
+(L2PT) 059 -> 033 REF=001
+(L2PT) 060 -> 025 REF=004
+(L2PT) 061 -> 011 REF=002
+(L2PT) 062 -> 017 REF=006
+(L2PT) 063 -> 008 REF=004
+Total: Allocated Frames=195 Page Faults/References=192/560
+ubuntu@41983:~/hw3$ cat test3-4.bin | ./os3-2-dump
+load_process() start
+0 179
+28 24 27 27 21 27 24 25 58 55 06 07 09 08 49 08 08 09 06 08 40 38 38 40 41 38 40 39 43 41 41 40 21 24 24 25 01 25 22 23 38 37 37 39 38 28 35 25 26 28 29 25 32 32 32 51 34 36 33 06 36 37 37 35 15 15 14 14 15 12 12 13 43 42 42 42 44 43 49 42 53 29 58 52 52 54 50 54 51 50 28 56 57 60 58 59 60 58 59 56 05 06 03 03 05 03 04 04 02 02 47 23 63 59 61 63 59 34 37 38 35 35 34 36 35 37 50 54 54 50 52 53 51 52 54 35 33 33 33 33 48 51 51 48 50 50 29 49 51 48 50 51 51 50 21 19 05 02 05 01 01 04 02 04 03 04 03 03 02 17 18 21 21 28 17 21 21 61 21 
+1 106
+03 04 05 02 57 04 04 06 04 04 06 37 04 05 06 02 03 05 03 06 02 03 03 16 05 07 06 09 05 28 08 06 14 16 14 14 15 15 16 15 16 13 18 21 29 20 21 20 22 11 20 19 40 19 20 36 35 37 35 38 39 40 39 41 41 37 37 39 40 39 39 40 37 39 38 54 54 55 58 56 42 16 45 47 42 45 45 34 63 62 50 52 51 49 50 52 53 52 35 51 53 49 52 50 50 51 
+2 128
+36 33 33 32 34 32 36 33 34 36 33 49 48 48 45 48 23 23 54 55 57 55 56 56 53 54 29 27 26 30 27 26 26 51 52 50 53 52 52 53 49 52 52 49 53 25 27 25 54 44 29 30 26 30 26 29 55 54 55 53 51 54 54 52 52 52 49 52 50 51 49 52 51 48 23 51 51 51 59 56 56 58 56 53 57 55 57 57 56 55 21 21 20 19 20 20 18 20 45 45 21 24 21 22 21 25 22 24 21 22 47 23 33 48 30 34 40 34 07 32 54 52 51 54 53 51 52 54 
+3 137
+44 45 45 46 45 47 46 45 44 47 52 21 57 54 58 54 55 57 56 57 29 31 32 32 29 00 32 48 28 28 29 28 29 63 61 59 61 63 61 59 56 53 54 61 48 53 56 53 57 57 53 57 60 59 60 59 61 60 35 60 56 57 47 54 55 55 55 53 53 54 19 18 50 32 31 33 34 00 04 01 13 14 14 17 13 17 14 16 36 50 43 13 11 14 10 11 30 33 32 34 33 23 35 25 35 13 12 33 32 30 46 48 26 47 23 48 11 37 37 39 38 36 37 55 37 38 54 39 11 38 31 28 32 29 29 29 29 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 028: (L1PT) PF,Allocated Frame 003 -> 004,(L2PT) PF,Allocated Frame 005
+[PID 01 REF:000] Page access 003: (L1PT) PF,Allocated Frame 000 -> 006,(L2PT) PF,Allocated Frame 007
+[PID 02 REF:000] Page access 036: (L1PT) PF,Allocated Frame 004 -> 008,(L2PT) PF,Allocated Frame 009
+[PID 03 REF:000] Page access 044: (L1PT) PF,Allocated Frame 005 -> 010,(L2PT) PF,Allocated Frame 011
+[PID 00 REF:001] Page access 024: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 012
+[PID 01 REF:001] Page access 004: (L1PT) Frame 006,(L2PT) PF,Allocated Frame 013
+[PID 02 REF:001] Page access 033: (L1PT) Frame 008,(L2PT) PF,Allocated Frame 014
+[PID 03 REF:001] Page access 045: (L1PT) Frame 010,(L2PT) PF,Allocated Frame 015
+[PID 00 REF:002] Page access 027: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 016
+[PID 01 REF:002] Page access 005: (L1PT) Frame 006,(L2PT) PF,Allocated Frame 017
+[PID 02 REF:002] Page access 033: (L1PT) Frame 008,(L2PT) Frame 014
+[PID 03 REF:002] Page access 045: (L1PT) Frame 010,(L2PT) Frame 015
+[PID 00 REF:003] Page access 027: (L1PT) Frame 004,(L2PT) Frame 016
+[PID 01 REF:003] Page access 002: (L1PT) Frame 006,(L2PT) PF,Allocated Frame 018
+[PID 02 REF:003] Page access 032: (L1PT) Frame 008,(L2PT) PF,Allocated Frame 019
+[PID 03 REF:003] Page access 046: (L1PT) Frame 010,(L2PT) PF,Allocated Frame 020
+[PID 00 REF:004] Page access 021: (L1PT) PF,Allocated Frame 002 -> 021,(L2PT) PF,Allocated Frame 022
+[PID 01 REF:004] Page access 057: (L1PT) PF,Allocated Frame 007 -> 023,(L2PT) PF,Allocated Frame 024
+[PID 02 REF:004] Page access 034: (L1PT) Frame 008,(L2PT) PF,Allocated Frame 025
+[PID 03 REF:004] Page access 045: (L1PT) Frame 010,(L2PT) Frame 015
+[PID 00 REF:005] Page access 027: (L1PT) Frame 004,(L2PT) Frame 016
+[PID 01 REF:005] Page access 004: (L1PT) Frame 006,(L2PT) Frame 013
+[PID 02 REF:005] Page access 032: (L1PT) Frame 008,(L2PT) Frame 019
+[PID 03 REF:005] Page access 047: (L1PT) Frame 010,(L2PT) PF,Allocated Frame 026
+[PID 00 REF:006] Page access 024: (L1PT) Frame 004,(L2PT) Frame 012
+[PID 01 REF:006] Page access 004: (L1PT) Frame 006,(L2PT) Frame 013
+[PID 02 REF:006] Page access 036: (L1PT) Frame 008,(L2PT) Frame 009
+[PID 03 REF:006] Page access 046: (L1PT) Frame 010,(L2PT) Frame 020
+[PID 00 REF:007] Page access 025: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 027
+[PID 01 REF:007] Page access 006: (L1PT) Frame 006,(L2PT) PF,Allocated Frame 028
+[PID 02 REF:007] Page access 033: (L1PT) Frame 008,(L2PT) Frame 014
+[PID 03 REF:007] Page access 045: (L1PT) Frame 010,(L2PT) Frame 015
+[PID 00 REF:008] Page access 058: (L1PT) PF,Allocated Frame 007 -> 029,(L2PT) PF,Allocated Frame 030
+[PID 01 REF:008] Page access 004: (L1PT) Frame 006,(L2PT) Frame 013
+[PID 02 REF:008] Page access 034: (L1PT) Frame 008,(L2PT) Frame 025
+[PID 03 REF:008] Page access 044: (L1PT) Frame 010,(L2PT) Frame 011
+[PID 00 REF:009] Page access 055: (L1PT) PF,Allocated Frame 006 -> 031,(L2PT) PF,Allocated Frame 032
+[PID 01 REF:009] Page access 004: (L1PT) Frame 006,(L2PT) Frame 013
+[PID 02 REF:009] Page access 036: (L1PT) Frame 008,(L2PT) Frame 009
+[PID 03 REF:009] Page access 047: (L1PT) Frame 010,(L2PT) Frame 026
+[PID 00 REF:010] Page access 006: (L1PT) PF,Allocated Frame 000 -> 033,(L2PT) PF,Allocated Frame 034
+[PID 01 REF:010] Page access 006: (L1PT) Frame 006,(L2PT) Frame 028
+[PID 02 REF:010] Page access 033: (L1PT) Frame 008,(L2PT) Frame 014
+[PID 03 REF:010] Page access 052: (L1PT) PF,Allocated Frame 006 -> 035,(L2PT) PF,Allocated Frame 036
+[PID 00 REF:011] Page access 007: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 037
+[PID 01 REF:011] Page access 037: (L1PT) PF,Allocated Frame 004 -> 038,(L2PT) PF,Allocated Frame 039
+[PID 02 REF:011] Page access 049: (L1PT) PF,Allocated Frame 006 -> 040,(L2PT) PF,Allocated Frame 041
+[PID 03 REF:011] Page access 021: (L1PT) PF,Allocated Frame 002 -> 042,(L2PT) PF,Allocated Frame 043
+[PID 00 REF:012] Page access 009: (L1PT) PF,Allocated Frame 001 -> 044,(L2PT) PF,Allocated Frame 045
+[PID 01 REF:012] Page access 004: (L1PT) Frame 006,(L2PT) Frame 013
+[PID 02 REF:012] Page access 048: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 046
+[PID 03 REF:012] Page access 057: (L1PT) PF,Allocated Frame 007 -> 047,(L2PT) PF,Allocated Frame 048
+[PID 00 REF:013] Page access 008: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 049
+[PID 01 REF:013] Page access 005: (L1PT) Frame 006,(L2PT) Frame 017
+[PID 02 REF:013] Page access 048: (L1PT) Frame 040,(L2PT) Frame 046
+[PID 03 REF:013] Page access 054: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 050
+[PID 00 REF:014] Page access 049: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 051
+[PID 01 REF:014] Page access 006: (L1PT) Frame 006,(L2PT) Frame 028
+[PID 02 REF:014] Page access 045: (L1PT) PF,Allocated Frame 005 -> 052,(L2PT) PF,Allocated Frame 053
+[PID 03 REF:014] Page access 058: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 054
+[PID 00 REF:015] Page access 008: (L1PT) Frame 044,(L2PT) Frame 049
+[PID 01 REF:015] Page access 002: (L1PT) Frame 006,(L2PT) Frame 018
+[PID 02 REF:015] Page access 048: (L1PT) Frame 040,(L2PT) Frame 046
+[PID 03 REF:015] Page access 054: (L1PT) Frame 035,(L2PT) Frame 050
+[PID 00 REF:016] Page access 008: (L1PT) Frame 044,(L2PT) Frame 049
+[PID 01 REF:016] Page access 003: (L1PT) Frame 006,(L2PT) Frame 007
+[PID 02 REF:016] Page access 023: (L1PT) PF,Allocated Frame 002 -> 055,(L2PT) PF,Allocated Frame 056
+[PID 03 REF:016] Page access 055: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 057
+[PID 00 REF:017] Page access 009: (L1PT) Frame 044,(L2PT) Frame 045
+[PID 01 REF:017] Page access 005: (L1PT) Frame 006,(L2PT) Frame 017
+[PID 02 REF:017] Page access 023: (L1PT) Frame 055,(L2PT) Frame 056
+[PID 03 REF:017] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:018] Page access 006: (L1PT) Frame 033,(L2PT) Frame 034
+[PID 01 REF:018] Page access 003: (L1PT) Frame 006,(L2PT) Frame 007
+[PID 02 REF:018] Page access 054: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 058
+[PID 03 REF:018] Page access 056: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 059
+[PID 00 REF:019] Page access 008: (L1PT) Frame 044,(L2PT) Frame 049
+[PID 01 REF:019] Page access 006: (L1PT) Frame 006,(L2PT) Frame 028
+[PID 02 REF:019] Page access 055: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 060
+[PID 03 REF:019] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:020] Page access 040: (L1PT) PF,Allocated Frame 005 -> 061,(L2PT) PF,Allocated Frame 062
+[PID 01 REF:020] Page access 002: (L1PT) Frame 006,(L2PT) Frame 018
+[PID 02 REF:020] Page access 057: (L1PT) PF,Allocated Frame 007 -> 063,(L2PT) PF,Allocated Frame 064
+[PID 03 REF:020] Page access 029: (L1PT) PF,Allocated Frame 003 -> 065,(L2PT) PF,Allocated Frame 066
+[PID 00 REF:021] Page access 038: (L1PT) PF,Allocated Frame 004 -> 067,(L2PT) PF,Allocated Frame 068
+[PID 01 REF:021] Page access 003: (L1PT) Frame 006,(L2PT) Frame 007
+[PID 02 REF:021] Page access 055: (L1PT) Frame 040,(L2PT) Frame 060
+[PID 03 REF:021] Page access 031: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 069
+[PID 00 REF:022] Page access 038: (L1PT) Frame 067,(L2PT) Frame 068
+[PID 01 REF:022] Page access 003: (L1PT) Frame 006,(L2PT) Frame 007
+[PID 02 REF:022] Page access 056: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 070
+[PID 03 REF:022] Page access 032: (L1PT) PF,Allocated Frame 004 -> 071,(L2PT) PF,Allocated Frame 072
+[PID 00 REF:023] Page access 040: (L1PT) Frame 061,(L2PT) Frame 062
+[PID 01 REF:023] Page access 016: (L1PT) PF,Allocated Frame 002 -> 073,(L2PT) PF,Allocated Frame 074
+[PID 02 REF:023] Page access 056: (L1PT) Frame 063,(L2PT) Frame 070
+[PID 03 REF:023] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:024] Page access 041: (L1PT) Frame 061,(L2PT) PF,Allocated Frame 075
+[PID 01 REF:024] Page access 005: (L1PT) Frame 006,(L2PT) Frame 017
+[PID 02 REF:024] Page access 053: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 076
+[PID 03 REF:024] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:025] Page access 038: (L1PT) Frame 067,(L2PT) Frame 068
+[PID 01 REF:025] Page access 007: (L1PT) Frame 006,(L2PT) PF,Allocated Frame 077
+[PID 02 REF:025] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:025] Page access 000: (L1PT) PF,Allocated Frame 000 -> 078,(L2PT) PF,Allocated Frame 079
+[PID 00 REF:026] Page access 040: (L1PT) Frame 061,(L2PT) Frame 062
+[PID 01 REF:026] Page access 006: (L1PT) Frame 006,(L2PT) Frame 028
+[PID 02 REF:026] Page access 029: (L1PT) PF,Allocated Frame 003 -> 080,(L2PT) PF,Allocated Frame 081
+[PID 03 REF:026] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:027] Page access 039: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 082
+[PID 01 REF:027] Page access 009: (L1PT) PF,Allocated Frame 001 -> 083,(L2PT) PF,Allocated Frame 084
+[PID 02 REF:027] Page access 027: (L1PT) Frame 080,(L2PT) PF,Allocated Frame 085
+[PID 03 REF:027] Page access 048: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 086
+[PID 00 REF:028] Page access 043: (L1PT) Frame 061,(L2PT) PF,Allocated Frame 087
+[PID 01 REF:028] Page access 005: (L1PT) Frame 006,(L2PT) Frame 017
+[PID 02 REF:028] Page access 026: (L1PT) Frame 080,(L2PT) PF,Allocated Frame 088
+[PID 03 REF:028] Page access 028: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 089
+[PID 00 REF:029] Page access 041: (L1PT) Frame 061,(L2PT) Frame 075
+[PID 01 REF:029] Page access 028: (L1PT) PF,Allocated Frame 003 -> 090,(L2PT) PF,Allocated Frame 091
+[PID 02 REF:029] Page access 030: (L1PT) Frame 080,(L2PT) PF,Allocated Frame 092
+[PID 03 REF:029] Page access 028: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:030] Page access 041: (L1PT) Frame 061,(L2PT) Frame 075
+[PID 01 REF:030] Page access 008: (L1PT) Frame 083,(L2PT) PF,Allocated Frame 093
+[PID 02 REF:030] Page access 027: (L1PT) Frame 080,(L2PT) Frame 085
+[PID 03 REF:030] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:031] Page access 040: (L1PT) Frame 061,(L2PT) Frame 062
+[PID 01 REF:031] Page access 006: (L1PT) Frame 006,(L2PT) Frame 028
+[PID 02 REF:031] Page access 026: (L1PT) Frame 080,(L2PT) Frame 088
+[PID 03 REF:031] Page access 028: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:032] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 01 REF:032] Page access 014: (L1PT) Frame 083,(L2PT) PF,Allocated Frame 094
+[PID 02 REF:032] Page access 026: (L1PT) Frame 080,(L2PT) Frame 088
+[PID 03 REF:032] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:033] Page access 024: (L1PT) Frame 004,(L2PT) Frame 012
+[PID 01 REF:033] Page access 016: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 02 REF:033] Page access 051: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 095
+[PID 03 REF:033] Page access 063: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 096
+[PID 00 REF:034] Page access 024: (L1PT) Frame 004,(L2PT) Frame 012
+[PID 01 REF:034] Page access 014: (L1PT) Frame 083,(L2PT) Frame 094
+[PID 02 REF:034] Page access 052: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 097
+[PID 03 REF:034] Page access 061: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 098
+[PID 00 REF:035] Page access 025: (L1PT) Frame 004,(L2PT) Frame 027
+[PID 01 REF:035] Page access 014: (L1PT) Frame 083,(L2PT) Frame 094
+[PID 02 REF:035] Page access 050: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 099
+[PID 03 REF:035] Page access 059: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 100
+[PID 00 REF:036] Page access 001: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 101
+[PID 01 REF:036] Page access 015: (L1PT) Frame 083,(L2PT) PF,Allocated Frame 102
+[PID 02 REF:036] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:036] Page access 061: (L1PT) Frame 047,(L2PT) Frame 098
+[PID 00 REF:037] Page access 025: (L1PT) Frame 004,(L2PT) Frame 027
+[PID 01 REF:037] Page access 015: (L1PT) Frame 083,(L2PT) Frame 102
+[PID 02 REF:037] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:037] Page access 063: (L1PT) Frame 047,(L2PT) Frame 096
+[PID 00 REF:038] Page access 022: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 103
+[PID 01 REF:038] Page access 016: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 02 REF:038] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:038] Page access 061: (L1PT) Frame 047,(L2PT) Frame 098
+[PID 00 REF:039] Page access 023: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 104
+[PID 01 REF:039] Page access 015: (L1PT) Frame 083,(L2PT) Frame 102
+[PID 02 REF:039] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:039] Page access 059: (L1PT) Frame 047,(L2PT) Frame 100
+[PID 00 REF:040] Page access 038: (L1PT) Frame 067,(L2PT) Frame 068
+[PID 01 REF:040] Page access 016: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 02 REF:040] Page access 049: (L1PT) Frame 040,(L2PT) Frame 041
+[PID 03 REF:040] Page access 056: (L1PT) Frame 047,(L2PT) Frame 059
+[PID 00 REF:041] Page access 037: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 105
+[PID 01 REF:041] Page access 013: (L1PT) Frame 083,(L2PT) PF,Allocated Frame 106
+[PID 02 REF:041] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:041] Page access 053: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 107
+[PID 00 REF:042] Page access 037: (L1PT) Frame 067,(L2PT) Frame 105
+[PID 01 REF:042] Page access 018: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 108
+[PID 02 REF:042] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:042] Page access 054: (L1PT) Frame 035,(L2PT) Frame 050
+[PID 00 REF:043] Page access 039: (L1PT) Frame 067,(L2PT) Frame 082
+[PID 01 REF:043] Page access 021: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 109
+[PID 02 REF:043] Page access 049: (L1PT) Frame 040,(L2PT) Frame 041
+[PID 03 REF:043] Page access 061: (L1PT) Frame 047,(L2PT) Frame 098
+[PID 00 REF:044] Page access 038: (L1PT) Frame 067,(L2PT) Frame 068
+[PID 01 REF:044] Page access 029: (L1PT) Frame 090,(L2PT) PF,Allocated Frame 110
+[PID 02 REF:044] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:044] Page access 048: (L1PT) Frame 035,(L2PT) Frame 086
+[PID 00 REF:045] Page access 028: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 01 REF:045] Page access 020: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 111
+[PID 02 REF:045] Page access 025: (L1PT) Frame 080,(L2PT) PF,Allocated Frame 112
+[PID 03 REF:045] Page access 053: (L1PT) Frame 035,(L2PT) Frame 107
+[PID 00 REF:046] Page access 035: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 113
+[PID 01 REF:046] Page access 021: (L1PT) Frame 073,(L2PT) Frame 109
+[PID 02 REF:046] Page access 027: (L1PT) Frame 080,(L2PT) Frame 085
+[PID 03 REF:046] Page access 056: (L1PT) Frame 047,(L2PT) Frame 059
+[PID 00 REF:047] Page access 025: (L1PT) Frame 004,(L2PT) Frame 027
+[PID 01 REF:047] Page access 020: (L1PT) Frame 073,(L2PT) Frame 111
+[PID 02 REF:047] Page access 025: (L1PT) Frame 080,(L2PT) Frame 112
+[PID 03 REF:047] Page access 053: (L1PT) Frame 035,(L2PT) Frame 107
+[PID 00 REF:048] Page access 026: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 114
+[PID 01 REF:048] Page access 022: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 115
+[PID 02 REF:048] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:048] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:049] Page access 028: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 01 REF:049] Page access 011: (L1PT) Frame 083,(L2PT) PF,Allocated Frame 116
+[PID 02 REF:049] Page access 044: (L1PT) Frame 052,(L2PT) PF,Allocated Frame 117
+[PID 03 REF:049] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:050] Page access 029: (L1PT) Frame 004,(L2PT) PF,Allocated Frame 118
+[PID 01 REF:050] Page access 020: (L1PT) Frame 073,(L2PT) Frame 111
+[PID 02 REF:050] Page access 029: (L1PT) Frame 080,(L2PT) Frame 081
+[PID 03 REF:050] Page access 053: (L1PT) Frame 035,(L2PT) Frame 107
+[PID 00 REF:051] Page access 025: (L1PT) Frame 004,(L2PT) Frame 027
+[PID 01 REF:051] Page access 019: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 119
+[PID 02 REF:051] Page access 030: (L1PT) Frame 080,(L2PT) Frame 092
+[PID 03 REF:051] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:052] Page access 032: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 120
+[PID 01 REF:052] Page access 040: (L1PT) PF,Allocated Frame 005 -> 121,(L2PT) PF,Allocated Frame 122
+[PID 02 REF:052] Page access 026: (L1PT) Frame 080,(L2PT) Frame 088
+[PID 03 REF:052] Page access 060: (L1PT) Frame 047,(L2PT) PF,Allocated Frame 123
+[PID 00 REF:053] Page access 032: (L1PT) Frame 067,(L2PT) Frame 120
+[PID 01 REF:053] Page access 019: (L1PT) Frame 073,(L2PT) Frame 119
+[PID 02 REF:053] Page access 030: (L1PT) Frame 080,(L2PT) Frame 092
+[PID 03 REF:053] Page access 059: (L1PT) Frame 047,(L2PT) Frame 100
+[PID 00 REF:054] Page access 032: (L1PT) Frame 067,(L2PT) Frame 120
+[PID 01 REF:054] Page access 020: (L1PT) Frame 073,(L2PT) Frame 111
+[PID 02 REF:054] Page access 026: (L1PT) Frame 080,(L2PT) Frame 088
+[PID 03 REF:054] Page access 060: (L1PT) Frame 047,(L2PT) Frame 123
+[PID 00 REF:055] Page access 051: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 124
+[PID 01 REF:055] Page access 036: (L1PT) Frame 038,(L2PT) PF,Allocated Frame 125
+[PID 02 REF:055] Page access 029: (L1PT) Frame 080,(L2PT) Frame 081
+[PID 03 REF:055] Page access 059: (L1PT) Frame 047,(L2PT) Frame 100
+[PID 00 REF:056] Page access 034: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 126
+[PID 01 REF:056] Page access 035: (L1PT) Frame 038,(L2PT) PF,Allocated Frame 127
+[PID 02 REF:056] Page access 055: (L1PT) Frame 040,(L2PT) Frame 060
+[PID 03 REF:056] Page access 061: (L1PT) Frame 047,(L2PT) Frame 098
+[PID 00 REF:057] Page access 036: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 128
+[PID 01 REF:057] Page access 037: (L1PT) Frame 038,(L2PT) Frame 039
+[PID 02 REF:057] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:057] Page access 060: (L1PT) Frame 047,(L2PT) Frame 123
+[PID 00 REF:058] Page access 033: (L1PT) Frame 067,(L2PT) PF,Allocated Frame 129
+[PID 01 REF:058] Page access 035: (L1PT) Frame 038,(L2PT) Frame 127
+[PID 02 REF:058] Page access 055: (L1PT) Frame 040,(L2PT) Frame 060
+[PID 03 REF:058] Page access 035: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 130
+[PID 00 REF:059] Page access 006: (L1PT) Frame 033,(L2PT) Frame 034
+[PID 01 REF:059] Page access 038: (L1PT) Frame 038,(L2PT) PF,Allocated Frame 131
+[PID 02 REF:059] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:059] Page access 060: (L1PT) Frame 047,(L2PT) Frame 123
+[PID 00 REF:060] Page access 036: (L1PT) Frame 067,(L2PT) Frame 128
+[PID 01 REF:060] Page access 039: (L1PT) Frame 038,(L2PT) PF,Allocated Frame 132
+[PID 02 REF:060] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:060] Page access 056: (L1PT) Frame 047,(L2PT) Frame 059
+[PID 00 REF:061] Page access 037: (L1PT) Frame 067,(L2PT) Frame 105
+[PID 01 REF:061] Page access 040: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 02 REF:061] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:061] Page access 057: (L1PT) Frame 047,(L2PT) Frame 048
+[PID 00 REF:062] Page access 037: (L1PT) Frame 067,(L2PT) Frame 105
+[PID 01 REF:062] Page access 039: (L1PT) Frame 038,(L2PT) Frame 132
+[PID 02 REF:062] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:062] Page access 047: (L1PT) Frame 010,(L2PT) Frame 026
+[PID 00 REF:063] Page access 035: (L1PT) Frame 067,(L2PT) Frame 113
+[PID 01 REF:063] Page access 041: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 133
+[PID 02 REF:063] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:063] Page access 054: (L1PT) Frame 035,(L2PT) Frame 050
+[PID 00 REF:064] Page access 015: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 134
+[PID 01 REF:064] Page access 041: (L1PT) Frame 121,(L2PT) Frame 133
+[PID 02 REF:064] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:064] Page access 055: (L1PT) Frame 035,(L2PT) Frame 057
+[PID 00 REF:065] Page access 015: (L1PT) Frame 044,(L2PT) Frame 134
+[PID 01 REF:065] Page access 037: (L1PT) Frame 038,(L2PT) Frame 039
+[PID 02 REF:065] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:065] Page access 055: (L1PT) Frame 035,(L2PT) Frame 057
+[PID 00 REF:066] Page access 014: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 135
+[PID 01 REF:066] Page access 037: (L1PT) Frame 038,(L2PT) Frame 039
+[PID 02 REF:066] Page access 049: (L1PT) Frame 040,(L2PT) Frame 041
+[PID 03 REF:066] Page access 055: (L1PT) Frame 035,(L2PT) Frame 057
+[PID 00 REF:067] Page access 014: (L1PT) Frame 044,(L2PT) Frame 135
+[PID 01 REF:067] Page access 039: (L1PT) Frame 038,(L2PT) Frame 132
+[PID 02 REF:067] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:067] Page access 053: (L1PT) Frame 035,(L2PT) Frame 107
+[PID 00 REF:068] Page access 015: (L1PT) Frame 044,(L2PT) Frame 134
+[PID 01 REF:068] Page access 040: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 02 REF:068] Page access 050: (L1PT) Frame 040,(L2PT) Frame 099
+[PID 03 REF:068] Page access 053: (L1PT) Frame 035,(L2PT) Frame 107
+[PID 00 REF:069] Page access 012: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 136
+[PID 01 REF:069] Page access 039: (L1PT) Frame 038,(L2PT) Frame 132
+[PID 02 REF:069] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:069] Page access 054: (L1PT) Frame 035,(L2PT) Frame 050
+[PID 00 REF:070] Page access 012: (L1PT) Frame 044,(L2PT) Frame 136
+[PID 01 REF:070] Page access 039: (L1PT) Frame 038,(L2PT) Frame 132
+[PID 02 REF:070] Page access 049: (L1PT) Frame 040,(L2PT) Frame 041
+[PID 03 REF:070] Page access 019: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 137
+[PID 00 REF:071] Page access 013: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 138
+[PID 01 REF:071] Page access 040: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 02 REF:071] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:071] Page access 018: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 139
+[PID 00 REF:072] Page access 043: (L1PT) Frame 061,(L2PT) Frame 087
+[PID 01 REF:072] Page access 037: (L1PT) Frame 038,(L2PT) Frame 039
+[PID 02 REF:072] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:072] Page access 050: (L1PT) Frame 035,(L2PT) PF,Allocated Frame 140
+[PID 00 REF:073] Page access 042: (L1PT) Frame 061,(L2PT) PF,Allocated Frame 141
+[PID 01 REF:073] Page access 039: (L1PT) Frame 038,(L2PT) Frame 132
+[PID 02 REF:073] Page access 048: (L1PT) Frame 040,(L2PT) Frame 046
+[PID 03 REF:073] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:074] Page access 042: (L1PT) Frame 061,(L2PT) Frame 141
+[PID 01 REF:074] Page access 038: (L1PT) Frame 038,(L2PT) Frame 131
+[PID 02 REF:074] Page access 023: (L1PT) Frame 055,(L2PT) Frame 056
+[PID 03 REF:074] Page access 031: (L1PT) Frame 065,(L2PT) Frame 069
+[PID 00 REF:075] Page access 042: (L1PT) Frame 061,(L2PT) Frame 141
+[PID 01 REF:075] Page access 054: (L1PT) PF,Allocated Frame 006 -> 142,(L2PT) PF,Allocated Frame 143
+[PID 02 REF:075] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:075] Page access 033: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 144
+[PID 00 REF:076] Page access 044: (L1PT) Frame 061,(L2PT) PF,Allocated Frame 145
+[PID 01 REF:076] Page access 054: (L1PT) Frame 142,(L2PT) Frame 143
+[PID 02 REF:076] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:076] Page access 034: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 146
+[PID 00 REF:077] Page access 043: (L1PT) Frame 061,(L2PT) Frame 087
+[PID 01 REF:077] Page access 055: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 147
+[PID 02 REF:077] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:077] Page access 000: (L1PT) Frame 078,(L2PT) Frame 079
+[PID 00 REF:078] Page access 049: (L1PT) Frame 031,(L2PT) Frame 051
+[PID 01 REF:078] Page access 058: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 148
+[PID 02 REF:078] Page access 059: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 149
+[PID 03 REF:078] Page access 004: (L1PT) Frame 078,(L2PT) PF,Allocated Frame 150
+[PID 00 REF:079] Page access 042: (L1PT) Frame 061,(L2PT) Frame 141
+[PID 01 REF:079] Page access 056: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 151
+[PID 02 REF:079] Page access 056: (L1PT) Frame 063,(L2PT) Frame 070
+[PID 03 REF:079] Page access 001: (L1PT) Frame 078,(L2PT) PF,Allocated Frame 152
+[PID 00 REF:080] Page access 053: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 153
+[PID 01 REF:080] Page access 042: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 154
+[PID 02 REF:080] Page access 056: (L1PT) Frame 063,(L2PT) Frame 070
+[PID 03 REF:080] Page access 013: (L1PT) PF,Allocated Frame 001 -> 155,(L2PT) PF,Allocated Frame 156
+[PID 00 REF:081] Page access 029: (L1PT) Frame 004,(L2PT) Frame 118
+[PID 01 REF:081] Page access 016: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 02 REF:081] Page access 058: (L1PT) Frame 063,(L2PT) PF,Allocated Frame 157
+[PID 03 REF:081] Page access 014: (L1PT) Frame 155,(L2PT) PF,Allocated Frame 158
+[PID 00 REF:082] Page access 058: (L1PT) Frame 029,(L2PT) Frame 030
+[PID 01 REF:082] Page access 045: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 159
+[PID 02 REF:082] Page access 056: (L1PT) Frame 063,(L2PT) Frame 070
+[PID 03 REF:082] Page access 014: (L1PT) Frame 155,(L2PT) Frame 158
+[PID 00 REF:083] Page access 052: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 160
+[PID 01 REF:083] Page access 047: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 161
+[PID 02 REF:083] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:083] Page access 017: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 162
+[PID 00 REF:084] Page access 052: (L1PT) Frame 031,(L2PT) Frame 160
+[PID 01 REF:084] Page access 042: (L1PT) Frame 121,(L2PT) Frame 154
+[PID 02 REF:084] Page access 057: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 03 REF:084] Page access 013: (L1PT) Frame 155,(L2PT) Frame 156
+[PID 00 REF:085] Page access 054: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 163
+[PID 01 REF:085] Page access 045: (L1PT) Frame 121,(L2PT) Frame 159
+[PID 02 REF:085] Page access 055: (L1PT) Frame 040,(L2PT) Frame 060
+[PID 03 REF:085] Page access 017: (L1PT) Frame 042,(L2PT) Frame 162
+[PID 00 REF:086] Page access 050: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 164
+[PID 01 REF:086] Page access 045: (L1PT) Frame 121,(L2PT) Frame 159
+[PID 02 REF:086] Page access 057: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 03 REF:086] Page access 014: (L1PT) Frame 155,(L2PT) Frame 158
+[PID 00 REF:087] Page access 054: (L1PT) Frame 031,(L2PT) Frame 163
+[PID 01 REF:087] Page access 034: (L1PT) Frame 038,(L2PT) PF,Allocated Frame 165
+[PID 02 REF:087] Page access 057: (L1PT) Frame 063,(L2PT) Frame 064
+[PID 03 REF:087] Page access 016: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 166
+[PID 00 REF:088] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 01 REF:088] Page access 063: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 167
+[PID 02 REF:088] Page access 056: (L1PT) Frame 063,(L2PT) Frame 070
+[PID 03 REF:088] Page access 036: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 168
+[PID 00 REF:089] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 01 REF:089] Page access 062: (L1PT) Frame 023,(L2PT) PF,Allocated Frame 169
+[PID 02 REF:089] Page access 055: (L1PT) Frame 040,(L2PT) Frame 060
+[PID 03 REF:089] Page access 050: (L1PT) Frame 035,(L2PT) Frame 140
+[PID 00 REF:090] Page access 028: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 01 REF:090] Page access 050: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 170
+[PID 02 REF:090] Page access 021: (L1PT) Frame 055,(L2PT) PF,Allocated Frame 171
+[PID 03 REF:090] Page access 043: (L1PT) Frame 010,(L2PT) PF,Allocated Frame 172
+[PID 00 REF:091] Page access 056: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 173
+[PID 01 REF:091] Page access 052: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 174
+[PID 02 REF:091] Page access 021: (L1PT) Frame 055,(L2PT) Frame 171
+[PID 03 REF:091] Page access 013: (L1PT) Frame 155,(L2PT) Frame 156
+[PID 00 REF:092] Page access 057: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 175
+[PID 01 REF:092] Page access 051: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 176
+[PID 02 REF:092] Page access 020: (L1PT) Frame 055,(L2PT) PF,Allocated Frame 177
+[PID 03 REF:092] Page access 011: (L1PT) Frame 155,(L2PT) PF,Allocated Frame 178
+[PID 00 REF:093] Page access 060: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 179
+[PID 01 REF:093] Page access 049: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 180
+[PID 02 REF:093] Page access 019: (L1PT) Frame 055,(L2PT) PF,Allocated Frame 181
+[PID 03 REF:093] Page access 014: (L1PT) Frame 155,(L2PT) Frame 158
+[PID 00 REF:094] Page access 058: (L1PT) Frame 029,(L2PT) Frame 030
+[PID 01 REF:094] Page access 050: (L1PT) Frame 142,(L2PT) Frame 170
+[PID 02 REF:094] Page access 020: (L1PT) Frame 055,(L2PT) Frame 177
+[PID 03 REF:094] Page access 010: (L1PT) Frame 155,(L2PT) PF,Allocated Frame 182
+[PID 00 REF:095] Page access 059: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 183
+[PID 01 REF:095] Page access 052: (L1PT) Frame 142,(L2PT) Frame 174
+[PID 02 REF:095] Page access 020: (L1PT) Frame 055,(L2PT) Frame 177
+[PID 03 REF:095] Page access 011: (L1PT) Frame 155,(L2PT) Frame 178
+[PID 00 REF:096] Page access 060: (L1PT) Frame 029,(L2PT) Frame 179
+[PID 01 REF:096] Page access 053: (L1PT) Frame 142,(L2PT) PF,Allocated Frame 184
+[PID 02 REF:096] Page access 018: (L1PT) Frame 055,(L2PT) PF,Allocated Frame 185
+[PID 03 REF:096] Page access 030: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 186
+[PID 00 REF:097] Page access 058: (L1PT) Frame 029,(L2PT) Frame 030
+[PID 01 REF:097] Page access 052: (L1PT) Frame 142,(L2PT) Frame 174
+[PID 02 REF:097] Page access 020: (L1PT) Frame 055,(L2PT) Frame 177
+[PID 03 REF:097] Page access 033: (L1PT) Frame 071,(L2PT) Frame 144
+[PID 00 REF:098] Page access 059: (L1PT) Frame 029,(L2PT) Frame 183
+[PID 01 REF:098] Page access 035: (L1PT) Frame 038,(L2PT) Frame 127
+[PID 02 REF:098] Page access 045: (L1PT) Frame 052,(L2PT) Frame 053
+[PID 03 REF:098] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:099] Page access 056: (L1PT) Frame 029,(L2PT) Frame 173
+[PID 01 REF:099] Page access 051: (L1PT) Frame 142,(L2PT) Frame 176
+[PID 02 REF:099] Page access 045: (L1PT) Frame 052,(L2PT) Frame 053
+[PID 03 REF:099] Page access 034: (L1PT) Frame 071,(L2PT) Frame 146
+[PID 00 REF:100] Page access 005: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 187
+[PID 01 REF:100] Page access 053: (L1PT) Frame 142,(L2PT) Frame 184
+[PID 02 REF:100] Page access 021: (L1PT) Frame 055,(L2PT) Frame 171
+[PID 03 REF:100] Page access 033: (L1PT) Frame 071,(L2PT) Frame 144
+[PID 00 REF:101] Page access 006: (L1PT) Frame 033,(L2PT) Frame 034
+[PID 01 REF:101] Page access 049: (L1PT) Frame 142,(L2PT) Frame 180
+[PID 02 REF:101] Page access 024: (L1PT) Frame 080,(L2PT) PF,Allocated Frame 188
+[PID 03 REF:101] Page access 023: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 189
+[PID 00 REF:102] Page access 003: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 190
+[PID 01 REF:102] Page access 052: (L1PT) Frame 142,(L2PT) Frame 174
+[PID 02 REF:102] Page access 021: (L1PT) Frame 055,(L2PT) Frame 171
+[PID 03 REF:102] Page access 035: (L1PT) Frame 071,(L2PT) Frame 130
+[PID 00 REF:103] Page access 003: (L1PT) Frame 033,(L2PT) Frame 190
+[PID 01 REF:103] Page access 050: (L1PT) Frame 142,(L2PT) Frame 170
+[PID 02 REF:103] Page access 022: (L1PT) Frame 055,(L2PT) PF,Allocated Frame 191
+[PID 03 REF:103] Page access 025: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 192
+[PID 00 REF:104] Page access 005: (L1PT) Frame 033,(L2PT) Frame 187
+[PID 01 REF:104] Page access 050: (L1PT) Frame 142,(L2PT) Frame 170
+[PID 02 REF:104] Page access 021: (L1PT) Frame 055,(L2PT) Frame 171
+[PID 03 REF:104] Page access 035: (L1PT) Frame 071,(L2PT) Frame 130
+[PID 00 REF:105] Page access 003: (L1PT) Frame 033,(L2PT) Frame 190
+[PID 01 REF:105] Page access 051: (L1PT) Frame 142,(L2PT) Frame 176
+[PID 02 REF:105] Page access 025: (L1PT) Frame 080,(L2PT) Frame 112
+[PID 03 REF:105] Page access 013: (L1PT) Frame 155,(L2PT) Frame 156
+[PID 00 REF:106] Page access 004: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 193
+[PID 02 REF:106] Page access 022: (L1PT) Frame 055,(L2PT) Frame 191
+[PID 03 REF:106] Page access 012: (L1PT) Frame 155,(L2PT) PF,Allocated Frame 194
+[PID 00 REF:107] Page access 004: (L1PT) Frame 033,(L2PT) Frame 193
+[PID 02 REF:107] Page access 024: (L1PT) Frame 080,(L2PT) Frame 188
+[PID 03 REF:107] Page access 033: (L1PT) Frame 071,(L2PT) Frame 144
+[PID 00 REF:108] Page access 002: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 195
+[PID 02 REF:108] Page access 021: (L1PT) Frame 055,(L2PT) Frame 171
+[PID 03 REF:108] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:109] Page access 002: (L1PT) Frame 033,(L2PT) Frame 195
+[PID 02 REF:109] Page access 022: (L1PT) Frame 055,(L2PT) Frame 191
+[PID 03 REF:109] Page access 030: (L1PT) Frame 065,(L2PT) Frame 186
+[PID 00 REF:110] Page access 047: (L1PT) Frame 061,(L2PT) PF,Allocated Frame 196
+[PID 02 REF:110] Page access 047: (L1PT) Frame 052,(L2PT) PF,Allocated Frame 197
+[PID 03 REF:110] Page access 046: (L1PT) Frame 010,(L2PT) Frame 020
+[PID 00 REF:111] Page access 023: (L1PT) Frame 021,(L2PT) Frame 104
+[PID 02 REF:111] Page access 023: (L1PT) Frame 055,(L2PT) Frame 056
+[PID 03 REF:111] Page access 048: (L1PT) Frame 035,(L2PT) Frame 086
+[PID 00 REF:112] Page access 063: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 198
+[PID 02 REF:112] Page access 033: (L1PT) Frame 008,(L2PT) Frame 014
+[PID 03 REF:112] Page access 026: (L1PT) Frame 065,(L2PT) PF,Allocated Frame 199
+[PID 00 REF:113] Page access 059: (L1PT) Frame 029,(L2PT) Frame 183
+[PID 02 REF:113] Page access 048: (L1PT) Frame 040,(L2PT) Frame 046
+[PID 03 REF:113] Page access 047: (L1PT) Frame 010,(L2PT) Frame 026
+[PID 00 REF:114] Page access 061: (L1PT) Frame 029,(L2PT) PF,Allocated Frame 200
+[PID 02 REF:114] Page access 030: (L1PT) Frame 080,(L2PT) Frame 092
+[PID 03 REF:114] Page access 023: (L1PT) Frame 042,(L2PT) Frame 189
+[PID 00 REF:115] Page access 063: (L1PT) Frame 029,(L2PT) Frame 198
+[PID 02 REF:115] Page access 034: (L1PT) Frame 008,(L2PT) Frame 025
+[PID 03 REF:115] Page access 048: (L1PT) Frame 035,(L2PT) Frame 086
+[PID 00 REF:116] Page access 059: (L1PT) Frame 029,(L2PT) Frame 183
+[PID 02 REF:116] Page access 040: (L1PT) Frame 052,(L2PT) PF,Allocated Frame 201
+[PID 03 REF:116] Page access 011: (L1PT) Frame 155,(L2PT) Frame 178
+[PID 00 REF:117] Page access 034: (L1PT) Frame 067,(L2PT) Frame 126
+[PID 02 REF:117] Page access 034: (L1PT) Frame 008,(L2PT) Frame 025
+[PID 03 REF:117] Page access 037: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 202
+[PID 00 REF:118] Page access 037: (L1PT) Frame 067,(L2PT) Frame 105
+[PID 02 REF:118] Page access 007: (L1PT) PF,Allocated Frame 000 -> 203,(L2PT) PF,Allocated Frame 204
+[PID 03 REF:118] Page access 037: (L1PT) Frame 071,(L2PT) Frame 202
+[PID 00 REF:119] Page access 038: (L1PT) Frame 067,(L2PT) Frame 068
+[PID 02 REF:119] Page access 032: (L1PT) Frame 008,(L2PT) Frame 019
+[PID 03 REF:119] Page access 039: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 205
+[PID 00 REF:120] Page access 035: (L1PT) Frame 067,(L2PT) Frame 113
+[PID 02 REF:120] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:120] Page access 038: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 206
+[PID 00 REF:121] Page access 035: (L1PT) Frame 067,(L2PT) Frame 113
+[PID 02 REF:121] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:121] Page access 036: (L1PT) Frame 071,(L2PT) Frame 168
+[PID 00 REF:122] Page access 034: (L1PT) Frame 067,(L2PT) Frame 126
+[PID 02 REF:122] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:122] Page access 037: (L1PT) Frame 071,(L2PT) Frame 202
+[PID 00 REF:123] Page access 036: (L1PT) Frame 067,(L2PT) Frame 128
+[PID 02 REF:123] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:123] Page access 055: (L1PT) Frame 035,(L2PT) Frame 057
+[PID 00 REF:124] Page access 035: (L1PT) Frame 067,(L2PT) Frame 113
+[PID 02 REF:124] Page access 053: (L1PT) Frame 040,(L2PT) Frame 076
+[PID 03 REF:124] Page access 037: (L1PT) Frame 071,(L2PT) Frame 202
+[PID 00 REF:125] Page access 037: (L1PT) Frame 067,(L2PT) Frame 105
+[PID 02 REF:125] Page access 051: (L1PT) Frame 040,(L2PT) Frame 095
+[PID 03 REF:125] Page access 038: (L1PT) Frame 071,(L2PT) Frame 206
+[PID 00 REF:126] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 02 REF:126] Page access 052: (L1PT) Frame 040,(L2PT) Frame 097
+[PID 03 REF:126] Page access 054: (L1PT) Frame 035,(L2PT) Frame 050
+[PID 00 REF:127] Page access 054: (L1PT) Frame 031,(L2PT) Frame 163
+[PID 02 REF:127] Page access 054: (L1PT) Frame 040,(L2PT) Frame 058
+[PID 03 REF:127] Page access 039: (L1PT) Frame 071,(L2PT) Frame 205
+[PID 00 REF:128] Page access 054: (L1PT) Frame 031,(L2PT) Frame 163
+[PID 03 REF:128] Page access 011: (L1PT) Frame 155,(L2PT) Frame 178
+[PID 00 REF:129] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 03 REF:129] Page access 038: (L1PT) Frame 071,(L2PT) Frame 206
+[PID 00 REF:130] Page access 052: (L1PT) Frame 031,(L2PT) Frame 160
+[PID 03 REF:130] Page access 031: (L1PT) Frame 065,(L2PT) Frame 069
+[PID 00 REF:131] Page access 053: (L1PT) Frame 031,(L2PT) Frame 153
+[PID 03 REF:131] Page access 028: (L1PT) Frame 065,(L2PT) Frame 089
+[PID 00 REF:132] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 03 REF:132] Page access 032: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 00 REF:133] Page access 052: (L1PT) Frame 031,(L2PT) Frame 160
+[PID 03 REF:133] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:134] Page access 054: (L1PT) Frame 031,(L2PT) Frame 163
+[PID 03 REF:134] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:135] Page access 035: (L1PT) Frame 067,(L2PT) Frame 113
+[PID 03 REF:135] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:136] Page access 033: (L1PT) Frame 067,(L2PT) Frame 129
+[PID 03 REF:136] Page access 029: (L1PT) Frame 065,(L2PT) Frame 066
+[PID 00 REF:137] Page access 033: (L1PT) Frame 067,(L2PT) Frame 129
+[PID 00 REF:138] Page access 033: (L1PT) Frame 067,(L2PT) Frame 129
+[PID 00 REF:139] Page access 033: (L1PT) Frame 067,(L2PT) Frame 129
+[PID 00 REF:140] Page access 048: (L1PT) Frame 031,(L2PT) PF,Allocated Frame 207
+[PID 00 REF:141] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 00 REF:142] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 00 REF:143] Page access 048: (L1PT) Frame 031,(L2PT) Frame 207
+[PID 00 REF:144] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 00 REF:145] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 00 REF:146] Page access 029: (L1PT) Frame 004,(L2PT) Frame 118
+[PID 00 REF:147] Page access 049: (L1PT) Frame 031,(L2PT) Frame 051
+[PID 00 REF:148] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 00 REF:149] Page access 048: (L1PT) Frame 031,(L2PT) Frame 207
+[PID 00 REF:150] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 00 REF:151] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 00 REF:152] Page access 051: (L1PT) Frame 031,(L2PT) Frame 124
+[PID 00 REF:153] Page access 050: (L1PT) Frame 031,(L2PT) Frame 164
+[PID 00 REF:154] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 00 REF:155] Page access 019: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 208
+[PID 00 REF:156] Page access 005: (L1PT) Frame 033,(L2PT) Frame 187
+[PID 00 REF:157] Page access 002: (L1PT) Frame 033,(L2PT) Frame 195
+[PID 00 REF:158] Page access 005: (L1PT) Frame 033,(L2PT) Frame 187
+[PID 00 REF:159] Page access 001: (L1PT) Frame 033,(L2PT) Frame 101
+[PID 00 REF:160] Page access 001: (L1PT) Frame 033,(L2PT) Frame 101
+[PID 00 REF:161] Page access 004: (L1PT) Frame 033,(L2PT) Frame 193
+[PID 00 REF:162] Page access 002: (L1PT) Frame 033,(L2PT) Frame 195
+[PID 00 REF:163] Page access 004: (L1PT) Frame 033,(L2PT) Frame 193
+[PID 00 REF:164] Page access 003: (L1PT) Frame 033,(L2PT) Frame 190
+[PID 00 REF:165] Page access 004: (L1PT) Frame 033,(L2PT) Frame 193
+[PID 00 REF:166] Page access 003: (L1PT) Frame 033,(L2PT) Frame 190
+[PID 00 REF:167] Page access 003: (L1PT) Frame 033,(L2PT) Frame 190
+[PID 00 REF:168] Page access 002: (L1PT) Frame 033,(L2PT) Frame 195
+[PID 00 REF:169] Page access 017: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 209
+[PID 00 REF:170] Page access 018: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 210
+[PID 00 REF:171] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 00 REF:172] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 00 REF:173] Page access 028: (L1PT) Frame 004,(L2PT) Frame 005
+[PID 00 REF:174] Page access 017: (L1PT) Frame 021,(L2PT) Frame 209
+[PID 00 REF:175] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 00 REF:176] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 00 REF:177] Page access 061: (L1PT) Frame 029,(L2PT) Frame 200
+[PID 00 REF:178] Page access 021: (L1PT) Frame 021,(L2PT) Frame 022
+Start() end
+** Process 000: Allocated Frames=063 PageFaults/References=062/179
+(L1PT) 000 -> 033
+(L2PT) 001 -> 101 REF=003
+(L2PT) 002 -> 195 REF=005
+(L2PT) 003 -> 190 REF=006
+(L2PT) 004 -> 193 REF=005
+(L2PT) 005 -> 187 REF=004
+(L2PT) 006 -> 034 REF=004
+(L2PT) 007 -> 037 REF=001
+(L1PT) 001 -> 044
+(L2PT) 008 -> 049 REF=004
+(L2PT) 009 -> 045 REF=002
+(L2PT) 012 -> 136 REF=002
+(L2PT) 013 -> 138 REF=001
+(L2PT) 014 -> 135 REF=002
+(L2PT) 015 -> 134 REF=003
+(L1PT) 002 -> 021
+(L2PT) 017 -> 209 REF=002
+(L2PT) 018 -> 210 REF=001
+(L2PT) 019 -> 208 REF=001
+(L2PT) 021 -> 022 REF=008
+(L2PT) 022 -> 103 REF=001
+(L2PT) 023 -> 104 REF=002
+(L1PT) 003 -> 004
+(L2PT) 024 -> 012 REF=004
+(L2PT) 025 -> 027 REF=005
+(L2PT) 026 -> 114 REF=001
+(L2PT) 027 -> 016 REF=003
+(L2PT) 028 -> 005 REF=005
+(L2PT) 029 -> 118 REF=003
+(L1PT) 004 -> 067
+(L2PT) 032 -> 120 REF=003
+(L2PT) 033 -> 129 REF=005
+(L2PT) 034 -> 126 REF=003
+(L2PT) 035 -> 113 REF=006
+(L2PT) 036 -> 128 REF=003
+(L2PT) 037 -> 105 REF=006
+(L2PT) 038 -> 068 REF=006
+(L2PT) 039 -> 082 REF=002
+(L1PT) 005 -> 061
+(L2PT) 040 -> 062 REF=004
+(L2PT) 041 -> 075 REF=003
+(L2PT) 042 -> 141 REF=004
+(L2PT) 043 -> 087 REF=003
+(L2PT) 044 -> 145 REF=001
+(L2PT) 047 -> 196 REF=001
+(L1PT) 006 -> 031
+(L2PT) 048 -> 207 REF=003
+(L2PT) 049 -> 051 REF=003
+(L2PT) 050 -> 164 REF=008
+(L2PT) 051 -> 124 REF=008
+(L2PT) 052 -> 160 REF=004
+(L2PT) 053 -> 153 REF=002
+(L2PT) 054 -> 163 REF=005
+(L2PT) 055 -> 032 REF=001
+(L1PT) 007 -> 029
+(L2PT) 056 -> 173 REF=002
+(L2PT) 057 -> 175 REF=001
+(L2PT) 058 -> 030 REF=004
+(L2PT) 059 -> 183 REF=004
+(L2PT) 060 -> 179 REF=002
+(L2PT) 061 -> 200 REF=002
+(L2PT) 063 -> 198 REF=002
+** Process 001: Allocated Frames=052 PageFaults/References=051/106
+(L1PT) 000 -> 006
+(L2PT) 002 -> 018 REF=003
+(L2PT) 003 -> 007 REF=005
+(L2PT) 004 -> 013 REF=006
+(L2PT) 005 -> 017 REF=005
+(L2PT) 006 -> 028 REF=006
+(L2PT) 007 -> 077 REF=001
+(L1PT) 001 -> 083
+(L2PT) 008 -> 093 REF=001
+(L2PT) 009 -> 084 REF=001
+(L2PT) 011 -> 116 REF=001
+(L2PT) 013 -> 106 REF=001
+(L2PT) 014 -> 094 REF=003
+(L2PT) 015 -> 102 REF=003
+(L1PT) 002 -> 073
+(L2PT) 016 -> 074 REF=005
+(L2PT) 018 -> 108 REF=001
+(L2PT) 019 -> 119 REF=002
+(L2PT) 020 -> 111 REF=004
+(L2PT) 021 -> 109 REF=002
+(L2PT) 022 -> 115 REF=001
+(L1PT) 003 -> 090
+(L2PT) 028 -> 091 REF=001
+(L2PT) 029 -> 110 REF=001
+(L1PT) 004 -> 038
+(L2PT) 034 -> 165 REF=001
+(L2PT) 035 -> 127 REF=003
+(L2PT) 036 -> 125 REF=001
+(L2PT) 037 -> 039 REF=005
+(L2PT) 038 -> 131 REF=002
+(L2PT) 039 -> 132 REF=006
+(L1PT) 005 -> 121
+(L2PT) 040 -> 122 REF=004
+(L2PT) 041 -> 133 REF=002
+(L2PT) 042 -> 154 REF=002
+(L2PT) 045 -> 159 REF=003
+(L2PT) 047 -> 161 REF=001
+(L1PT) 006 -> 142
+(L2PT) 049 -> 180 REF=002
+(L2PT) 050 -> 170 REF=004
+(L2PT) 051 -> 176 REF=003
+(L2PT) 052 -> 174 REF=004
+(L2PT) 053 -> 184 REF=002
+(L2PT) 054 -> 143 REF=002
+(L2PT) 055 -> 147 REF=001
+(L1PT) 007 -> 023
+(L2PT) 056 -> 151 REF=001
+(L2PT) 057 -> 024 REF=001
+(L2PT) 058 -> 148 REF=001
+(L2PT) 062 -> 169 REF=001
+(L2PT) 063 -> 167 REF=001
+** Process 002: Allocated Frames=041 PageFaults/References=040/128
+(L1PT) 000 -> 203
+(L2PT) 007 -> 204 REF=001
+(L1PT) 002 -> 055
+(L2PT) 018 -> 185 REF=001
+(L2PT) 019 -> 181 REF=001
+(L2PT) 020 -> 177 REF=004
+(L2PT) 021 -> 171 REF=006
+(L2PT) 022 -> 191 REF=003
+(L2PT) 023 -> 056 REF=004
+(L1PT) 003 -> 080
+(L2PT) 024 -> 188 REF=002
+(L2PT) 025 -> 112 REF=003
+(L2PT) 026 -> 088 REF=005
+(L2PT) 027 -> 085 REF=003
+(L2PT) 029 -> 081 REF=003
+(L2PT) 030 -> 092 REF=004
+(L1PT) 004 -> 008
+(L2PT) 032 -> 019 REF=003
+(L2PT) 033 -> 014 REF=005
+(L2PT) 034 -> 025 REF=004
+(L2PT) 036 -> 009 REF=003
+(L1PT) 005 -> 052
+(L2PT) 040 -> 201 REF=001
+(L2PT) 044 -> 117 REF=001
+(L2PT) 045 -> 053 REF=003
+(L2PT) 047 -> 197 REF=001
+(L1PT) 006 -> 040
+(L2PT) 048 -> 046 REF=005
+(L2PT) 049 -> 041 REF=005
+(L2PT) 050 -> 099 REF=002
+(L2PT) 051 -> 095 REF=009
+(L2PT) 052 -> 097 REF=012
+(L2PT) 053 -> 076 REF=007
+(L2PT) 054 -> 058 REF=009
+(L2PT) 055 -> 060 REF=006
+(L1PT) 007 -> 063
+(L2PT) 056 -> 070 REF=006
+(L2PT) 057 -> 064 REF=004
+(L2PT) 058 -> 157 REF=001
+(L2PT) 059 -> 149 REF=001
+** Process 003: Allocated Frames=055 PageFaults/References=054/137
+(L1PT) 000 -> 078
+(L2PT) 000 -> 079 REF=002
+(L2PT) 001 -> 152 REF=001
+(L2PT) 004 -> 150 REF=001
+(L1PT) 001 -> 155
+(L2PT) 010 -> 182 REF=001
+(L2PT) 011 -> 178 REF=004
+(L2PT) 012 -> 194 REF=001
+(L2PT) 013 -> 156 REF=004
+(L2PT) 014 -> 158 REF=004
+(L1PT) 002 -> 042
+(L2PT) 016 -> 166 REF=001
+(L2PT) 017 -> 162 REF=002
+(L2PT) 018 -> 139 REF=001
+(L2PT) 019 -> 137 REF=001
+(L2PT) 021 -> 043 REF=001
+(L2PT) 023 -> 189 REF=002
+(L1PT) 003 -> 065
+(L2PT) 025 -> 192 REF=001
+(L2PT) 026 -> 199 REF=001
+(L2PT) 028 -> 089 REF=004
+(L2PT) 029 -> 066 REF=008
+(L2PT) 030 -> 186 REF=002
+(L2PT) 031 -> 069 REF=003
+(L1PT) 004 -> 071
+(L2PT) 032 -> 072 REF=007
+(L2PT) 033 -> 144 REF=004
+(L2PT) 034 -> 146 REF=002
+(L2PT) 035 -> 130 REF=003
+(L2PT) 036 -> 168 REF=002
+(L2PT) 037 -> 202 REF=004
+(L2PT) 038 -> 206 REF=003
+(L2PT) 039 -> 205 REF=002
+(L1PT) 005 -> 010
+(L2PT) 043 -> 172 REF=001
+(L2PT) 044 -> 011 REF=002
+(L2PT) 045 -> 015 REF=004
+(L2PT) 046 -> 020 REF=003
+(L2PT) 047 -> 026 REF=004
+(L1PT) 006 -> 035
+(L2PT) 048 -> 086 REF=004
+(L2PT) 050 -> 140 REF=002
+(L2PT) 052 -> 036 REF=001
+(L2PT) 053 -> 107 REF=006
+(L2PT) 054 -> 050 REF=006
+(L2PT) 055 -> 057 REF=005
+(L1PT) 007 -> 047
+(L2PT) 056 -> 059 REF=004
+(L2PT) 057 -> 048 REF=007
+(L2PT) 058 -> 054 REF=001
+(L2PT) 059 -> 100 REF=004
+(L2PT) 060 -> 123 REF=004
+(L2PT) 061 -> 098 REF=005
+(L2PT) 063 -> 096 REF=002
+Total: Allocated Frames=211 Page Faults/References=207/550
+ubuntu@41983:~/hw3$ cat test3-5.bin | ./os3-2-dump
+load_process() start
+0 168
+08 11 09 11 11 11 09 07 10 10 15 42 54 57 57 12 10 11 12 61 34 59 16 55 19 17 17 16 18 17 59 58 62 61 62 59 62 58 59 36 30 31 32 01 32 30 30 33 39 29 30 27 28 29 27 29 18 15 17 16 14 14 14 14 17 14 14 18 15 15 29 31 32 30 32 13 11 15 11 11 11 08 12 12 09 08 06 08 06 09 16 16 14 07 14 12 23 16 15 45 05 45 46 43 45 46 47 46 50 53 52 52 26 53 32 50 15 14 48 17 27 11 30 30 29 29 37 38 40 37 39 38 37 16 41 47 47 45 46 47 44 30 48 45 27 29 30 28 28 30 16 12 14 37 14 15 14 14 16 15 13 16 13 13 14 52 52 54 
+1 235
+33 34 31 33 19 34 33 31 30 30 20 18 16 17 20 17 51 52 53 53 50 50 51 52 36 39 37 38 01 36 36 40 40 24 40 46 08 11 08 09 07 08 08 11 09 07 11 11 14 16 12 47 12 16 16 15 15 13 16 12 41 40 40 40 38 17 30 61 60 59 59 59 60 57 61 60 60 02 06 03 51 50 50 48 39 51 51 51 51 48 51 46 44 45 46 45 44 44 55 36 23 39 37 40 38 38 37 38 40 38 37 25 51 53 53 52 51 13 10 12 13 14 11 10 14 11 22 22 21 19 22 21 08 07 07 10 10 07 07 08 49 51 52 49 30 34 31 33 34 30 24 31 32 30 33 31 47 00 10 48 44 55 48 47 45 48 47 46 47 17 19 13 15 17 13 17 15 14 17 13 20 22 03 43 44 46 47 40 40 42 42 43 45 45 42 45 43 41 45 33 41 43 43 21 08 05 04 07 08 05 46 46 47 48 48 47 47 49 61 50 46 05 05 02 06 26 61 23 26 23 23 24 25 24 34 
+2 126
+05 03 02 01 03 04 05 01 02 02 41 40 62 44 34 34 54 56 55 53 56 53 53 54 54 56 25 29 25 27 27 29 26 26 29 25 17 17 19 18 17 17 11 18 19 56 57 58 54 57 54 54 58 02 54 54 56 57 56 54 34 33 30 31 31 28 29 27 25 26 29 28 30 30 30 27 29 59 59 58 60 57 59 56 36 21 22 21 20 23 23 06 20 22 23 23 28 28 27 15 29 29 28 30 29 29 28 28 33 35 18 18 18 15 15 17 16 14 16 16 15 19 17 17 16 15 
+3 92
+44 43 45 45 43 46 47 46 45 46 27 09 24 25 28 57 54 55 56 53 40 41 43 42 40 41 39 39 42 41 47 45 44 45 47 44 43 45 45 40 04 41 42 40 43 41 40 42 41 40 43 44 59 59 55 55 56 56 57 59 61 63 60 61 63 63 63 21 62 61 63 62 18 33 18 33 33 32 32 29 21 24 24 38 21 22 24 21 29 31 30 30 
+4 189
+62 60 59 60 58 62 58 61 58 62 59 60 17 20 21 21 19 18 18 20 17 18 07 08 09 08 10 59 60 48 32 22 22 19 60 19 50 48 51 49 52 51 49 52 51 36 38 35 36 36 35 37 35 34 48 45 49 46 47 03 23 25 25 25 22 26 25 27 25 25 24 28 27 27 24 27 28 27 25 25 24 27 10 25 25 28 26 25 49 26 07 30 29 31 30 32 28 28 28 05 06 06 06 07 07 06 48 35 04 08 04 07 61 42 44 42 43 41 41 44 15 32 32 29 30 31 28 29 32 10 30 30 50 53 51 50 49 52 50 51 04 00 04 63 03 02 00 01 03 01 22 22 24 24 25 25 04 25 06 11 47 46 45 40 45 11 07 12 09 10 08 09 11 09 09 09 08 12 11 09 12 12 13 13 12 14 10 14 13 
+load_process() end
+Start() start
+[PID 00 REF:000] Page access 008: (L1PT) PF,Allocated Frame 001 -> 005,(L2PT) PF,Allocated Frame 006
+[PID 01 REF:000] Page access 033: (L1PT) PF,Allocated Frame 004 -> 007,(L2PT) PF,Allocated Frame 008
+[PID 02 REF:000] Page access 005: (L1PT) PF,Allocated Frame 000 -> 009,(L2PT) PF,Allocated Frame 010
+[PID 03 REF:000] Page access 044: (L1PT) PF,Allocated Frame 005 -> 011,(L2PT) PF,Allocated Frame 012
+[PID 04 REF:000] Page access 062: (L1PT) PF,Allocated Frame 007 -> 013,(L2PT) PF,Allocated Frame 014
+[PID 00 REF:001] Page access 011: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 015
+[PID 01 REF:001] Page access 034: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 016
+[PID 02 REF:001] Page access 003: (L1PT) Frame 009,(L2PT) PF,Allocated Frame 017
+[PID 03 REF:001] Page access 043: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 018
+[PID 04 REF:001] Page access 060: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 019
+[PID 00 REF:002] Page access 009: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 020
+[PID 01 REF:002] Page access 031: (L1PT) PF,Allocated Frame 003 -> 021,(L2PT) PF,Allocated Frame 022
+[PID 02 REF:002] Page access 002: (L1PT) Frame 009,(L2PT) PF,Allocated Frame 023
+[PID 03 REF:002] Page access 045: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 024
+[PID 04 REF:002] Page access 059: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 025
+[PID 00 REF:003] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:003] Page access 033: (L1PT) Frame 007,(L2PT) Frame 008
+[PID 02 REF:003] Page access 001: (L1PT) Frame 009,(L2PT) PF,Allocated Frame 026
+[PID 03 REF:003] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:003] Page access 060: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:004] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:004] Page access 019: (L1PT) PF,Allocated Frame 002 -> 027,(L2PT) PF,Allocated Frame 028
+[PID 02 REF:004] Page access 003: (L1PT) Frame 009,(L2PT) Frame 017
+[PID 03 REF:004] Page access 043: (L1PT) Frame 011,(L2PT) Frame 018
+[PID 04 REF:004] Page access 058: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 029
+[PID 00 REF:005] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:005] Page access 034: (L1PT) Frame 007,(L2PT) Frame 016
+[PID 02 REF:005] Page access 004: (L1PT) Frame 009,(L2PT) PF,Allocated Frame 030
+[PID 03 REF:005] Page access 046: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 031
+[PID 04 REF:005] Page access 062: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:006] Page access 009: (L1PT) Frame 005,(L2PT) Frame 020
+[PID 01 REF:006] Page access 033: (L1PT) Frame 007,(L2PT) Frame 008
+[PID 02 REF:006] Page access 005: (L1PT) Frame 009,(L2PT) Frame 010
+[PID 03 REF:006] Page access 047: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 032
+[PID 04 REF:006] Page access 058: (L1PT) Frame 013,(L2PT) Frame 029
+[PID 00 REF:007] Page access 007: (L1PT) PF,Allocated Frame 000 -> 033,(L2PT) PF,Allocated Frame 034
+[PID 01 REF:007] Page access 031: (L1PT) Frame 021,(L2PT) Frame 022
+[PID 02 REF:007] Page access 001: (L1PT) Frame 009,(L2PT) Frame 026
+[PID 03 REF:007] Page access 046: (L1PT) Frame 011,(L2PT) Frame 031
+[PID 04 REF:007] Page access 061: (L1PT) Frame 013,(L2PT) PF,Allocated Frame 035
+[PID 00 REF:008] Page access 010: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 036
+[PID 01 REF:008] Page access 030: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 037
+[PID 02 REF:008] Page access 002: (L1PT) Frame 009,(L2PT) Frame 023
+[PID 03 REF:008] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:008] Page access 058: (L1PT) Frame 013,(L2PT) Frame 029
+[PID 00 REF:009] Page access 010: (L1PT) Frame 005,(L2PT) Frame 036
+[PID 01 REF:009] Page access 030: (L1PT) Frame 021,(L2PT) Frame 037
+[PID 02 REF:009] Page access 002: (L1PT) Frame 009,(L2PT) Frame 023
+[PID 03 REF:009] Page access 046: (L1PT) Frame 011,(L2PT) Frame 031
+[PID 04 REF:009] Page access 062: (L1PT) Frame 013,(L2PT) Frame 014
+[PID 00 REF:010] Page access 015: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 038
+[PID 01 REF:010] Page access 020: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 039
+[PID 02 REF:010] Page access 041: (L1PT) PF,Allocated Frame 005 -> 040,(L2PT) PF,Allocated Frame 041
+[PID 03 REF:010] Page access 027: (L1PT) PF,Allocated Frame 003 -> 042,(L2PT) PF,Allocated Frame 043
+[PID 04 REF:010] Page access 059: (L1PT) Frame 013,(L2PT) Frame 025
+[PID 00 REF:011] Page access 042: (L1PT) PF,Allocated Frame 005 -> 044,(L2PT) PF,Allocated Frame 045
+[PID 01 REF:011] Page access 018: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 046
+[PID 02 REF:011] Page access 040: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 047
+[PID 03 REF:011] Page access 009: (L1PT) PF,Allocated Frame 001 -> 048,(L2PT) PF,Allocated Frame 049
+[PID 04 REF:011] Page access 060: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:012] Page access 054: (L1PT) PF,Allocated Frame 006 -> 050,(L2PT) PF,Allocated Frame 051
+[PID 01 REF:012] Page access 016: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 052
+[PID 02 REF:012] Page access 062: (L1PT) PF,Allocated Frame 007 -> 053,(L2PT) PF,Allocated Frame 054
+[PID 03 REF:012] Page access 024: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 055
+[PID 04 REF:012] Page access 017: (L1PT) PF,Allocated Frame 002 -> 056,(L2PT) PF,Allocated Frame 057
+[PID 00 REF:013] Page access 057: (L1PT) PF,Allocated Frame 007 -> 058,(L2PT) PF,Allocated Frame 059
+[PID 01 REF:013] Page access 017: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 060
+[PID 02 REF:013] Page access 044: (L1PT) Frame 040,(L2PT) PF,Allocated Frame 061
+[PID 03 REF:013] Page access 025: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 062
+[PID 04 REF:013] Page access 020: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 063
+[PID 00 REF:014] Page access 057: (L1PT) Frame 058,(L2PT) Frame 059
+[PID 01 REF:014] Page access 020: (L1PT) Frame 027,(L2PT) Frame 039
+[PID 02 REF:014] Page access 034: (L1PT) PF,Allocated Frame 004 -> 064,(L2PT) PF,Allocated Frame 065
+[PID 03 REF:014] Page access 028: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 066
+[PID 04 REF:014] Page access 021: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 067
+[PID 00 REF:015] Page access 012: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 068
+[PID 01 REF:015] Page access 017: (L1PT) Frame 027,(L2PT) Frame 060
+[PID 02 REF:015] Page access 034: (L1PT) Frame 064,(L2PT) Frame 065
+[PID 03 REF:015] Page access 057: (L1PT) PF,Allocated Frame 007 -> 069,(L2PT) PF,Allocated Frame 070
+[PID 04 REF:015] Page access 021: (L1PT) Frame 056,(L2PT) Frame 067
+[PID 00 REF:016] Page access 010: (L1PT) Frame 005,(L2PT) Frame 036
+[PID 01 REF:016] Page access 051: (L1PT) PF,Allocated Frame 006 -> 071,(L2PT) PF,Allocated Frame 072
+[PID 02 REF:016] Page access 054: (L1PT) PF,Allocated Frame 006 -> 073,(L2PT) PF,Allocated Frame 074
+[PID 03 REF:016] Page access 054: (L1PT) PF,Allocated Frame 006 -> 075,(L2PT) PF,Allocated Frame 076
+[PID 04 REF:016] Page access 019: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 077
+[PID 00 REF:017] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:017] Page access 052: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 078
+[PID 02 REF:017] Page access 056: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 079
+[PID 03 REF:017] Page access 055: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 080
+[PID 04 REF:017] Page access 018: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 081
+[PID 00 REF:018] Page access 012: (L1PT) Frame 005,(L2PT) Frame 068
+[PID 01 REF:018] Page access 053: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 082
+[PID 02 REF:018] Page access 055: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 083
+[PID 03 REF:018] Page access 056: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 084
+[PID 04 REF:018] Page access 018: (L1PT) Frame 056,(L2PT) Frame 081
+[PID 00 REF:019] Page access 061: (L1PT) Frame 058,(L2PT) PF,Allocated Frame 085
+[PID 01 REF:019] Page access 053: (L1PT) Frame 071,(L2PT) Frame 082
+[PID 02 REF:019] Page access 053: (L1PT) Frame 073,(L2PT) PF,Allocated Frame 086
+[PID 03 REF:019] Page access 053: (L1PT) Frame 075,(L2PT) PF,Allocated Frame 087
+[PID 04 REF:019] Page access 020: (L1PT) Frame 056,(L2PT) Frame 063
+[PID 00 REF:020] Page access 034: (L1PT) PF,Allocated Frame 004 -> 088,(L2PT) PF,Allocated Frame 089
+[PID 01 REF:020] Page access 050: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 090
+[PID 02 REF:020] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:020] Page access 040: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 091
+[PID 04 REF:020] Page access 017: (L1PT) Frame 056,(L2PT) Frame 057
+[PID 00 REF:021] Page access 059: (L1PT) Frame 058,(L2PT) PF,Allocated Frame 092
+[PID 01 REF:021] Page access 050: (L1PT) Frame 071,(L2PT) Frame 090
+[PID 02 REF:021] Page access 053: (L1PT) Frame 073,(L2PT) Frame 086
+[PID 03 REF:021] Page access 041: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 093
+[PID 04 REF:021] Page access 018: (L1PT) Frame 056,(L2PT) Frame 081
+[PID 00 REF:022] Page access 016: (L1PT) PF,Allocated Frame 002 -> 094,(L2PT) PF,Allocated Frame 095
+[PID 01 REF:022] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:022] Page access 053: (L1PT) Frame 073,(L2PT) Frame 086
+[PID 03 REF:022] Page access 043: (L1PT) Frame 011,(L2PT) Frame 018
+[PID 04 REF:022] Page access 007: (L1PT) PF,Allocated Frame 000 -> 096,(L2PT) PF,Allocated Frame 097
+[PID 00 REF:023] Page access 055: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 098
+[PID 01 REF:023] Page access 052: (L1PT) Frame 071,(L2PT) Frame 078
+[PID 02 REF:023] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:023] Page access 042: (L1PT) Frame 011,(L2PT) PF,Allocated Frame 099
+[PID 04 REF:023] Page access 008: (L1PT) PF,Allocated Frame 001 -> 100,(L2PT) PF,Allocated Frame 101
+[PID 00 REF:024] Page access 019: (L1PT) Frame 094,(L2PT) PF,Allocated Frame 102
+[PID 01 REF:024] Page access 036: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 103
+[PID 02 REF:024] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:024] Page access 040: (L1PT) Frame 011,(L2PT) Frame 091
+[PID 04 REF:024] Page access 009: (L1PT) Frame 100,(L2PT) PF,Allocated Frame 104
+[PID 00 REF:025] Page access 017: (L1PT) Frame 094,(L2PT) PF,Allocated Frame 105
+[PID 01 REF:025] Page access 039: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 106
+[PID 02 REF:025] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:025] Page access 041: (L1PT) Frame 011,(L2PT) Frame 093
+[PID 04 REF:025] Page access 008: (L1PT) Frame 100,(L2PT) Frame 101
+[PID 00 REF:026] Page access 017: (L1PT) Frame 094,(L2PT) Frame 105
+[PID 01 REF:026] Page access 037: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 107
+[PID 02 REF:026] Page access 025: (L1PT) PF,Allocated Frame 003 -> 108,(L2PT) PF,Allocated Frame 109
+[PID 03 REF:026] Page access 039: (L1PT) PF,Allocated Frame 004 -> 110,(L2PT) PF,Allocated Frame 111
+[PID 04 REF:026] Page access 010: (L1PT) Frame 100,(L2PT) PF,Allocated Frame 112
+[PID 00 REF:027] Page access 016: (L1PT) Frame 094,(L2PT) Frame 095
+[PID 01 REF:027] Page access 038: (L1PT) Frame 007,(L2PT) PF,Allocated Frame 113
+[PID 02 REF:027] Page access 029: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 114
+[PID 03 REF:027] Page access 039: (L1PT) Frame 110,(L2PT) Frame 111
+[PID 04 REF:027] Page access 059: (L1PT) Frame 013,(L2PT) Frame 025
+[PID 00 REF:028] Page access 018: (L1PT) Frame 094,(L2PT) PF,Allocated Frame 115
+[PID 01 REF:028] Page access 001: (L1PT) PF,Allocated Frame 000 -> 116,(L2PT) PF,Allocated Frame 117
+[PID 02 REF:028] Page access 025: (L1PT) Frame 108,(L2PT) Frame 109
+[PID 03 REF:028] Page access 042: (L1PT) Frame 011,(L2PT) Frame 099
+[PID 04 REF:028] Page access 060: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:029] Page access 017: (L1PT) Frame 094,(L2PT) Frame 105
+[PID 01 REF:029] Page access 036: (L1PT) Frame 007,(L2PT) Frame 103
+[PID 02 REF:029] Page access 027: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 118
+[PID 03 REF:029] Page access 041: (L1PT) Frame 011,(L2PT) Frame 093
+[PID 04 REF:029] Page access 048: (L1PT) PF,Allocated Frame 006 -> 119,(L2PT) PF,Allocated Frame 120
+[PID 00 REF:030] Page access 059: (L1PT) Frame 058,(L2PT) Frame 092
+[PID 01 REF:030] Page access 036: (L1PT) Frame 007,(L2PT) Frame 103
+[PID 02 REF:030] Page access 027: (L1PT) Frame 108,(L2PT) Frame 118
+[PID 03 REF:030] Page access 047: (L1PT) Frame 011,(L2PT) Frame 032
+[PID 04 REF:030] Page access 032: (L1PT) PF,Allocated Frame 004 -> 121,(L2PT) PF,Allocated Frame 122
+[PID 00 REF:031] Page access 058: (L1PT) Frame 058,(L2PT) PF,Allocated Frame 123
+[PID 01 REF:031] Page access 040: (L1PT) PF,Allocated Frame 005 -> 124,(L2PT) PF,Allocated Frame 125
+[PID 02 REF:031] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 03 REF:031] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:031] Page access 022: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 126
+[PID 00 REF:032] Page access 062: (L1PT) Frame 058,(L2PT) PF,Allocated Frame 127
+[PID 01 REF:032] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:032] Page access 026: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 128
+[PID 03 REF:032] Page access 044: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 04 REF:032] Page access 022: (L1PT) Frame 056,(L2PT) Frame 126
+[PID 00 REF:033] Page access 061: (L1PT) Frame 058,(L2PT) Frame 085
+[PID 01 REF:033] Page access 024: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 129
+[PID 02 REF:033] Page access 026: (L1PT) Frame 108,(L2PT) Frame 128
+[PID 03 REF:033] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:033] Page access 019: (L1PT) Frame 056,(L2PT) Frame 077
+[PID 00 REF:034] Page access 062: (L1PT) Frame 058,(L2PT) Frame 127
+[PID 01 REF:034] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:034] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 03 REF:034] Page access 047: (L1PT) Frame 011,(L2PT) Frame 032
+[PID 04 REF:034] Page access 060: (L1PT) Frame 013,(L2PT) Frame 019
+[PID 00 REF:035] Page access 059: (L1PT) Frame 058,(L2PT) Frame 092
+[PID 01 REF:035] Page access 046: (L1PT) Frame 124,(L2PT) PF,Allocated Frame 130
+[PID 02 REF:035] Page access 025: (L1PT) Frame 108,(L2PT) Frame 109
+[PID 03 REF:035] Page access 044: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 04 REF:035] Page access 019: (L1PT) Frame 056,(L2PT) Frame 077
+[PID 00 REF:036] Page access 062: (L1PT) Frame 058,(L2PT) Frame 127
+[PID 01 REF:036] Page access 008: (L1PT) PF,Allocated Frame 001 -> 131,(L2PT) PF,Allocated Frame 132
+[PID 02 REF:036] Page access 017: (L1PT) PF,Allocated Frame 002 -> 133,(L2PT) PF,Allocated Frame 134
+[PID 03 REF:036] Page access 043: (L1PT) Frame 011,(L2PT) Frame 018
+[PID 04 REF:036] Page access 050: (L1PT) Frame 119,(L2PT) PF,Allocated Frame 135
+[PID 00 REF:037] Page access 058: (L1PT) Frame 058,(L2PT) Frame 123
+[PID 01 REF:037] Page access 011: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 136
+[PID 02 REF:037] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 03 REF:037] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:037] Page access 048: (L1PT) Frame 119,(L2PT) Frame 120
+[PID 00 REF:038] Page access 059: (L1PT) Frame 058,(L2PT) Frame 092
+[PID 01 REF:038] Page access 008: (L1PT) Frame 131,(L2PT) Frame 132
+[PID 02 REF:038] Page access 019: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 137
+[PID 03 REF:038] Page access 045: (L1PT) Frame 011,(L2PT) Frame 024
+[PID 04 REF:038] Page access 051: (L1PT) Frame 119,(L2PT) PF,Allocated Frame 138
+[PID 00 REF:039] Page access 036: (L1PT) Frame 088,(L2PT) PF,Allocated Frame 139
+[PID 01 REF:039] Page access 009: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 140
+[PID 02 REF:039] Page access 018: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 141
+[PID 03 REF:039] Page access 040: (L1PT) Frame 011,(L2PT) Frame 091
+[PID 04 REF:039] Page access 049: (L1PT) Frame 119,(L2PT) PF,Allocated Frame 142
+[PID 00 REF:040] Page access 030: (L1PT) PF,Allocated Frame 003 -> 143,(L2PT) PF,Allocated Frame 144
+[PID 01 REF:040] Page access 007: (L1PT) Frame 116,(L2PT) PF,Allocated Frame 145
+[PID 02 REF:040] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 03 REF:040] Page access 004: (L1PT) PF,Allocated Frame 000 -> 146,(L2PT) PF,Allocated Frame 147
+[PID 04 REF:040] Page access 052: (L1PT) Frame 119,(L2PT) PF,Allocated Frame 148
+[PID 00 REF:041] Page access 031: (L1PT) Frame 143,(L2PT) PF,Allocated Frame 149
+[PID 01 REF:041] Page access 008: (L1PT) Frame 131,(L2PT) Frame 132
+[PID 02 REF:041] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 03 REF:041] Page access 041: (L1PT) Frame 011,(L2PT) Frame 093
+[PID 04 REF:041] Page access 051: (L1PT) Frame 119,(L2PT) Frame 138
+[PID 00 REF:042] Page access 032: (L1PT) Frame 088,(L2PT) PF,Allocated Frame 150
+[PID 01 REF:042] Page access 008: (L1PT) Frame 131,(L2PT) Frame 132
+[PID 02 REF:042] Page access 011: (L1PT) PF,Allocated Frame 001 -> 151,(L2PT) PF,Allocated Frame 152
+[PID 03 REF:042] Page access 042: (L1PT) Frame 011,(L2PT) Frame 099
+[PID 04 REF:042] Page access 049: (L1PT) Frame 119,(L2PT) Frame 142
+[PID 00 REF:043] Page access 001: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 153
+[PID 01 REF:043] Page access 011: (L1PT) Frame 131,(L2PT) Frame 136
+[PID 02 REF:043] Page access 018: (L1PT) Frame 133,(L2PT) Frame 141
+[PID 03 REF:043] Page access 040: (L1PT) Frame 011,(L2PT) Frame 091
+[PID 04 REF:043] Page access 052: (L1PT) Frame 119,(L2PT) Frame 148
+[PID 00 REF:044] Page access 032: (L1PT) Frame 088,(L2PT) Frame 150
+[PID 01 REF:044] Page access 009: (L1PT) Frame 131,(L2PT) Frame 140
+[PID 02 REF:044] Page access 019: (L1PT) Frame 133,(L2PT) Frame 137
+[PID 03 REF:044] Page access 043: (L1PT) Frame 011,(L2PT) Frame 018
+[PID 04 REF:044] Page access 051: (L1PT) Frame 119,(L2PT) Frame 138
+[PID 00 REF:045] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:045] Page access 007: (L1PT) Frame 116,(L2PT) Frame 145
+[PID 02 REF:045] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:045] Page access 041: (L1PT) Frame 011,(L2PT) Frame 093
+[PID 04 REF:045] Page access 036: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 154
+[PID 00 REF:046] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:046] Page access 011: (L1PT) Frame 131,(L2PT) Frame 136
+[PID 02 REF:046] Page access 057: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 155
+[PID 03 REF:046] Page access 040: (L1PT) Frame 011,(L2PT) Frame 091
+[PID 04 REF:046] Page access 038: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 156
+[PID 00 REF:047] Page access 033: (L1PT) Frame 088,(L2PT) PF,Allocated Frame 157
+[PID 01 REF:047] Page access 011: (L1PT) Frame 131,(L2PT) Frame 136
+[PID 02 REF:047] Page access 058: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 158
+[PID 03 REF:047] Page access 042: (L1PT) Frame 011,(L2PT) Frame 099
+[PID 04 REF:047] Page access 035: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 159
+[PID 00 REF:048] Page access 039: (L1PT) Frame 088,(L2PT) PF,Allocated Frame 160
+[PID 01 REF:048] Page access 014: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 161
+[PID 02 REF:048] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:048] Page access 041: (L1PT) Frame 011,(L2PT) Frame 093
+[PID 04 REF:048] Page access 036: (L1PT) Frame 121,(L2PT) Frame 154
+[PID 00 REF:049] Page access 029: (L1PT) Frame 143,(L2PT) PF,Allocated Frame 162
+[PID 01 REF:049] Page access 016: (L1PT) Frame 027,(L2PT) Frame 052
+[PID 02 REF:049] Page access 057: (L1PT) Frame 053,(L2PT) Frame 155
+[PID 03 REF:049] Page access 040: (L1PT) Frame 011,(L2PT) Frame 091
+[PID 04 REF:049] Page access 036: (L1PT) Frame 121,(L2PT) Frame 154
+[PID 00 REF:050] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:050] Page access 012: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 163
+[PID 02 REF:050] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:050] Page access 043: (L1PT) Frame 011,(L2PT) Frame 018
+[PID 04 REF:050] Page access 035: (L1PT) Frame 121,(L2PT) Frame 159
+[PID 00 REF:051] Page access 027: (L1PT) Frame 143,(L2PT) PF,Allocated Frame 164
+[PID 01 REF:051] Page access 047: (L1PT) Frame 124,(L2PT) PF,Allocated Frame 165
+[PID 02 REF:051] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:051] Page access 044: (L1PT) Frame 011,(L2PT) Frame 012
+[PID 04 REF:051] Page access 037: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 166
+[PID 00 REF:052] Page access 028: (L1PT) Frame 143,(L2PT) PF,Allocated Frame 167
+[PID 01 REF:052] Page access 012: (L1PT) Frame 131,(L2PT) Frame 163
+[PID 02 REF:052] Page access 058: (L1PT) Frame 053,(L2PT) Frame 158
+[PID 03 REF:052] Page access 059: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 168
+[PID 04 REF:052] Page access 035: (L1PT) Frame 121,(L2PT) Frame 159
+[PID 00 REF:053] Page access 029: (L1PT) Frame 143,(L2PT) Frame 162
+[PID 01 REF:053] Page access 016: (L1PT) Frame 027,(L2PT) Frame 052
+[PID 02 REF:053] Page access 002: (L1PT) Frame 009,(L2PT) Frame 023
+[PID 03 REF:053] Page access 059: (L1PT) Frame 069,(L2PT) Frame 168
+[PID 04 REF:053] Page access 034: (L1PT) Frame 121,(L2PT) PF,Allocated Frame 169
+[PID 00 REF:054] Page access 027: (L1PT) Frame 143,(L2PT) Frame 164
+[PID 01 REF:054] Page access 016: (L1PT) Frame 027,(L2PT) Frame 052
+[PID 02 REF:054] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:054] Page access 055: (L1PT) Frame 075,(L2PT) Frame 080
+[PID 04 REF:054] Page access 048: (L1PT) Frame 119,(L2PT) Frame 120
+[PID 00 REF:055] Page access 029: (L1PT) Frame 143,(L2PT) Frame 162
+[PID 01 REF:055] Page access 015: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 170
+[PID 02 REF:055] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:055] Page access 055: (L1PT) Frame 075,(L2PT) Frame 080
+[PID 04 REF:055] Page access 045: (L1PT) PF,Allocated Frame 005 -> 171,(L2PT) PF,Allocated Frame 172
+[PID 00 REF:056] Page access 018: (L1PT) Frame 094,(L2PT) Frame 115
+[PID 01 REF:056] Page access 015: (L1PT) Frame 131,(L2PT) Frame 170
+[PID 02 REF:056] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:056] Page access 056: (L1PT) Frame 069,(L2PT) Frame 084
+[PID 04 REF:056] Page access 049: (L1PT) Frame 119,(L2PT) Frame 142
+[PID 00 REF:057] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:057] Page access 013: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 173
+[PID 02 REF:057] Page access 057: (L1PT) Frame 053,(L2PT) Frame 155
+[PID 03 REF:057] Page access 056: (L1PT) Frame 069,(L2PT) Frame 084
+[PID 04 REF:057] Page access 046: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 174
+[PID 00 REF:058] Page access 017: (L1PT) Frame 094,(L2PT) Frame 105
+[PID 01 REF:058] Page access 016: (L1PT) Frame 027,(L2PT) Frame 052
+[PID 02 REF:058] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:058] Page access 057: (L1PT) Frame 069,(L2PT) Frame 070
+[PID 04 REF:058] Page access 047: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 175
+[PID 00 REF:059] Page access 016: (L1PT) Frame 094,(L2PT) Frame 095
+[PID 01 REF:059] Page access 012: (L1PT) Frame 131,(L2PT) Frame 163
+[PID 02 REF:059] Page access 054: (L1PT) Frame 073,(L2PT) Frame 074
+[PID 03 REF:059] Page access 059: (L1PT) Frame 069,(L2PT) Frame 168
+[PID 04 REF:059] Page access 003: (L1PT) Frame 096,(L2PT) PF,Allocated Frame 176
+[PID 00 REF:060] Page access 014: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 177
+[PID 01 REF:060] Page access 041: (L1PT) Frame 124,(L2PT) PF,Allocated Frame 178
+[PID 02 REF:060] Page access 034: (L1PT) Frame 064,(L2PT) Frame 065
+[PID 03 REF:060] Page access 061: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 179
+[PID 04 REF:060] Page access 023: (L1PT) Frame 056,(L2PT) PF,Allocated Frame 180
+[PID 00 REF:061] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:061] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:061] Page access 033: (L1PT) Frame 064,(L2PT) PF,Allocated Frame 181
+[PID 03 REF:061] Page access 063: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 182
+[PID 04 REF:061] Page access 025: (L1PT) PF,Allocated Frame 003 -> 183,(L2PT) PF,Allocated Frame 184
+[PID 00 REF:062] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:062] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:062] Page access 030: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 185
+[PID 03 REF:062] Page access 060: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 186
+[PID 04 REF:062] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:063] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:063] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:063] Page access 031: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 187
+[PID 03 REF:063] Page access 061: (L1PT) Frame 069,(L2PT) Frame 179
+[PID 04 REF:063] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:064] Page access 017: (L1PT) Frame 094,(L2PT) Frame 105
+[PID 01 REF:064] Page access 038: (L1PT) Frame 007,(L2PT) Frame 113
+[PID 02 REF:064] Page access 031: (L1PT) Frame 108,(L2PT) Frame 187
+[PID 03 REF:064] Page access 063: (L1PT) Frame 069,(L2PT) Frame 182
+[PID 04 REF:064] Page access 022: (L1PT) Frame 056,(L2PT) Frame 126
+[PID 00 REF:065] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:065] Page access 017: (L1PT) Frame 027,(L2PT) Frame 060
+[PID 02 REF:065] Page access 028: (L1PT) Frame 108,(L2PT) PF,Allocated Frame 188
+[PID 03 REF:065] Page access 063: (L1PT) Frame 069,(L2PT) Frame 182
+[PID 04 REF:065] Page access 026: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 189
+[PID 00 REF:066] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:066] Page access 030: (L1PT) Frame 021,(L2PT) Frame 037
+[PID 02 REF:066] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 03 REF:066] Page access 063: (L1PT) Frame 069,(L2PT) Frame 182
+[PID 04 REF:066] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:067] Page access 018: (L1PT) Frame 094,(L2PT) Frame 115
+[PID 01 REF:067] Page access 061: (L1PT) PF,Allocated Frame 007 -> 190,(L2PT) PF,Allocated Frame 191
+[PID 02 REF:067] Page access 027: (L1PT) Frame 108,(L2PT) Frame 118
+[PID 03 REF:067] Page access 021: (L1PT) PF,Allocated Frame 002 -> 192,(L2PT) PF,Allocated Frame 193
+[PID 04 REF:067] Page access 027: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 194
+[PID 00 REF:068] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:068] Page access 060: (L1PT) Frame 190,(L2PT) PF,Allocated Frame 195
+[PID 02 REF:068] Page access 025: (L1PT) Frame 108,(L2PT) Frame 109
+[PID 03 REF:068] Page access 062: (L1PT) Frame 069,(L2PT) PF,Allocated Frame 196
+[PID 04 REF:068] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:069] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:069] Page access 059: (L1PT) Frame 190,(L2PT) PF,Allocated Frame 197
+[PID 02 REF:069] Page access 026: (L1PT) Frame 108,(L2PT) Frame 128
+[PID 03 REF:069] Page access 061: (L1PT) Frame 069,(L2PT) Frame 179
+[PID 04 REF:069] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:070] Page access 029: (L1PT) Frame 143,(L2PT) Frame 162
+[PID 01 REF:070] Page access 059: (L1PT) Frame 190,(L2PT) Frame 197
+[PID 02 REF:070] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 03 REF:070] Page access 063: (L1PT) Frame 069,(L2PT) Frame 182
+[PID 04 REF:070] Page access 024: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 198
+[PID 00 REF:071] Page access 031: (L1PT) Frame 143,(L2PT) Frame 149
+[PID 01 REF:071] Page access 059: (L1PT) Frame 190,(L2PT) Frame 197
+[PID 02 REF:071] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 03 REF:071] Page access 062: (L1PT) Frame 069,(L2PT) Frame 196
+[PID 04 REF:071] Page access 028: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 199
+[PID 00 REF:072] Page access 032: (L1PT) Frame 088,(L2PT) Frame 150
+[PID 01 REF:072] Page access 060: (L1PT) Frame 190,(L2PT) Frame 195
+[PID 02 REF:072] Page access 030: (L1PT) Frame 108,(L2PT) Frame 185
+[PID 03 REF:072] Page access 018: (L1PT) Frame 192,(L2PT) PF,Allocated Frame 200
+[PID 04 REF:072] Page access 027: (L1PT) Frame 183,(L2PT) Frame 194
+[PID 00 REF:073] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:073] Page access 057: (L1PT) Frame 190,(L2PT) PF,Allocated Frame 201
+[PID 02 REF:073] Page access 030: (L1PT) Frame 108,(L2PT) Frame 185
+[PID 03 REF:073] Page access 033: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 202
+[PID 04 REF:073] Page access 027: (L1PT) Frame 183,(L2PT) Frame 194
+[PID 00 REF:074] Page access 032: (L1PT) Frame 088,(L2PT) Frame 150
+[PID 01 REF:074] Page access 061: (L1PT) Frame 190,(L2PT) Frame 191
+[PID 02 REF:074] Page access 030: (L1PT) Frame 108,(L2PT) Frame 185
+[PID 03 REF:074] Page access 018: (L1PT) Frame 192,(L2PT) Frame 200
+[PID 04 REF:074] Page access 024: (L1PT) Frame 183,(L2PT) Frame 198
+[PID 00 REF:075] Page access 013: (L1PT) Frame 005,(L2PT) PF,Allocated Frame 203
+[PID 01 REF:075] Page access 060: (L1PT) Frame 190,(L2PT) Frame 195
+[PID 02 REF:075] Page access 027: (L1PT) Frame 108,(L2PT) Frame 118
+[PID 03 REF:075] Page access 033: (L1PT) Frame 110,(L2PT) Frame 202
+[PID 04 REF:075] Page access 027: (L1PT) Frame 183,(L2PT) Frame 194
+[PID 00 REF:076] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:076] Page access 060: (L1PT) Frame 190,(L2PT) Frame 195
+[PID 02 REF:076] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 03 REF:076] Page access 033: (L1PT) Frame 110,(L2PT) Frame 202
+[PID 04 REF:076] Page access 028: (L1PT) Frame 183,(L2PT) Frame 199
+[PID 00 REF:077] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:077] Page access 002: (L1PT) Frame 116,(L2PT) PF,Allocated Frame 204
+[PID 02 REF:077] Page access 059: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 205
+[PID 03 REF:077] Page access 032: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 206
+[PID 04 REF:077] Page access 027: (L1PT) Frame 183,(L2PT) Frame 194
+[PID 00 REF:078] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:078] Page access 006: (L1PT) Frame 116,(L2PT) PF,Allocated Frame 207
+[PID 02 REF:078] Page access 059: (L1PT) Frame 053,(L2PT) Frame 205
+[PID 03 REF:078] Page access 032: (L1PT) Frame 110,(L2PT) Frame 206
+[PID 04 REF:078] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:079] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:079] Page access 003: (L1PT) Frame 116,(L2PT) PF,Allocated Frame 208
+[PID 02 REF:079] Page access 058: (L1PT) Frame 053,(L2PT) Frame 158
+[PID 03 REF:079] Page access 029: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 209
+[PID 04 REF:079] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:080] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:080] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:080] Page access 060: (L1PT) Frame 053,(L2PT) PF,Allocated Frame 210
+[PID 03 REF:080] Page access 021: (L1PT) Frame 192,(L2PT) Frame 193
+[PID 04 REF:080] Page access 024: (L1PT) Frame 183,(L2PT) Frame 198
+[PID 00 REF:081] Page access 008: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 01 REF:081] Page access 050: (L1PT) Frame 071,(L2PT) Frame 090
+[PID 02 REF:081] Page access 057: (L1PT) Frame 053,(L2PT) Frame 155
+[PID 03 REF:081] Page access 024: (L1PT) Frame 042,(L2PT) Frame 055
+[PID 04 REF:081] Page access 027: (L1PT) Frame 183,(L2PT) Frame 194
+[PID 00 REF:082] Page access 012: (L1PT) Frame 005,(L2PT) Frame 068
+[PID 01 REF:082] Page access 050: (L1PT) Frame 071,(L2PT) Frame 090
+[PID 02 REF:082] Page access 059: (L1PT) Frame 053,(L2PT) Frame 205
+[PID 03 REF:082] Page access 024: (L1PT) Frame 042,(L2PT) Frame 055
+[PID 04 REF:082] Page access 010: (L1PT) Frame 100,(L2PT) Frame 112
+[PID 00 REF:083] Page access 012: (L1PT) Frame 005,(L2PT) Frame 068
+[PID 01 REF:083] Page access 048: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 211
+[PID 02 REF:083] Page access 056: (L1PT) Frame 053,(L2PT) Frame 079
+[PID 03 REF:083] Page access 038: (L1PT) Frame 110,(L2PT) PF,Allocated Frame 212
+[PID 04 REF:083] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:084] Page access 009: (L1PT) Frame 005,(L2PT) Frame 020
+[PID 01 REF:084] Page access 039: (L1PT) Frame 007,(L2PT) Frame 106
+[PID 02 REF:084] Page access 036: (L1PT) Frame 064,(L2PT) PF,Allocated Frame 213
+[PID 03 REF:084] Page access 021: (L1PT) Frame 192,(L2PT) Frame 193
+[PID 04 REF:084] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:085] Page access 008: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 01 REF:085] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:085] Page access 021: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 214
+[PID 03 REF:085] Page access 022: (L1PT) Frame 192,(L2PT) PF,Allocated Frame 215
+[PID 04 REF:085] Page access 028: (L1PT) Frame 183,(L2PT) Frame 199
+[PID 00 REF:086] Page access 006: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 216
+[PID 01 REF:086] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:086] Page access 022: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 217
+[PID 03 REF:086] Page access 024: (L1PT) Frame 042,(L2PT) Frame 055
+[PID 04 REF:086] Page access 026: (L1PT) Frame 183,(L2PT) Frame 189
+[PID 00 REF:087] Page access 008: (L1PT) Frame 005,(L2PT) Frame 006
+[PID 01 REF:087] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:087] Page access 021: (L1PT) Frame 133,(L2PT) Frame 214
+[PID 03 REF:087] Page access 021: (L1PT) Frame 192,(L2PT) Frame 193
+[PID 04 REF:087] Page access 025: (L1PT) Frame 183,(L2PT) Frame 184
+[PID 00 REF:088] Page access 006: (L1PT) Frame 033,(L2PT) Frame 216
+[PID 01 REF:088] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:088] Page access 020: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 218
+[PID 03 REF:088] Page access 029: (L1PT) Frame 042,(L2PT) Frame 209
+[PID 04 REF:088] Page access 049: (L1PT) Frame 119,(L2PT) Frame 142
+[PID 00 REF:089] Page access 009: (L1PT) Frame 005,(L2PT) Frame 020
+[PID 01 REF:089] Page access 048: (L1PT) Frame 071,(L2PT) Frame 211
+[PID 02 REF:089] Page access 023: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 219
+[PID 03 REF:089] Page access 031: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 220
+[PID 04 REF:089] Page access 026: (L1PT) Frame 183,(L2PT) Frame 189
+[PID 00 REF:090] Page access 016: (L1PT) Frame 094,(L2PT) Frame 095
+[PID 01 REF:090] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:090] Page access 023: (L1PT) Frame 133,(L2PT) Frame 219
+[PID 03 REF:090] Page access 030: (L1PT) Frame 042,(L2PT) PF,Allocated Frame 221
+[PID 04 REF:090] Page access 007: (L1PT) Frame 096,(L2PT) Frame 097
+[PID 00 REF:091] Page access 016: (L1PT) Frame 094,(L2PT) Frame 095
+[PID 01 REF:091] Page access 046: (L1PT) Frame 124,(L2PT) Frame 130
+[PID 02 REF:091] Page access 006: (L1PT) Frame 009,(L2PT) PF,Allocated Frame 222
+[PID 03 REF:091] Page access 030: (L1PT) Frame 042,(L2PT) Frame 221
+[PID 04 REF:091] Page access 030: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 223
+[PID 00 REF:092] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:092] Page access 044: (L1PT) Frame 124,(L2PT) PF,Allocated Frame 224
+[PID 02 REF:092] Page access 020: (L1PT) Frame 133,(L2PT) Frame 218
+[PID 04 REF:092] Page access 029: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 225
+[PID 00 REF:093] Page access 007: (L1PT) Frame 033,(L2PT) Frame 034
+[PID 01 REF:093] Page access 045: (L1PT) Frame 124,(L2PT) PF,Allocated Frame 226
+[PID 02 REF:093] Page access 022: (L1PT) Frame 133,(L2PT) Frame 217
+[PID 04 REF:093] Page access 031: (L1PT) Frame 183,(L2PT) PF,Allocated Frame 227
+[PID 00 REF:094] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:094] Page access 046: (L1PT) Frame 124,(L2PT) Frame 130
+[PID 02 REF:094] Page access 023: (L1PT) Frame 133,(L2PT) Frame 219
+[PID 04 REF:094] Page access 030: (L1PT) Frame 183,(L2PT) Frame 223
+[PID 00 REF:095] Page access 012: (L1PT) Frame 005,(L2PT) Frame 068
+[PID 01 REF:095] Page access 045: (L1PT) Frame 124,(L2PT) Frame 226
+[PID 02 REF:095] Page access 023: (L1PT) Frame 133,(L2PT) Frame 219
+[PID 04 REF:095] Page access 032: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 00 REF:096] Page access 023: (L1PT) Frame 094,(L2PT) PF,Allocated Frame 228
+[PID 01 REF:096] Page access 044: (L1PT) Frame 124,(L2PT) Frame 224
+[PID 02 REF:096] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 04 REF:096] Page access 028: (L1PT) Frame 183,(L2PT) Frame 199
+[PID 00 REF:097] Page access 016: (L1PT) Frame 094,(L2PT) Frame 095
+[PID 01 REF:097] Page access 044: (L1PT) Frame 124,(L2PT) Frame 224
+[PID 02 REF:097] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 04 REF:097] Page access 028: (L1PT) Frame 183,(L2PT) Frame 199
+[PID 00 REF:098] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:098] Page access 055: (L1PT) Frame 071,(L2PT) PF,Allocated Frame 229
+[PID 02 REF:098] Page access 027: (L1PT) Frame 108,(L2PT) Frame 118
+[PID 04 REF:098] Page access 028: (L1PT) Frame 183,(L2PT) Frame 199
+[PID 00 REF:099] Page access 045: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 230
+[PID 01 REF:099] Page access 036: (L1PT) Frame 007,(L2PT) Frame 103
+[PID 02 REF:099] Page access 015: (L1PT) Frame 151,(L2PT) PF,Allocated Frame 231
+[PID 04 REF:099] Page access 005: (L1PT) Frame 096,(L2PT) PF,Allocated Frame 232
+[PID 00 REF:100] Page access 005: (L1PT) Frame 033,(L2PT) PF,Allocated Frame 233
+[PID 01 REF:100] Page access 023: (L1PT) Frame 027,(L2PT) PF,Allocated Frame 234
+[PID 02 REF:100] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 04 REF:100] Page access 006: (L1PT) Frame 096,(L2PT) PF,Allocated Frame 235
+[PID 00 REF:101] Page access 045: (L1PT) Frame 044,(L2PT) Frame 230
+[PID 01 REF:101] Page access 039: (L1PT) Frame 007,(L2PT) Frame 106
+[PID 02 REF:101] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 04 REF:101] Page access 006: (L1PT) Frame 096,(L2PT) Frame 235
+[PID 00 REF:102] Page access 046: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 236
+[PID 01 REF:102] Page access 037: (L1PT) Frame 007,(L2PT) Frame 107
+[PID 02 REF:102] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 04 REF:102] Page access 006: (L1PT) Frame 096,(L2PT) Frame 235
+[PID 00 REF:103] Page access 043: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 237
+[PID 01 REF:103] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:103] Page access 030: (L1PT) Frame 108,(L2PT) Frame 185
+[PID 04 REF:103] Page access 007: (L1PT) Frame 096,(L2PT) Frame 097
+[PID 00 REF:104] Page access 045: (L1PT) Frame 044,(L2PT) Frame 230
+[PID 01 REF:104] Page access 038: (L1PT) Frame 007,(L2PT) Frame 113
+[PID 02 REF:104] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 04 REF:104] Page access 007: (L1PT) Frame 096,(L2PT) Frame 097
+[PID 00 REF:105] Page access 046: (L1PT) Frame 044,(L2PT) Frame 236
+[PID 01 REF:105] Page access 038: (L1PT) Frame 007,(L2PT) Frame 113
+[PID 02 REF:105] Page access 029: (L1PT) Frame 108,(L2PT) Frame 114
+[PID 04 REF:105] Page access 006: (L1PT) Frame 096,(L2PT) Frame 235
+[PID 00 REF:106] Page access 047: (L1PT) Frame 044,(L2PT) PF,Allocated Frame 238
+[PID 01 REF:106] Page access 037: (L1PT) Frame 007,(L2PT) Frame 107
+[PID 02 REF:106] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 04 REF:106] Page access 048: (L1PT) Frame 119,(L2PT) Frame 120
+[PID 00 REF:107] Page access 046: (L1PT) Frame 044,(L2PT) Frame 236
+[PID 01 REF:107] Page access 038: (L1PT) Frame 007,(L2PT) Frame 113
+[PID 02 REF:107] Page access 028: (L1PT) Frame 108,(L2PT) Frame 188
+[PID 04 REF:107] Page access 035: (L1PT) Frame 121,(L2PT) Frame 159
+[PID 00 REF:108] Page access 050: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 239
+[PID 01 REF:108] Page access 040: (L1PT) Frame 124,(L2PT) Frame 125
+[PID 02 REF:108] Page access 033: (L1PT) Frame 064,(L2PT) Frame 181
+[PID 04 REF:108] Page access 004: (L1PT) Frame 096,(L2PT) PF,Allocated Frame 240
+[PID 00 REF:109] Page access 053: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 241
+[PID 01 REF:109] Page access 038: (L1PT) Frame 007,(L2PT) Frame 113
+[PID 02 REF:109] Page access 035: (L1PT) Frame 064,(L2PT) PF,Allocated Frame 242
+[PID 04 REF:109] Page access 008: (L1PT) Frame 100,(L2PT) Frame 101
+[PID 00 REF:110] Page access 052: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 243
+[PID 01 REF:110] Page access 037: (L1PT) Frame 007,(L2PT) Frame 107
+[PID 02 REF:110] Page access 018: (L1PT) Frame 133,(L2PT) Frame 141
+[PID 04 REF:110] Page access 004: (L1PT) Frame 096,(L2PT) Frame 240
+[PID 00 REF:111] Page access 052: (L1PT) Frame 050,(L2PT) Frame 243
+[PID 01 REF:111] Page access 025: (L1PT) Frame 021,(L2PT) PF,Allocated Frame 244
+[PID 02 REF:111] Page access 018: (L1PT) Frame 133,(L2PT) Frame 141
+[PID 04 REF:111] Page access 007: (L1PT) Frame 096,(L2PT) Frame 097
+[PID 00 REF:112] Page access 026: (L1PT) Frame 143,(L2PT) PF,Allocated Frame 245
+[PID 01 REF:112] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:112] Page access 018: (L1PT) Frame 133,(L2PT) Frame 141
+[PID 04 REF:112] Page access 061: (L1PT) Frame 013,(L2PT) Frame 035
+[PID 00 REF:113] Page access 053: (L1PT) Frame 050,(L2PT) Frame 241
+[PID 01 REF:113] Page access 053: (L1PT) Frame 071,(L2PT) Frame 082
+[PID 02 REF:113] Page access 015: (L1PT) Frame 151,(L2PT) Frame 231
+[PID 04 REF:113] Page access 042: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 246
+[PID 00 REF:114] Page access 032: (L1PT) Frame 088,(L2PT) Frame 150
+[PID 01 REF:114] Page access 053: (L1PT) Frame 071,(L2PT) Frame 082
+[PID 02 REF:114] Page access 015: (L1PT) Frame 151,(L2PT) Frame 231
+[PID 04 REF:114] Page access 044: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 247
+[PID 00 REF:115] Page access 050: (L1PT) Frame 050,(L2PT) Frame 239
+[PID 01 REF:115] Page access 052: (L1PT) Frame 071,(L2PT) Frame 078
+[PID 02 REF:115] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 04 REF:115] Page access 042: (L1PT) Frame 171,(L2PT) Frame 246
+[PID 00 REF:116] Page access 015: (L1PT) Frame 005,(L2PT) Frame 038
+[PID 01 REF:116] Page access 051: (L1PT) Frame 071,(L2PT) Frame 072
+[PID 02 REF:116] Page access 016: (L1PT) Frame 133,(L2PT) PF,Allocated Frame 248
+[PID 04 REF:116] Page access 043: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 249
+[PID 00 REF:117] Page access 014: (L1PT) Frame 005,(L2PT) Frame 177
+[PID 01 REF:117] Page access 013: (L1PT) Frame 131,(L2PT) Frame 173
+[PID 02 REF:117] Page access 014: (L1PT) Frame 151,(L2PT) PF,Allocated Frame 250
+[PID 04 REF:117] Page access 041: (L1PT) Frame 171,(L2PT) PF,Allocated Frame 251
+[PID 00 REF:118] Page access 048: (L1PT) Frame 050,(L2PT) PF,Allocated Frame 252
+[PID 01 REF:118] Page access 010: (L1PT) Frame 131,(L2PT) PF,Allocated Frame 253
+[PID 02 REF:118] Page access 016: (L1PT) Frame 133,(L2PT) Frame 248
+[PID 04 REF:118] Page access 041: (L1PT) Frame 171,(L2PT) Frame 251
+[PID 00 REF:119] Page access 017: (L1PT) Frame 094,(L2PT) Frame 105
+[PID 01 REF:119] Page access 012: (L1PT) Frame 131,(L2PT) Frame 163
+[PID 02 REF:119] Page access 016: (L1PT) Frame 133,(L2PT) Frame 248
+[PID 04 REF:119] Page access 044: (L1PT) Frame 171,(L2PT) Frame 247
+[PID 00 REF:120] Page access 027: (L1PT) Frame 143,(L2PT) Frame 164
+[PID 01 REF:120] Page access 013: (L1PT) Frame 131,(L2PT) Frame 173
+[PID 02 REF:120] Page access 015: (L1PT) Frame 151,(L2PT) Frame 231
+[PID 04 REF:120] Page access 015: (L1PT) Frame 100,(L2PT) PF,Allocated Frame 254
+[PID 00 REF:121] Page access 011: (L1PT) Frame 005,(L2PT) Frame 015
+[PID 01 REF:121] Page access 014: (L1PT) Frame 131,(L2PT) Frame 161
+[PID 02 REF:121] Page access 019: (L1PT) Frame 133,(L2PT) Frame 137
+[PID 04 REF:121] Page access 032: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 00 REF:122] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:122] Page access 011: (L1PT) Frame 131,(L2PT) Frame 136
+[PID 02 REF:122] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 04 REF:122] Page access 032: (L1PT) Frame 121,(L2PT) Frame 122
+[PID 00 REF:123] Page access 030: (L1PT) Frame 143,(L2PT) Frame 144
+[PID 01 REF:123] Page access 010: (L1PT) Frame 131,(L2PT) Frame 253
+[PID 02 REF:123] Page access 017: (L1PT) Frame 133,(L2PT) Frame 134
+[PID 04 REF:123] Page access 029: (L1PT) Frame 183,(L2PT) Frame 225
+[PID 00 REF:124] Page access 029: (L1PT) Frame 143,(L2PT) Frame 162
+[PID 01 REF:124] Page access 014: (L1PT) Frame 131,(L2PT) Frame 161
+[PID 02 REF:124] Page access 016: (L1PT) Frame 133,(L2PT) Frame 248
+[PID 04 REF:124] Page access 030: (L1PT) Frame 183,(L2PT) Frame 223
+[PID 00 REF:125] Page access 029: (L1PT) Frame 143,(L2PT) Frame 162
+[PID 01 REF:125] Page access 011: (L1PT) Frame 131,(L2PT) Frame 136
+[PID 02 REF:125] Page access 015: (L1PT) Frame 151,(L2PT) Frame 231
+[PID 04 REF:125] Page access 031: (L1PT) Frame 183,(L2PT) Frame 227
+[PID 00 REF:126] Page access 037: (L1PT) Frame 088,(L2PT) PF,Allocated Frame 255
+[PID 01 REF:126] Page access 022: (L1PT) Frame 027,(L2PT) PF,Out of memory!!
+Start() end
+** Process 000: Allocated Frames=054 PageFaults/References=053/127
+(L1PT) 000 -> 033
+(L2PT) 001 -> 153 REF=001
+(L2PT) 005 -> 233 REF=001
+(L2PT) 006 -> 216 REF=002
+(L2PT) 007 -> 034 REF=002
+(L1PT) 001 -> 005
+(L2PT) 008 -> 006 REF=004
+(L2PT) 009 -> 020 REF=004
+(L2PT) 010 -> 036 REF=003
+(L2PT) 011 -> 015 REF=010
+(L2PT) 012 -> 068 REF=005
+(L2PT) 013 -> 203 REF=001
+(L2PT) 014 -> 177 REF=009
+(L2PT) 015 -> 038 REF=007
+(L1PT) 002 -> 094
+(L2PT) 016 -> 095 REF=006
+(L2PT) 017 -> 105 REF=006
+(L2PT) 018 -> 115 REF=003
+(L2PT) 019 -> 102 REF=001
+(L2PT) 023 -> 228 REF=001
+(L1PT) 003 -> 143
+(L2PT) 026 -> 245 REF=001
+(L2PT) 027 -> 164 REF=003
+(L2PT) 028 -> 167 REF=001
+(L2PT) 029 -> 162 REF=006
+(L2PT) 030 -> 144 REF=007
+(L2PT) 031 -> 149 REF=002
+(L1PT) 004 -> 088
+(L2PT) 032 -> 150 REF=005
+(L2PT) 033 -> 157 REF=001
+(L2PT) 034 -> 089 REF=001
+(L2PT) 036 -> 139 REF=001
+(L2PT) 037 -> 255 REF=001
+(L2PT) 039 -> 160 REF=001
+(L1PT) 005 -> 044
+(L2PT) 042 -> 045 REF=001
+(L2PT) 043 -> 237 REF=001
+(L2PT) 045 -> 230 REF=003
+(L2PT) 046 -> 236 REF=003
+(L2PT) 047 -> 238 REF=001
+(L1PT) 006 -> 050
+(L2PT) 048 -> 252 REF=001
+(L2PT) 050 -> 239 REF=002
+(L2PT) 052 -> 243 REF=002
+(L2PT) 053 -> 241 REF=002
+(L2PT) 054 -> 051 REF=001
+(L2PT) 055 -> 098 REF=001
+(L1PT) 007 -> 058
+(L2PT) 057 -> 059 REF=002
+(L2PT) 058 -> 123 REF=002
+(L2PT) 059 -> 092 REF=004
+(L2PT) 061 -> 085 REF=002
+(L2PT) 062 -> 127 REF=003
+** Process 001: Allocated Frames=054 PageFaults/References=053/126
+(L1PT) 000 -> 116
+(L2PT) 001 -> 117 REF=001
+(L2PT) 002 -> 204 REF=001
+(L2PT) 003 -> 208 REF=001
+(L2PT) 006 -> 207 REF=001
+(L2PT) 007 -> 145 REF=002
+(L1PT) 001 -> 131
+(L2PT) 008 -> 132 REF=004
+(L2PT) 009 -> 140 REF=002
+(L2PT) 010 -> 253 REF=002
+(L2PT) 011 -> 136 REF=006
+(L2PT) 012 -> 163 REF=004
+(L2PT) 013 -> 173 REF=003
+(L2PT) 014 -> 161 REF=003
+(L2PT) 015 -> 170 REF=002
+(L1PT) 002 -> 027
+(L2PT) 016 -> 052 REF=005
+(L2PT) 017 -> 060 REF=003
+(L2PT) 018 -> 046 REF=001
+(L2PT) 019 -> 028 REF=001
+(L2PT) 020 -> 039 REF=002
+(L2PT) 023 -> 234 REF=001
+(L1PT) 003 -> 021
+(L2PT) 024 -> 129 REF=001
+(L2PT) 025 -> 244 REF=001
+(L2PT) 030 -> 037 REF=003
+(L2PT) 031 -> 022 REF=002
+(L1PT) 004 -> 007
+(L2PT) 033 -> 008 REF=003
+(L2PT) 034 -> 016 REF=002
+(L2PT) 036 -> 103 REF=004
+(L2PT) 037 -> 107 REF=004
+(L2PT) 038 -> 113 REF=006
+(L2PT) 039 -> 106 REF=003
+(L1PT) 005 -> 124
+(L2PT) 040 -> 125 REF=008
+(L2PT) 041 -> 178 REF=001
+(L2PT) 044 -> 224 REF=003
+(L2PT) 045 -> 226 REF=002
+(L2PT) 046 -> 130 REF=003
+(L2PT) 047 -> 165 REF=001
+(L1PT) 006 -> 071
+(L2PT) 048 -> 211 REF=002
+(L2PT) 050 -> 090 REF=004
+(L2PT) 051 -> 072 REF=010
+(L2PT) 052 -> 078 REF=003
+(L2PT) 053 -> 082 REF=004
+(L2PT) 055 -> 229 REF=001
+(L1PT) 007 -> 190
+(L2PT) 057 -> 201 REF=001
+(L2PT) 059 -> 197 REF=003
+(L2PT) 060 -> 195 REF=004
+(L2PT) 061 -> 191 REF=002
+** Process 002: Allocated Frames=049 PageFaults/References=048/126
+(L1PT) 000 -> 009
+(L2PT) 001 -> 026 REF=002
+(L2PT) 002 -> 023 REF=004
+(L2PT) 003 -> 017 REF=002
+(L2PT) 004 -> 030 REF=001
+(L2PT) 005 -> 010 REF=002
+(L2PT) 006 -> 222 REF=001
+(L1PT) 001 -> 151
+(L2PT) 011 -> 152 REF=001
+(L2PT) 014 -> 250 REF=001
+(L2PT) 015 -> 231 REF=005
+(L1PT) 002 -> 133
+(L2PT) 016 -> 248 REF=004
+(L2PT) 017 -> 134 REF=007
+(L2PT) 018 -> 141 REF=005
+(L2PT) 019 -> 137 REF=003
+(L2PT) 020 -> 218 REF=002
+(L2PT) 021 -> 214 REF=002
+(L2PT) 022 -> 217 REF=002
+(L2PT) 023 -> 219 REF=004
+(L1PT) 003 -> 108
+(L2PT) 025 -> 109 REF=004
+(L2PT) 026 -> 128 REF=003
+(L2PT) 027 -> 118 REF=005
+(L2PT) 028 -> 188 REF=007
+(L2PT) 029 -> 114 REF=010
+(L2PT) 030 -> 185 REF=005
+(L2PT) 031 -> 187 REF=002
+(L1PT) 004 -> 064
+(L2PT) 033 -> 181 REF=002
+(L2PT) 034 -> 065 REF=003
+(L2PT) 035 -> 242 REF=001
+(L2PT) 036 -> 213 REF=001
+(L1PT) 005 -> 040
+(L2PT) 040 -> 047 REF=001
+(L2PT) 041 -> 041 REF=001
+(L2PT) 044 -> 061 REF=001
+(L1PT) 006 -> 073
+(L2PT) 053 -> 086 REF=003
+(L2PT) 054 -> 074 REF=009
+(L2PT) 055 -> 083 REF=001
+(L1PT) 007 -> 053
+(L2PT) 056 -> 079 REF=007
+(L2PT) 057 -> 155 REF=004
+(L2PT) 058 -> 158 REF=003
+(L2PT) 059 -> 205 REF=003
+(L2PT) 060 -> 210 REF=001
+(L2PT) 062 -> 054 REF=001
+** Process 003: Allocated Frames=043 PageFaults/References=042/092
+(L1PT) 000 -> 146
+(L2PT) 004 -> 147 REF=001
+(L1PT) 001 -> 048
+(L2PT) 009 -> 049 REF=001
+(L1PT) 002 -> 192
+(L2PT) 018 -> 200 REF=002
+(L2PT) 021 -> 193 REF=004
+(L2PT) 022 -> 215 REF=001
+(L1PT) 003 -> 042
+(L2PT) 024 -> 055 REF=004
+(L2PT) 025 -> 062 REF=001
+(L2PT) 027 -> 043 REF=001
+(L2PT) 028 -> 066 REF=001
+(L2PT) 029 -> 209 REF=002
+(L2PT) 030 -> 221 REF=002
+(L2PT) 031 -> 220 REF=001
+(L1PT) 004 -> 110
+(L2PT) 032 -> 206 REF=002
+(L2PT) 033 -> 202 REF=003
+(L2PT) 038 -> 212 REF=001
+(L2PT) 039 -> 111 REF=002
+(L1PT) 005 -> 011
+(L2PT) 040 -> 091 REF=006
+(L2PT) 041 -> 093 REF=006
+(L2PT) 042 -> 099 REF=004
+(L2PT) 043 -> 018 REF=006
+(L2PT) 044 -> 012 REF=004
+(L2PT) 045 -> 024 REF=007
+(L2PT) 046 -> 031 REF=003
+(L2PT) 047 -> 032 REF=003
+(L1PT) 006 -> 075
+(L2PT) 053 -> 087 REF=001
+(L2PT) 054 -> 076 REF=001
+(L2PT) 055 -> 080 REF=003
+(L1PT) 007 -> 069
+(L2PT) 056 -> 084 REF=003
+(L2PT) 057 -> 070 REF=002
+(L2PT) 059 -> 168 REF=003
+(L2PT) 060 -> 186 REF=001
+(L2PT) 061 -> 179 REF=003
+(L2PT) 062 -> 196 REF=002
+(L2PT) 063 -> 182 REF=005
+** Process 004: Allocated Frames=056 PageFaults/References=055/126
+(L1PT) 000 -> 096
+(L2PT) 003 -> 176 REF=001
+(L2PT) 004 -> 240 REF=002
+(L2PT) 005 -> 232 REF=001
+(L2PT) 006 -> 235 REF=004
+(L2PT) 007 -> 097 REF=005
+(L1PT) 001 -> 100
+(L2PT) 008 -> 101 REF=003
+(L2PT) 009 -> 104 REF=001
+(L2PT) 010 -> 112 REF=002
+(L2PT) 015 -> 254 REF=001
+(L1PT) 002 -> 056
+(L2PT) 017 -> 057 REF=002
+(L2PT) 018 -> 081 REF=003
+(L2PT) 019 -> 077 REF=003
+(L2PT) 020 -> 063 REF=002
+(L2PT) 021 -> 067 REF=002
+(L2PT) 022 -> 126 REF=003
+(L2PT) 023 -> 180 REF=001
+(L1PT) 003 -> 183
+(L2PT) 024 -> 198 REF=003
+(L2PT) 025 -> 184 REF=011
+(L2PT) 026 -> 189 REF=003
+(L2PT) 027 -> 194 REF=006
+(L2PT) 028 -> 199 REF=006
+(L2PT) 029 -> 225 REF=002
+(L2PT) 030 -> 223 REF=003
+(L2PT) 031 -> 227 REF=002
+(L1PT) 004 -> 121
+(L2PT) 032 -> 122 REF=004
+(L2PT) 034 -> 169 REF=001
+(L2PT) 035 -> 159 REF=004
+(L2PT) 036 -> 154 REF=003
+(L2PT) 037 -> 166 REF=001
+(L2PT) 038 -> 156 REF=001
+(L1PT) 005 -> 171
+(L2PT) 041 -> 251 REF=002
+(L2PT) 042 -> 246 REF=002
+(L2PT) 043 -> 249 REF=001
+(L2PT) 044 -> 247 REF=002
+(L2PT) 045 -> 172 REF=001
+(L2PT) 046 -> 174 REF=001
+(L2PT) 047 -> 175 REF=001
+(L1PT) 006 -> 119
+(L2PT) 048 -> 120 REF=004
+(L2PT) 049 -> 142 REF=004
+(L2PT) 050 -> 135 REF=001
+(L2PT) 051 -> 138 REF=003
+(L2PT) 052 -> 148 REF=002
+(L1PT) 007 -> 013
+(L2PT) 058 -> 029 REF=003
+(L2PT) 059 -> 025 REF=003
+(L2PT) 060 -> 019 REF=005
+(L2PT) 061 -> 035 REF=002
+(L2PT) 062 -> 014 REF=003
+Total: Allocated Frames=256 Page Faults/References=251/597

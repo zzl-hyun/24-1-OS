@@ -1,0 +1,163 @@
+ubuntu@41983:~/hw1$ cat test2.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 004	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0007 CPU: Loaded PID: 001	Arrival: 007	Codesize: 004	PC: 000
+0053 CPU: OP_IO START len: 107 ends at: 0160
+0255 CPU: OP_IO START len: 069 ends at: 0324
+*** TOTAL CLOCKS: 0324 IDLE: 0186 UTIL: 42.59%
+
+ubuntu@41983:~/hw1$ cat test2.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 004	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0007 CPU: Loaded PID: 001	Arrival: 007	Codesize: 004	PC: 000
+0064 CPU: Switched	from: 000	to: 001
+0160 CPU: Switched	from: 001	to: 100
+0160 IO : COMPLETED! PID: 000	IOTIME: 160	PC: 001
+0171 CPU: Switched	from: 100	to: 000
+0181 CPU: Switched	from: 000	to: 100
+0218 IO : COMPLETED! PID: 001	IOTIME: 218	PC: 001
+0229 CPU: Switched	from: 100	to: 001
+*** TOTAL CLOCKS: 0229 IDLE: 0089 UTIL: 61.14%
+
+ubuntu@41983:~/hw1$ cat test3.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 001	Arrival: 000	Codesize: 010	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0004 CPU: OP_IO START len: 108 ends at: 0112
+0208 CPU: OP_IO START len: 121 ends at: 0329
+0403 CPU: OP_IO START len: 119 ends at: 0522
+*** TOTAL CLOCKS: 0537 IDLE: 0358 UTIL: 33.33%
+
+ubuntu@41983:~/hw1$ cat test3.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 001	Arrival: 000	Codesize: 010	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0015 CPU: Switched	from: 000	to: 001
+0079 CPU: Switched	from: 001	to: 100
+0112 IO : COMPLETED! PID: 000	IOTIME: 112	PC: 001
+0123 CPU: Switched	from: 100	to: 000
+0166 CPU: Switched	from: 000	to: 100
+0189 IO : COMPLETED! PID: 001	IOTIME: 189	PC: 001
+0200 CPU: Switched	from: 100	to: 001
+0285 CPU: Switched	from: 001	to: 100
+0393 IO : COMPLETED! PID: 001	IOTIME: 393	PC: 003
+0404 CPU: Switched	from: 100	to: 001
+*** TOTAL CLOCKS: 0419 IDLE: 0237 UTIL: 43.44%
+
+ubuntu@41983:~/hw1$ cat test4.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 002	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0007 CPU: Loaded PID: 001	Arrival: 007	Codesize: 008	PC: 000
+0010 CPU: Loaded PID: 002	Arrival: 010	Codesize: 010	PC: 000
+0171 CPU: OP_IO START len: 114 ends at: 0285
+0380 CPU: OP_IO START len: 130 ends at: 0510
+0547 CPU: OP_IO START len: 128 ends at: 0675
+0750 CPU: OP_IO START len: 116 ends at: 0866
+*** TOTAL CLOCKS: 0912 IDLE: 0508 UTIL: 44.30%
+
+ubuntu@41983:~/hw1$ cat test4.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 002	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0007 CPU: Loaded PID: 001	Arrival: 007	Codesize: 008	PC: 000
+0010 CPU: Loaded PID: 002	Arrival: 010	Codesize: 010	PC: 000
+0100 CPU: Switched	from: 000	to: 001
+0182 CPU: Switched	from: 001	to: 002
+0220 CPU: Switched	from: 002	to: 100
+0285 IO : COMPLETED! PID: 001	IOTIME: 285	PC: 001
+0296 CPU: Switched	from: 100	to: 001
+0337 IO : COMPLETED! PID: 002	IOTIME: 337	PC: 001
+0402 CPU: Switched	from: 001	to: 002
+0488 CPU: Switched	from: 002	to: 100
+0521 IO : COMPLETED! PID: 001	IOTIME: 521	PC: 003
+0532 CPU: Switched	from: 100	to: 001
+0542 CPU: Switched	from: 001	to: 100
+0593 IO : COMPLETED! PID: 002	IOTIME: 593	PC: 003
+0604 CPU: Switched	from: 100	to: 002
+*** TOTAL CLOCKS: 0650 IDLE: 0242 UTIL: 62.77%
+
+
+ubuntu@41983:~/hw1$ cat test5.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0008 CPU: Loaded PID: 001	Arrival: 008	Codesize: 006	PC: 000
+0016 CPU: Loaded PID: 002	Arrival: 016	Codesize: 002	PC: 000
+0025 CPU: OP_IO START len: 142 ends at: 0167
+0301 CPU: OP_IO START len: 100 ends at: 0401
+*** TOTAL CLOCKS: 0515 IDLE: 0262 UTIL: 49.13%
+
+ubuntu@41983:~/hw1$ cat test5.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0008 CPU: Loaded PID: 001	Arrival: 008	Codesize: 006	PC: 000
+0016 CPU: Loaded PID: 002	Arrival: 016	Codesize: 002	PC: 000
+0036 CPU: Switched	from: 000	to: 001
+0090 CPU: Switched	from: 001	to: 002
+0167 IO : COMPLETED! PID: 000	IOTIME: 167	PC: 001
+0186 CPU: Switched	from: 002	to: 000
+0186 IO : COMPLETED! PID: 001	IOTIME: 179	PC: 001
+0277 CPU: Switched	from: 000	to: 001
+*** TOTAL CLOCKS: 0295 IDLE: 0040 UTIL: 86.44%
+
+ubuntu@41983:~/hw1$ cat test6.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 002	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0014 CPU: Loaded PID: 001	Arrival: 006	Codesize: 002	PC: 000
+0014 CPU: Loaded PID: 002	Arrival: 010	Codesize: 010	PC: 000
+0123 CPU: OP_IO START len: 131 ends at: 0254
+0316 CPU: OP_IO START len: 143 ends at: 0459
+*** TOTAL CLOCKS: 0462 IDLE: 0305 UTIL: 33.98%
+
+ubuntu@41983:~/hw1$ cat test6.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 002	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0014 CPU: Switched	from: 000	to: 100
+0014 CPU: Loaded PID: 001	Arrival: 006	Codesize: 002	PC: 000
+0014 CPU: Loaded PID: 002	Arrival: 010	Codesize: 010	PC: 000
+0025 CPU: Switched	from: 100	to: 001
+0052 CPU: Switched	from: 001	to: 002
+0134 CPU: Switched	from: 002	to: 100
+0254 IO : COMPLETED! PID: 002	IOTIME: 254	PC: 001
+0265 CPU: Switched	from: 100	to: 002
+0338 CPU: Switched	from: 002	to: 100
+0470 IO : COMPLETED! PID: 002	IOTIME: 470	PC: 003
+0481 CPU: Switched	from: 100	to: 002
+*** TOTAL CLOCKS: 0484 IDLE: 0325 UTIL: 32.85%
+
+ubuntu@41983:~/hw1$ cat test7.bin | ./1-2
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0005 CPU: Loaded PID: 001	Arrival: 005	Codesize: 006	PC: 000
+0006 CPU: Loaded PID: 002	Arrival: 006	Codesize: 010	PC: 000
+0008 CPU: Loaded PID: 003	Arrival: 008	Codesize: 004	PC: 000
+0016 CPU: OP_IO START len: 097 ends at: 0113
+0239 CPU: OP_IO START len: 068 ends at: 0307
+0462 CPU: OP_IO START len: 146 ends at: 0608
+0636 CPU: OP_IO START len: 105 ends at: 0741
+0821 CPU: OP_IO START len: 119 ends at: 0940
+*** TOTAL CLOCKS: 0940 IDLE: 0565 UTIL: 39.89%
+
+ubuntu@41983:~/hw1$ cat test7.bin | ./1-3
+0000 CPU: Loaded PID: 000	Arrival: 000	Codesize: 006	PC: 000
+0000 CPU: Loaded PID: 100	Arrival: 000	Codesize: 002	PC: 000
+0005 CPU: Loaded PID: 001	Arrival: 005	Codesize: 006	PC: 000
+0006 CPU: Loaded PID: 002	Arrival: 006	Codesize: 010	PC: 000
+0008 CPU: Loaded PID: 003	Arrival: 008	Codesize: 004	PC: 000
+0027 CPU: Switched	from: 000	to: 001
+0098 CPU: Switched	from: 001	to: 002
+0113 IO : COMPLETED! PID: 000	IOTIME: 113	PC: 001
+0155 IO : COMPLETED! PID: 001	IOTIME: 155	PC: 001
+0170 CPU: Switched	from: 002	to: 003
+0203 CPU: Switched	from: 003	to: 000
+0269 CPU: Switched	from: 000	to: 001
+0305 IO : COMPLETED! PID: 002	IOTIME: 305	PC: 001
+0311 IO : COMPLETED! PID: 003	IOTIME: 311	PC: 001
+0363 CPU: Switched	from: 001	to: 002
+0402 CPU: Switched	from: 002	to: 003
+0412 CPU: Switched	from: 003	to: 100
+0496 IO : COMPLETED! PID: 002	IOTIME: 496	PC: 003
+0507 CPU: Switched	from: 100	to: 002
+*** TOTAL CLOCKS: 0555 IDLE: 0175 UTIL: 68.47%
+
+
+
+
